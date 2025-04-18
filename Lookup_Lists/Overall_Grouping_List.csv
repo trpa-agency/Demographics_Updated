@@ -1,0 +1,129 @@
+variable_code,variable_name_original,variable_category,broad_category,grouping_prefix
+B25012_012E,Renter Occupied Households With Own Children under 18,Tenure by Prescence of Children Grouped,Renter Occupied Households With Children,Prescence of Children
+B25012_013E,Renter Occupied Households With Own Children under 6 years only,Tenure by Prescence of Children Grouped,Renter Occupied Households With Children,Prescence of Children
+B25012_014E,Renter Occupied Households With Own Children under 6 years and 6 to 17 years,Tenure by Prescence of Children Grouped,Renter Occupied Households With Children,Prescence of Children
+B25012_015E,Renter Occupied Households With Own Children 6 to 17 years,Tenure by Prescence of Children Grouped,Renter Occupied Households With Children,Prescence of Children
+B25012_006E,Owner Occupied Households With Own Children under 6 years and 6 to 17 years,Tenure by Prescence of Children Grouped,Owner Occupied Households With Children ,Prescence of Children
+B25012_007E,Owner Occupied Households With Own Children 6 to 17 years,Tenure by Prescence of Children Grouped,Owner Occupied Households With Children ,Prescence of Children
+B25012_008E,Owner Occupied Households No Own Children under 18,Tenure by Prescence of Children Grouped,Owner Occupied Households With Children ,Prescence of Children
+B25012_009E,Owner Occupied Households No Related Children under 18,Tenure by Prescence of Children Grouped,Owner Occupied Households With No Children ,Prescence of Children
+B25012_011E,Renter Occupied Households With Related Children under 18,Tenure by Prescence of Children Grouped,Renter Occupied Households With Children,Prescence of Children
+B25012_016E,Renter Occupied Households No Own Children under 18,Tenure by Prescence of Children Grouped,Renter Occupied Households With No Children,Prescence of Children
+B25012_017E,Renter Occupied Households No Related Children under 18,Tenure by Prescence of Children Grouped,Renter Occupied Households With No Children,Prescence of Children
+B25012_003E,Owner Occupied Households With Related Children under 18,Tenure by Prescence of Children Grouped,Owner Occupied Households With Children ,Prescence of Children
+B25012_004E,Owner Occupied Households With Own Children under 18,Tenure by Prescence of Children Grouped,Owner Occupied Households With Children ,Prescence of Children
+B25012_005E,Owner Occupied Households With Own Children under 6 years only,Tenure by Prescence of Children Grouped,Owner Occupied Households With Children ,Prescence of Children
+B01001_002E,Male: Total,TRPA 5-year Age Categories,Total,TRPA 5-year Age Categories
+B01001_003E,Male: Under 5 years,TRPA 5-year Age Categories,Under 5,TRPA 5-year Age Categories
+B01001_004E,Male: 5 to 9 years,TRPA 5-year Age Categories,5 to 9,TRPA 5-year Age Categories
+B01001_005E,Male: 10 to 14 years,TRPA 5-year Age Categories,10 to 14,TRPA 5-year Age Categories
+B01001_006E,Male: 15 to 17 years,TRPA 5-year Age Categories,15 to 19,TRPA 5-year Age Categories
+B01001_007E,Male: 18 and 19 years,TRPA 5-year Age Categories,15 to 19,TRPA 5-year Age Categories
+B01001_008E,Male: 20 years,TRPA 5-year Age Categories,20 to 24,TRPA 5-year Age Categories
+B01001_009E,Male: 21 years,TRPA 5-year Age Categories,20 to 24,TRPA 5-year Age Categories
+B01001_010E,Male: 22 to 24 years,TRPA 5-year Age Categories,20 to 24,TRPA 5-year Age Categories
+B01001_011E,Male: 25 to 29 years,TRPA 5-year Age Categories,25 to 29,TRPA 5-year Age Categories
+B01001_012E,Male: 30 to 34 years,TRPA 5-year Age Categories,30 to 34,TRPA 5-year Age Categories
+B01001_013E,Male: 35 to 39 years,TRPA 5-year Age Categories,35 to 39,TRPA 5-year Age Categories
+B01001_014E,Male: 40 to 44 years,TRPA 5-year Age Categories,40 to 44,TRPA 5-year Age Categories
+B01001_015E,Male: 45 to 49 years,TRPA 5-year Age Categories,45 to 49,TRPA 5-year Age Categories
+B01001_016E,Male: 50 to 54 years,TRPA 5-year Age Categories,50 to 54,TRPA 5-year Age Categories
+B01001_017E,Male: 55 to 59 years,TRPA 5-year Age Categories,55 to 59,TRPA 5-year Age Categories
+B01001_018E,Male: 60 and 61 years,TRPA 5-year Age Categories,60 to 64,TRPA 5-year Age Categories
+B01001_019E,Male: 62 to 64 years,TRPA 5-year Age Categories,60 to 64,TRPA 5-year Age Categories
+B01001_020E,Male: 65 and 66 years,TRPA 5-year Age Categories,65 to 69,TRPA 5-year Age Categories
+B01001_021E,Male: 67 to 69 years,TRPA 5-year Age Categories,65 to 69,TRPA 5-year Age Categories
+B01001_022E,Male: 70 to 74 years,TRPA 5-year Age Categories,70 to 74,TRPA 5-year Age Categories
+B01001_023E,Male: 75 to 79 years,TRPA 5-year Age Categories,75 to 79,TRPA 5-year Age Categories
+B01001_024E,Male: 80 to 84 years,TRPA 5-year Age Categories,80 to 84,TRPA 5-year Age Categories
+B01001_025E,Male: 85 years and over,TRPA 5-year Age Categories,Over 85,TRPA 5-year Age Categories
+B01001_026E,Female: Total,TRPA 5-year Age Categories,Total,TRPA 5-year Age Categories
+B01001_027E,Female: Under 5 years,TRPA 5-year Age Categories,Under 5,TRPA 5-year Age Categories
+B01001_028E,Female: 5 to 9 years,TRPA 5-year Age Categories,5 to 9,TRPA 5-year Age Categories
+B01001_029E,Female: 10 to 14 years,TRPA 5-year Age Categories,10 to 14,TRPA 5-year Age Categories
+B01001_030E,Female: 15 to 17 years,TRPA 5-year Age Categories,15 to 19,TRPA 5-year Age Categories
+B01001_031E,Female: 18 and 19 years,TRPA 5-year Age Categories,15 to 19,TRPA 5-year Age Categories
+B01001_032E,Female: 20 years,TRPA 5-year Age Categories,20 to 24,TRPA 5-year Age Categories
+B01001_033E,Female: 21 years,TRPA 5-year Age Categories,20 to 24,TRPA 5-year Age Categories
+B01001_034E,Female: 22 to 24 years,TRPA 5-year Age Categories,20 to 24,TRPA 5-year Age Categories
+B01001_035E,Female: 25 to 29 years,TRPA 5-year Age Categories,25 to 29,TRPA 5-year Age Categories
+B01001_036E,Female: 30 to 34 years,TRPA 5-year Age Categories,30 to 34,TRPA 5-year Age Categories
+B01001_037E,Female: 35 to 39 years,TRPA 5-year Age Categories,35 to 39,TRPA 5-year Age Categories
+B01001_038E,Female: 40 to 44 years,TRPA 5-year Age Categories,40 to 44,TRPA 5-year Age Categories
+B01001_039E,Female: 45 to 49 years,TRPA 5-year Age Categories,45 to 49,TRPA 5-year Age Categories
+B01001_040E,Female: 50 to 54 years,TRPA 5-year Age Categories,50 to 54,TRPA 5-year Age Categories
+B01001_041E,Female: 55 to 59 years,TRPA 5-year Age Categories,55 to 59,TRPA 5-year Age Categories
+B01001_042E,Female: 60 and 61 years,TRPA 5-year Age Categories,60 to 64,TRPA 5-year Age Categories
+B01001_043E,Female: 62 to 64 years,TRPA 5-year Age Categories,60 to 64,TRPA 5-year Age Categories
+B01001_044E,Female: 65 and 66 years,TRPA 5-year Age Categories,65 to 69,TRPA 5-year Age Categories
+B01001_045E,Female: 67 to 69 years,TRPA 5-year Age Categories,65 to 69,TRPA 5-year Age Categories
+B01001_046E,Female: 70 to 74 years,TRPA 5-year Age Categories,70 to 74,TRPA 5-year Age Categories
+B01001_047E,Female: 75 to 79 years,TRPA 5-year Age Categories,75 to 79,TRPA 5-year Age Categories
+B01001_048E,Female: 80 to 84 years,TRPA 5-year Age Categories,80 to 84,TRPA 5-year Age Categories
+B01001_049E,Female: 85 years and over,TRPA 5-year Age Categories,Over 85,TRPA 5-year Age Categories
+B16004_003E,Speak Only English (5 to 17),English Fluency: Language,"English: Native, Very Well, Well",English Fluency
+B16004_005E,"Speak Spanish - Speak English ""Very Well""  (5 to 17)",English Fluency: Language,"English: Native, Very Well, Well",English Fluency
+B16004_006E,"Speak Spanish - Speak English ""Well""  (5 to 17)",English Fluency: Language,"English: Native, Very Well, Well",English Fluency
+B16004_007E,"Speak Spanish - Speak English ""Not Well""  (5 to 17)",English Fluency: Language,"English: Not Well, Not at All",English Fluency
+B16004_008E,"Speak Spanish - Speak English ""Not at  All""  (5 to 17)",English Fluency: Language,"English: Not Well, Not at All",English Fluency
+B16004_010E,"Speak other Indo-European languages - Speak English ""Very Well""  (5 to 17)",English Fluency: Language,"English: Native, Very Well, Well",English Fluency
+B16004_011E,"Speak other Indo-European languages - Speak English ""Well""  (5 to 17)",English Fluency: Language,"English: Native, Very Well, Well",English Fluency
+B16004_012E,"Speak other Indo-European languages - Speak English ""Not Well""  (5 to 17)",English Fluency: Language,"English: Not Well, Not at All",English Fluency
+B16004_013E,"Speak other Indo-European languages - Speak English ""Not at  All""  (5 to 17)",English Fluency: Language,"English: Not Well, Not at All",English Fluency
+B16004_015E,"Speak Asian and Pacific Island languages - Speak English ""Very Well""  (5 to 17)",English Fluency: Language,"English: Native, Very Well, Well",English Fluency
+B16004_016E,"Speak Asian and Pacific Island languages - Speak English ""Well""  (5 to 17)",English Fluency: Language,"English: Native, Very Well, Well",English Fluency
+B16004_017E,"Speak Asian and Pacific Island languages- Speak English ""Not Well""  (5 to 17)",English Fluency: Language,"English: Not Well, Not at All",English Fluency
+B16004_018E,"Speak Asian and Pacific Island languages - Speak English ""Not at  All""  (5 to 17)",English Fluency: Language,"English: Not Well, Not at All",English Fluency
+B16004_020E,"Speak other languages - Speak English ""Very Well""  (5 to 17)",English Fluency: Language,"English: Native, Very Well, Well",English Fluency
+B16004_021E,"Speak other languages - Speak English ""Well""  (5 to 17)",English Fluency: Language,"English: Native, Very Well, Well",English Fluency
+B16004_022E,"Speak other languages - Speak English ""Not Well""  (5 to 17)",English Fluency: Language,"English: Not Well, Not at All",English Fluency
+B16004_023E,"Speak other languages - Speak English ""Not at  All""  (5 to 17)",English Fluency: Language,"English: Not Well, Not at All",English Fluency
+B16004_025E,Speak Only English (18 to 64),English Fluency: Language,"English: Native, Very Well, Well",English Fluency
+B16004_027E,"Speak Spanish - Speak English ""Very Well""  (18 to 64)",English Fluency: Language,"English: Native, Very Well, Well",English Fluency
+B16004_028E,"Speak Spanish - Speak English ""Well""  (18 to 64)",English Fluency: Language,"English: Native, Very Well, Well",English Fluency
+B16004_029E,"Speak Spanish - Speak English ""Not Well""  (18 to 64)",English Fluency: Language,"English: Not Well, Not at All",English Fluency
+B16004_030E,"Speak Spanish - Speak English ""Not at  All""  (18 to 64)",English Fluency: Language,"English: Not Well, Not at All",English Fluency
+B16004_032E,"Speak other Indo-European languages - Speak English ""Very Well""  (18 to 64)",English Fluency: Language,"English: Native, Very Well, Well",English Fluency
+B16004_033E,"Speak other Indo-European languages - Speak English ""Well""  (18 to 64)",English Fluency: Language,"English: Native, Very Well, Well",English Fluency
+B16004_034E,"Speak other Indo-European languages - Speak English ""Not Well""  (18 to 64)",English Fluency: Language,"English: Not Well, Not at All",English Fluency
+B16004_035E,"Speak other Indo-European languages - Speak English ""Not at  All""  (18 to 64)",English Fluency: Language,"English: Not Well, Not at All",English Fluency
+B16004_037E,"Speak Asian and Pacific Island languages - Speak English ""Very Well""  (18 to 64)",English Fluency: Language,"English: Native, Very Well, Well",English Fluency
+B16004_038E,"Speak Asian and Pacific Island languages - Speak English ""Well""  (18 to 64)",English Fluency: Language,"English: Native, Very Well, Well",English Fluency
+B16004_039E,"Speak Asian and Pacific Island languages- Speak English ""Not Well""  (18 to 64)",English Fluency: Language,"English: Not Well, Not at All",English Fluency
+B16004_040E,"Speak Asian and Pacific Island languages - Speak English ""Not at  All""  (18 to 64)",English Fluency: Language,"English: Not Well, Not at All",English Fluency
+B16004_042E,"Speak other languages - Speak English ""Very Well""  (18 to 64)",English Fluency: Language,"English: Native, Very Well, Well",English Fluency
+B16004_043E,"Speak other languages - Speak English ""Well""  (18 to 64)",English Fluency: Language,"English: Native, Very Well, Well",English Fluency
+B16004_044E,"Speak other languages - Speak English ""Not Well""  (18 to 64)",English Fluency: Language,"English: Not Well, Not at All",English Fluency
+B16004_045E,"Speak other languages - Speak English ""Not at  All""  (18 to 64)",English Fluency: Language,"English: Not Well, Not at All",English Fluency
+B16004_047E,Speak Only English (65 years and over),English Fluency: Language,"English: Native, Very Well, Well",English Fluency
+B16004_049E,"Speak Spanish - Speak English ""Very Well""  (65 years and over)",English Fluency: Language,"English: Native, Very Well, Well",English Fluency
+B16004_050E,"Speak Spanish - Speak English ""Well""  (65 years and over)",English Fluency: Language,"English: Native, Very Well, Well",English Fluency
+B16004_051E,"Speak Spanish - Speak English ""Not Well""  (65 years and over)",English Fluency: Language,"English: Not Well, Not at All",English Fluency
+B16004_052E,"Speak Spanish - Speak English ""Not at  All""  (65 years and over)",English Fluency: Language,"English: Not Well, Not at All",English Fluency
+B16004_054E,"Speak other Indo-European languages - Speak English ""Very Well""  (65 years and over)",English Fluency: Language,"English: Native, Very Well, Well",English Fluency
+B16004_055E,"Speak other Indo-European languages - Speak English ""Well""  (65 years and over)",English Fluency: Language,"English: Native, Very Well, Well",English Fluency
+B16004_056E,"Speak other Indo-European languages - Speak English ""Not Well""  (65 years and over)",English Fluency: Language,"English: Not Well, Not at All",English Fluency
+B16004_057E,"Speak other Indo-European languages - Speak English ""Not at  All""  (65 years and over)",English Fluency: Language,"English: Not Well, Not at All",English Fluency
+B16004_059E,"Speak Asian and Pacific Island languages - Speak English ""Very Well""  (65 years and over)",English Fluency: Language,"English: Native, Very Well, Well",English Fluency
+B16004_060E,"Speak Asian and Pacific Island languages - Speak English ""Well""  (65 years and over)",English Fluency: Language,"English: Native, Very Well, Well",English Fluency
+B16004_061E,"Speak Asian and Pacific Island languages- Speak English ""Not Well""  (65 years and over)",English Fluency: Language,"English: Not Well, Not at All",English Fluency
+B16004_062E,"Speak Asian and Pacific Island languages - Speak English ""Not at  All""  (65 years and over)",English Fluency: Language,"English: Not Well, Not at All",English Fluency
+B16004_064E,"Speak other languages - Speak English ""Very Well""  (65 years and over)",English Fluency: Language,"English: Native, Very Well, Well",English Fluency
+B16004_065E,"Speak other languages - Speak English ""Well""  (65 years and over)",English Fluency: Language,"English: Native, Very Well, Well",English Fluency
+B16004_066E,"Speak other languages - Speak English ""Not Well""  (65 years and over)",English Fluency: Language,"English: Not Well, Not at All",English Fluency
+B16004_067E,"Speak other languages - Speak English ""Not at  All""  (65 years and over)",English Fluency: Language,"English: Not Well, Not at All",English Fluency
+B25044_001E,Total Households Vehicles Available,Household Vehicle Numbers Grouped,Vehicles Available: Total Houselholds,Household Vehicle Numbers
+B25044_002E,Total Owner Occupied Households Vehicle Available,Household Vehicle Numbers Grouped,Vehicle Available: Total,Household Vehicle Numbers
+B25044_003E,Total Owner Occupied Households No Vehicle Available,Household Vehicle Numbers Grouped,No Vehicle Available,Household Vehicle Numbers
+B25044_004E,Total Owner Occupied Households 1 Vehicle Available,Household Vehicle Numbers Grouped,1 Vehicle Available,Household Vehicle Numbers
+B25044_005E,Total Owner Occupied Households 2 Vehicles Available,Household Vehicle Numbers Grouped,2 Vehicles Available,Household Vehicle Numbers
+B25044_006E,Total Owner Occupied Households 3 Vehicles Available,Household Vehicle Numbers Grouped,3 Vehicles Available,Household Vehicle Numbers
+B25044_007E,Total Owner Occupied Households 4 Vehicles Available,Household Vehicle Numbers Grouped,4 Vehicles Available,Household Vehicle Numbers
+B25044_008E,Total Owner Occupied Households 5 or more Vehicles Available,Household Vehicle Numbers Grouped,5 Vehicles Available,Household Vehicle Numbers
+B25044_009E,Total Renter Occupied Households Vehicle Available,Household Vehicle Numbers Grouped,Vehicle Available: Total,Household Vehicle Numbers
+B25044_010E,Total Renter Occupied Households No Vehicle Available,Household Vehicle Numbers Grouped,No Vehicle Available,Household Vehicle Numbers
+B25044_011E,Total Renter Occupied Households 1 Vehicle Available,Household Vehicle Numbers Grouped,1 Vehicle Available,Household Vehicle Numbers
+B25044_012E,Total Renter Occupied Households 2 Vehicles Available,Household Vehicle Numbers Grouped,2 Vehicles Available,Household Vehicle Numbers
+B25044_013E,Total Renter Occupied Households 3 Vehicles Available,Household Vehicle Numbers Grouped,3 Vehicles Available,Household Vehicle Numbers
+B25044_014E,Total Renter Occupied Households 4 Vehicles Available,Household Vehicle Numbers Grouped,4 Vehicles Available,Household Vehicle Numbers
+B25044_015E,Total Renter Occupied Households 5 or more Vehicles Available,Household Vehicle Numbers Grouped,5 Vehicles Available,Household Vehicle Numbers

@@ -1,0 +1,91 @@
+variable_code,variable_name,value,Geography,year_sample,dataset,sample_level,Category
+B25004_002E,Vacant Housing Units: For rent,925,Basin,2023,acs/acs5,block group,Housing Units
+B25004_002E,Vacant Housing Units: For rent,925,Basin,2023,acs/acs5,tract,Housing Units
+B25004_002E,Vacant Housing Units: For rent,167,Douglas County (Tahoe Basin),2023,acs/acs5,block group,Housing Units
+B25004_002E,Vacant Housing Units: For rent,539,El Dorado County (Tahoe Basin),2023,acs/acs5,block group,Housing Units
+B25004_002E,Vacant Housing Units: For rent,62,Placer County (Tahoe Basin),2023,acs/acs5,block group,Housing Units
+B25004_002E,Vacant Housing Units: For rent,157,Washoe County (Tahoe Basin),2023,acs/acs5,block group,Housing Units
+B25004_002E,Vacant Housing Units: For rent,167,Douglas County (Tahoe Basin),2023,acs/acs5,tract,Housing Units
+B25004_002E,Vacant Housing Units: For rent,539,El Dorado County (Tahoe Basin),2023,acs/acs5,tract,Housing Units
+B25004_002E,Vacant Housing Units: For rent,62,Placer County (Tahoe Basin),2023,acs/acs5,tract,Housing Units
+B25004_002E,Vacant Housing Units: For rent,157,Washoe County (Tahoe Basin),2023,acs/acs5,tract,Housing Units
+B25004_002E,Vacant Housing Units: For rent,219,North Lake,2023,acs/acs5,block group,Housing Units
+B25004_002E,Vacant Housing Units: For rent,706,South Lake,2023,acs/acs5,block group,Housing Units
+B25004_002E,Vacant Housing Units: For rent,219,North Lake,2023,acs/acs5,tract,Housing Units
+B25004_002E,Vacant Housing Units: For rent,706,South Lake,2023,acs/acs5,tract,Housing Units
+B25004_002E,Vacant Housing Units: For rent,601,California,2023,acs/acs5,block group,Housing Units
+B25004_002E,Vacant Housing Units: For rent,324,Nevada,2023,acs/acs5,block group,Housing Units
+B25004_002E,Vacant Housing Units: For rent,601,California,2023,acs/acs5,tract,Housing Units
+B25004_002E,Vacant Housing Units: For rent,324,Nevada,2023,acs/acs5,tract,Housing Units
+B25004_003E,"Vacant Housing Units: Rented, not occupied",162,Basin,2023,acs/acs5,block group,Housing Units
+B25004_003E,"Vacant Housing Units: Rented, not occupied",162,Basin,2023,acs/acs5,tract,Housing Units
+B25004_003E,"Vacant Housing Units: Rented, not occupied",49,Douglas County (Tahoe Basin),2023,acs/acs5,block group,Housing Units
+B25004_003E,"Vacant Housing Units: Rented, not occupied",11,El Dorado County (Tahoe Basin),2023,acs/acs5,block group,Housing Units
+B25004_003E,"Vacant Housing Units: Rented, not occupied",25,Placer County (Tahoe Basin),2023,acs/acs5,block group,Housing Units
+B25004_003E,"Vacant Housing Units: Rented, not occupied",77,Washoe County (Tahoe Basin),2023,acs/acs5,block group,Housing Units
+B25004_003E,"Vacant Housing Units: Rented, not occupied",49,Douglas County (Tahoe Basin),2023,acs/acs5,tract,Housing Units
+B25004_003E,"Vacant Housing Units: Rented, not occupied",11,El Dorado County (Tahoe Basin),2023,acs/acs5,tract,Housing Units
+B25004_003E,"Vacant Housing Units: Rented, not occupied",25,Placer County (Tahoe Basin),2023,acs/acs5,tract,Housing Units
+B25004_003E,"Vacant Housing Units: Rented, not occupied",77,Washoe County (Tahoe Basin),2023,acs/acs5,tract,Housing Units
+B25004_003E,"Vacant Housing Units: Rented, not occupied",102,North Lake,2023,acs/acs5,block group,Housing Units
+B25004_003E,"Vacant Housing Units: Rented, not occupied",60,South Lake,2023,acs/acs5,block group,Housing Units
+B25004_003E,"Vacant Housing Units: Rented, not occupied",102,North Lake,2023,acs/acs5,tract,Housing Units
+B25004_003E,"Vacant Housing Units: Rented, not occupied",60,South Lake,2023,acs/acs5,tract,Housing Units
+B25004_003E,"Vacant Housing Units: Rented, not occupied",36,California,2023,acs/acs5,block group,Housing Units
+B25004_003E,"Vacant Housing Units: Rented, not occupied",126,Nevada,2023,acs/acs5,block group,Housing Units
+B25004_003E,"Vacant Housing Units: Rented, not occupied",36,California,2023,acs/acs5,tract,Housing Units
+B25004_003E,"Vacant Housing Units: Rented, not occupied",126,Nevada,2023,acs/acs5,tract,Housing Units
+B25004_004E,Vacant Housing Units: For sale only,176,Basin,2023,acs/acs5,block group,Housing Units
+B25004_004E,Vacant Housing Units: For sale only,176,Basin,2023,acs/acs5,tract,Housing Units
+B25004_004E,Vacant Housing Units: For sale only,22,Douglas County (Tahoe Basin),2023,acs/acs5,block group,Housing Units
+B25004_004E,Vacant Housing Units: For sale only,110,El Dorado County (Tahoe Basin),2023,acs/acs5,block group,Housing Units
+B25004_004E,Vacant Housing Units: For sale only,11,Placer County (Tahoe Basin),2023,acs/acs5,block group,Housing Units
+B25004_004E,Vacant Housing Units: For sale only,33,Washoe County (Tahoe Basin),2023,acs/acs5,block group,Housing Units
+B25004_004E,Vacant Housing Units: For sale only,22,Douglas County (Tahoe Basin),2023,acs/acs5,tract,Housing Units
+B25004_004E,Vacant Housing Units: For sale only,110,El Dorado County (Tahoe Basin),2023,acs/acs5,tract,Housing Units
+B25004_004E,Vacant Housing Units: For sale only,11,Placer County (Tahoe Basin),2023,acs/acs5,tract,Housing Units
+B25004_004E,Vacant Housing Units: For sale only,33,Washoe County (Tahoe Basin),2023,acs/acs5,tract,Housing Units
+B25004_004E,Vacant Housing Units: For sale only,44,North Lake,2023,acs/acs5,block group,Housing Units
+B25004_004E,Vacant Housing Units: For sale only,132,South Lake,2023,acs/acs5,block group,Housing Units
+B25004_004E,Vacant Housing Units: For sale only,44,North Lake,2023,acs/acs5,tract,Housing Units
+B25004_004E,Vacant Housing Units: For sale only,132,South Lake,2023,acs/acs5,tract,Housing Units
+B25004_004E,Vacant Housing Units: For sale only,121,California,2023,acs/acs5,block group,Housing Units
+B25004_004E,Vacant Housing Units: For sale only,55,Nevada,2023,acs/acs5,block group,Housing Units
+B25004_004E,Vacant Housing Units: For sale only,121,California,2023,acs/acs5,tract,Housing Units
+B25004_004E,Vacant Housing Units: For sale only,55,Nevada,2023,acs/acs5,tract,Housing Units
+B25004_005E,"Vacant Housing Units: Sold, not occupied",337,Basin,2023,acs/acs5,block group,Housing Units
+B25004_005E,"Vacant Housing Units: Sold, not occupied",337,Basin,2023,acs/acs5,tract,Housing Units
+B25004_005E,"Vacant Housing Units: Sold, not occupied",16,Douglas County (Tahoe Basin),2023,acs/acs5,block group,Housing Units
+B25004_005E,"Vacant Housing Units: Sold, not occupied",245,El Dorado County (Tahoe Basin),2023,acs/acs5,block group,Housing Units
+B25004_005E,"Vacant Housing Units: Sold, not occupied",26,Placer County (Tahoe Basin),2023,acs/acs5,block group,Housing Units
+B25004_005E,"Vacant Housing Units: Sold, not occupied",50,Washoe County (Tahoe Basin),2023,acs/acs5,block group,Housing Units
+B25004_005E,"Vacant Housing Units: Sold, not occupied",16,Douglas County (Tahoe Basin),2023,acs/acs5,tract,Housing Units
+B25004_005E,"Vacant Housing Units: Sold, not occupied",245,El Dorado County (Tahoe Basin),2023,acs/acs5,tract,Housing Units
+B25004_005E,"Vacant Housing Units: Sold, not occupied",26,Placer County (Tahoe Basin),2023,acs/acs5,tract,Housing Units
+B25004_005E,"Vacant Housing Units: Sold, not occupied",50,Washoe County (Tahoe Basin),2023,acs/acs5,tract,Housing Units
+B25004_005E,"Vacant Housing Units: Sold, not occupied",76,North Lake,2023,acs/acs5,block group,Housing Units
+B25004_005E,"Vacant Housing Units: Sold, not occupied",261,South Lake,2023,acs/acs5,block group,Housing Units
+B25004_005E,"Vacant Housing Units: Sold, not occupied",76,North Lake,2023,acs/acs5,tract,Housing Units
+B25004_005E,"Vacant Housing Units: Sold, not occupied",261,South Lake,2023,acs/acs5,tract,Housing Units
+B25004_005E,"Vacant Housing Units: Sold, not occupied",271,California,2023,acs/acs5,block group,Housing Units
+B25004_005E,"Vacant Housing Units: Sold, not occupied",66,Nevada,2023,acs/acs5,block group,Housing Units
+B25004_005E,"Vacant Housing Units: Sold, not occupied",271,California,2023,acs/acs5,tract,Housing Units
+B25004_005E,"Vacant Housing Units: Sold, not occupied",66,Nevada,2023,acs/acs5,tract,Housing Units
+B25004_007E,Vacant Housing Units: Other Vacant,37,Basin,2023,acs/acs5,block group,Housing Units
+B25004_007E,Vacant Housing Units: Other Vacant,37,Basin,2023,acs/acs5,tract,Housing Units
+B25004_007E,Vacant Housing Units: Other Vacant,0,Douglas County (Tahoe Basin),2023,acs/acs5,block group,Housing Units
+B25004_007E,Vacant Housing Units: Other Vacant,24,El Dorado County (Tahoe Basin),2023,acs/acs5,block group,Housing Units
+B25004_007E,Vacant Housing Units: Other Vacant,13,Placer County (Tahoe Basin),2023,acs/acs5,block group,Housing Units
+B25004_007E,Vacant Housing Units: Other Vacant,0,Washoe County (Tahoe Basin),2023,acs/acs5,block group,Housing Units
+B25004_007E,Vacant Housing Units: Other Vacant,0,Douglas County (Tahoe Basin),2023,acs/acs5,tract,Housing Units
+B25004_007E,Vacant Housing Units: Other Vacant,24,El Dorado County (Tahoe Basin),2023,acs/acs5,tract,Housing Units
+B25004_007E,Vacant Housing Units: Other Vacant,13,Placer County (Tahoe Basin),2023,acs/acs5,tract,Housing Units
+B25004_007E,Vacant Housing Units: Other Vacant,0,Washoe County (Tahoe Basin),2023,acs/acs5,tract,Housing Units
+B25004_007E,Vacant Housing Units: Other Vacant,13,North Lake,2023,acs/acs5,block group,Housing Units
+B25004_007E,Vacant Housing Units: Other Vacant,24,South Lake,2023,acs/acs5,block group,Housing Units
+B25004_007E,Vacant Housing Units: Other Vacant,13,North Lake,2023,acs/acs5,tract,Housing Units
+B25004_007E,Vacant Housing Units: Other Vacant,24,South Lake,2023,acs/acs5,tract,Housing Units
+B25004_007E,Vacant Housing Units: Other Vacant,37,California,2023,acs/acs5,block group,Housing Units
+B25004_007E,Vacant Housing Units: Other Vacant,0,Nevada,2023,acs/acs5,block group,Housing Units
+B25004_007E,Vacant Housing Units: Other Vacant,37,California,2023,acs/acs5,tract,Housing Units
+B25004_007E,Vacant Housing Units: Other Vacant,0,Nevada,2023,acs/acs5,tract,Housing Units
