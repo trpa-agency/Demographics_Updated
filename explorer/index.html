@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demographic Data Explorer | TRPA</title>
+  <meta name="description" content="See which Census demographic variables TRPA publishes for the Lake Tahoe Basin, what the values look like, what each variable means, and where the data needs review." />
+
+  <!-- Calcite Design System 5.0 (no separate stylesheet) -->
+  <script type="module" src="https://js.arcgis.com/calcite-components/5.0"></script>
+  <!-- Plotly and AG Grid load before the ArcGIS Maps SDK, which is added only when the Geography tab opens -->
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ag-grid-community@33.3.2/dist/ag-grid-community.min.js"></script>
+  <link rel="stylesheet" href="https://trpa-agency.github.io/tools/assets/trpa-tokens.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Fallback tokens. trpa-tokens.css overrides these when it loads. */
+    :root {
+      --trpa-blue: #0072CE; --trpa-navy: #003B71; --trpa-orange: #E87722; --trpa-forest: #4A6118;
+      --trpa-brick: #9C3E27; --trpa-ice: #B4CBE8; --link-text: #0068A8;
+      --gray-bg: #F5F5F5; --gray-border: #DDDDDD; --gray-text: #555F6D;
+    }
+    html, body { margin: 0; font-family: 'Open Sans', system-ui, sans-serif; color: var(--trpa-navy); background: var(--gray-bg); font-size: 15px; line-height: 1.55; }
+    a { color: var(--link-text); }
+    :focus-visible { outline: 3px solid var(--trpa-orange); outline-offset: 2px; }
+    .header { background: var(--trpa-navy); color: #fff; padding: 0.75rem 2rem; display: flex; align-items: center; gap: 1.25rem; }
+    .header img { height: 46px; width: auto; }
+    .header .subtitle { font-size: 0.85rem; opacity: 0.85; }
+    .header h1 { font-size: 1.45rem; margin: 0; font-weight: 700; }
+    .wrap { padding: 1rem 2rem 2rem; max-width: 1500px; margin: 0 auto; }
+    .intro { margin: 0 0 1rem; max-width: 70rem; }
+    .kpi-row { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1rem 0; }
+    .kpi-card { background: #fff; border-radius: 8px; padding: 1rem 1.25rem; flex: 1; min-width: 170px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border-top: 3px solid var(--trpa-blue); }
+    .kpi-value { font-size: 1.8rem; font-weight: 700; line-height: 1.25; margin-bottom: 0.2rem; }
+    .kpi-label { font-size: 0.82rem; color: var(--gray-text); }
+    .card { background: #fff; border-radius: 8px; padding: 1rem 1.25rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); margin-bottom: 1rem; }
+    .card h2, .card h3 { margin: 0 0 0.5rem; font-size: 1.1rem; }
+    .card p, .steps li, .definition, dd { line-height: 1.55; }
+    .card p { margin: 0.25rem 0 0.5rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; }
+    .controls { display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-end; margin: 0.75rem 0; }
+    .controls > * { min-width: 200px; }
+    .controls .grow { flex: 1; min-width: 260px; }
+    .grid-box { background: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); overflow: hidden; }
+    #variable-grid { height: 460px; width: 100%; }
+    .detail { display: none; margin-top: 1rem; }
+    .detail.open { display: block; }
+    .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.5rem 0; }
+    .definition { background: var(--gray-bg); border-left: 4px solid var(--trpa-blue); padding: 0.6rem 0.9rem; margin: 0.5rem 0; }
+    .definition.warn { border-left-color: var(--trpa-orange); }
+    .muted { color: var(--gray-text); font-size: 0.85rem; }
+    .chart { width: 100%; min-height: 360px; }
+    .steps { counter-reset: step; list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 0.75rem; }
+    .steps li { background: #fff; border-radius: 8px; padding: 0.75rem 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); position: relative; padding-top: 2.1rem; }
+    .steps li::before { counter-increment: step; content: counter(step); position: absolute; top: 0.6rem; left: 1rem; width: 1.4rem; height: 1.4rem; border-radius: 50%; background: var(--trpa-blue); color: #fff; font-size: 0.8rem; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+    .check-head { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+    .status { display: inline-block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; padding: 0.15rem 0.6rem; border-radius: 999px; color: #fff; background: var(--gray-text); }
+    .status.pass { background: var(--trpa-forest); } .status.review { background: #9A4F00; } .status.fail { background: var(--trpa-brick); } .status.error { background: #444; }
+    .check-grid { width: 100%; margin-top: 0.5rem; }
+    #map-view { width: 100%; height: 520px; border-radius: 8px; overflow: hidden; }
+    dl.glossary dt { font-weight: 700; margin-top: 0.75rem; }
+    dl.glossary dd { margin: 0.15rem 0 0 0; }
+    footer { font-size: 0.8rem; color: var(--gray-text); padding: 1rem 2rem 2rem; max-width: 1500px; margin: 0 auto; }
+    calcite-tabs { margin-top: 0.5rem; }
+    calcite-tab { padding-top: 1rem; }
+    @media (max-width: 700px) { .header, .wrap, footer { padding-left: 1rem; padding-right: 1rem; } .header img { height: 36px; } #variable-grid { height: 380px; } }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <img src="assets/TRPALogo_WHITE.png" alt="Tahoe Regional Planning Agency" />
+    <div>
+      <div class="subtitle">Tahoe Regional Planning Agency</div>
+      <h1>Demographic Data Explorer</h1>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="intro">This page reads the TRPA demographic services live. It shows which US Census Bureau variables are published for the Lake Tahoe Basin, which years and geographies they cover, what each variable means, and where the data needs review. It reads data only and never changes it.</p>
+    <calcite-notice open icon="information" scale="s" id="source-notice">
+      <span slot="message">Sources: TRPA ArcGIS Server, <a href="https://maps.trpa.org/server/rest/services/Demographics/MapServer" target="_blank" rel="noopener noreferrer">Demographics</a> and <a href="https://maps.trpa.org/server/rest/services/LTinfo_Climate_Resilience_Dashboard/MapServer" target="_blank" rel="noopener noreferrer">Climate Resilience Dashboard</a> services. Variable definitions: <a href="https://www.census.gov/data/developers/data-sets.html" target="_blank" rel="noopener noreferrer">US Census Bureau API</a>.</span>
+    </calcite-notice>
+
+    <calcite-tabs>
+      <calcite-tab-nav slot="title-group" id="tab-nav">
+        <calcite-tab-title tab="overview" selected>Overview</calcite-tab-title>
+        <calcite-tab-title tab="variables">Variables</calcite-tab-title>
+        <calcite-tab-title tab="coverage">Coverage</calcite-tab-title>
+        <calcite-tab-title tab="quality">Data quality</calcite-tab-title>
+        <calcite-tab-title tab="geography">Geography</calcite-tab-title>
+        <calcite-tab-title tab="glossary">Glossary</calcite-tab-title>
+      </calcite-tab-nav>
+
+      <!-- OVERVIEW -->
+      <calcite-tab tab="overview" selected>
+        <div class="kpi-row" id="kpis">
+          <div class="kpi-card"><div class="kpi-value" id="kpi-raw">-</div><div class="kpi-label">Records in Census Data (tract and block group)</div></div>
+          <div class="kpi-card"><div class="kpi-value" id="kpi-vars">-</div><div class="kpi-label">Distinct variable codes in Census Data</div></div>
+          <div class="kpi-card"><div class="kpi-value" id="kpi-years">-</div><div class="kpi-label">Data years in Census Data</div></div>
+          <div class="kpi-card"><div class="kpi-value" id="kpi-climate">-</div><div class="kpi-label">Summary records used by the Climate Resilience Dashboard</div></div>
+          <div class="kpi-card"><div class="kpi-value" id="kpi-summaries">-</div><div class="kpi-label">Records in Demographic Summaries</div></div>
+        </div>
+        <h2>What each source holds</h2>
+        <div class="grid-3" id="source-cards"></div>
+        <h2>How data gets here</h2>
+        <ol class="steps">
+          <li><b>Choose variables.</b> Staff list Census variables in config/variables.csv in the Demographics repository.</li>
+          <li><b>Download.</b> The toolkit asks the Census API for each county and keeps only tracts and block groups inside the basin.</li>
+          <li><b>Group.</b> Detailed variables are added into TRPA categories, such as Age_Under_18 or BIPOC.</li>
+          <li><b>Summarize.</b> Values are added up to the Basin, each county's basin portion, North Lake and South Lake, and each state.</li>
+          <li><b>Check.</b> QAQC reports flag duplicates, gaps, and double counting before anything is published.</li>
+          <li><b>Publish.</b> A staff member reviews the files and loads them into the services this page reads.</li>
+        </ol>
+      </calcite-tab>
+
+      <!-- VARIABLES -->
+      <calcite-tab tab="variables">
+        <div class="controls">
+          <calcite-select id="var-source" label-text="Data source"></calcite-select>
+          <calcite-input id="var-search" class="grow" label-text="Search code, name, or category" placeholder="For example B25004, vacant, or Age" clearable icon="search"></calcite-input>
+          <calcite-select id="var-category" label-text="Category"><calcite-option value="">All categories</calcite-option></calcite-select>
+          <calcite-button id="var-export" icon-start="download" appearance="outline" scale="m">CSV</calcite-button>
+        </div>
+        <p class="muted" id="var-count">Loading variables...</p>
+        <div class="grid-box"><div id="variable-grid"></div></div>
+
+        <section class="card detail" id="detail" aria-live="polite">
+          <h2 id="detail-title">Variable</h2>
+          <div class="chips" id="detail-chips"></div>
+          <div id="detail-definition"></div>
+          <div class="controls" id="detail-controls"></div>
+          <h3 id="detail-chart-title">Values by year</h3>
+          <div id="detail-chart" class="chart" role="img" aria-label="Chart of values by year"></div>
+          <p class="muted" id="detail-chart-note"></p>
+          <h3>Values present</h3>
+          <div class="grid-box"><div id="detail-grid" style="width:100%"></div></div>
+        </section>
+      </calcite-tab>
+
+      <!-- COVERAGE -->
+      <calcite-tab tab="coverage">
+        <div class="controls">
+          <calcite-select id="cov-source" label-text="Data source"></calcite-select>
+          <calcite-select id="cov-category" label-text="Show variables inside a category"><calcite-option value="">All categories (one row per category)</calcite-option></calcite-select>
+        </div>
+        <div class="card">
+          <h2>Records by year</h2>
+          <p class="muted">Each cell is the number of records for that row and year. Blank cells mean no data for that year.</p>
+          <div id="cov-chart" class="chart" role="img" aria-label="Heat map of record counts by year"></div>
+        </div>
+      </calcite-tab>
+
+      <!-- DATA QUALITY -->
+      <calcite-tab tab="quality">
+        <div class="controls">
+          <calcite-select id="qa-year" label-text="Year for the duplicate check"><calcite-option value="">All years (slower)</calcite-option></calcite-select>
+          <calcite-button id="qa-run" icon-start="check-circle">Run checks</calcite-button>
+        </div>
+        <p class="muted">Checks run against the published services. A result marked review is worth a look. A result marked fail means published numbers are wrong or would double count.</p>
+        <div id="qa-results"></div>
+      </calcite-tab>
+
+      <!-- GEOGRAPHY -->
+      <calcite-tab tab="geography">
+        <div class="controls">
+          <calcite-select id="geo-year" label-text="Census boundary year"></calcite-select>
+          <calcite-select id="geo-level" label-text="Geography level"></calcite-select>
+        </div>
+        <div class="card">
+          <h2>Basin geographies</h2>
+          <p class="muted">These are the tracts, block groups, and blocks inside the Tahoe Basin. A download keeps only Census records whose TRPAID appears here. Select a shape to see its TRPAID and neighborhood.</p>
+          <div id="map-view" role="region" aria-label="Map of basin Census geographies"></div>
+        </div>
+        <div class="card">
+          <h2>Geography counts</h2>
+          <div class="grid-box"><div id="geo-grid" style="width:100%"></div></div>
+        </div>
+      </calcite-tab>
+
+      <!-- GLOSSARY -->
+      <calcite-tab tab="glossary">
+        <div class="card">
+          <h2>Terms used on this page</h2>
+          <dl class="glossary">
+            <dt>American Community Survey (ACS) 5-year estimates</dt>
+            <dd>A Census Bureau survey that pools five years of responses. The 2023 estimate covers 2019 through 2023. Each estimate comes with a margin of error.</dd>
+            <dt>Decennial Census</dt>
+            <dd>The full count taken every 10 years (2000, 2010, 2020). It has no margin of error. Datasets include dec/sf1 and dec/sf3 (2000 and 2010) and dec/dhc (2020).</dd>
+            <dt>Margin of error (MOE)</dt>
+            <dd>The range around an ACS estimate that holds the true value 90 times out of 100. An estimate of 500 with a margin of error of 100 means 400 to 600.</dd>
+            <dt>Coefficient of variation (CV)</dt>
+            <dd>The margin of error divided by 1.645, divided by the estimate. Below 12 percent is reliable. Above 40 percent is unreliable.</dd>
+            <dt>Tract, block group, and block</dt>
+            <dd>Census geographies from largest to smallest. Tracts hold about 4,000 people. Block groups split tracts. Blocks are the smallest and appear only in the Decennial Census.</dd>
+            <dt>Census boundary year</dt>
+            <dd>Census redraws tracts and block groups every 10 years. ACS 2010 to 2019 uses 2010 boundaries. ACS 2020 and later uses 2020 boundaries.</dd>
+            <dt>TRPAID</dt>
+            <dd>The Census geography code plus the boundary year, stored as text. Tract 06017030201 on 2020 boundaries is TRPAID 060170302012020. It links every record to its shape.</dd>
+            <dt>Grouped variable</dt>
+            <dd>A TRPA category built by adding detailed Census variables. Its code starts with the grouping set name, such as "TRPA Grouped: B01001_003E, B01001_004E".</dd>
+            <dt>Summary geographies</dt>
+            <dd>Basin is the whole Lake Tahoe Basin. County rows cover only the basin part of each county. North Lake is Placer and Washoe. South Lake is El Dorado and Douglas. California and Nevada rows cover each state's part of the basin.</dd>
+            <dt>Medians</dt>
+            <dd>A median cannot be added across tracts. TRPA calculates basin medians from count bins, such as households by income range, instead.</dd>
+          </dl>
+        </div>
+      </calcite-tab>
+    </calcite-tabs>
+  </main>
+  <footer id="footer">Data read live from TRPA ArcGIS Server. Page opened <span id="opened"></span>.</footer>
+
+  <script>
+  // ───────────────────────── Configuration ─────────────────────────
+  const SERVER = 'https://maps.trpa.org/server/rest/services';
+  const CENSUS_API = 'https://api.census.gov/data';
+  const CONFIG_DIR = '../config';  // read when the page is served from the repository (GitHub Pages)
+  const GEOMETRY_URL = `${SERVER}/Demographics/MapServer/27`;
+  const SOURCES = {
+    census: {
+      label: 'Census Data (tract and block group)', url: `${SERVER}/Demographics/MapServer/28`,
+      f: { code: 'variable_code', name: 'variable_name', category: 'variable_category', dataset: 'dataset', level: 'sample_level', year: 'year_sample', value: 'value', geo: 'TRPAID', moe: 'MarginOfError' },
+      about: 'One record per tract or block group, variable, and year. Includes ACS estimates with margins of error, Decennial counts, and TRPA grouped categories.'
+    },
+    climate: {
+      label: 'Climate Resilience Dashboard Census Data (summaries)', url: `${SERVER}/LTinfo_Climate_Resilience_Dashboard/MapServer/135`,
+      f: { code: 'variable_code', name: 'variable_name', category: 'Category', dataset: 'dataset', level: 'sample_level', year: 'year_sample', value: 'value', geo: 'Geography' },
+      about: 'Values added up to the Basin, counties, North Lake and South Lake, and states. The Climate Resilience Dashboard charts read this table.'
+    },
+    summaries: {
+      label: 'Demographic Summaries', url: `${SERVER}/Demographics/MapServer/18`,
+      f: { code: 'Code', name: null, category: 'Category', dataset: 'Source', level: null, year: 'Year', value: 'Value', geo: 'Geography' },
+      about: 'An older summary table with Basin, county, shore, and state values, plus historic Decennial totals back to 1980.'
+    }
+  };
+  const KNOWN_DATASETS = ['acs/acs5', 'acs/acs5/subject', 'acs/acs5/profile', 'dec/sf1', 'dec/sf2', 'dec/sf3', 'dec/dhc', 'dec/dp', 'dec/pl', 'cbp'];
+  const EXPECTED_GEOGRAPHIES = ['Basin', 'North Lake', 'South Lake', 'California', 'Nevada', 'El Dorado County (Tahoe Basin)', 'Placer County (Tahoe Basin)', 'Douglas County (Tahoe Basin)', 'Washoe County (Tahoe Basin)'];
+  const NON_ADDITIVE = /\b(median|mean|average|percent|rate|ratio|per capita)\b/i;
+  const BRAND_COLORS = ['#0072CE', '#003B71', '#E87722', '#4A6118', '#9C3E27', '#B5A64C', '#7B6A8A', '#B4CBE8'];
+  const LAYOUT = {
+    font: { family: 'Open Sans, system-ui, sans-serif', color: '#003B71', size: 13 },
+    paper_bgcolor: 'transparent', plot_bgcolor: 'transparent', margin: { t: 20, r: 20, b: 50, l: 70 },
+    xaxis: { gridcolor: '#e8e8e8', linecolor: '#DDDDDD' }, yaxis: { gridcolor: '#e8e8e8', linecolor: '#DDDDDD' },
+    colorway: BRAND_COLORS, hovermode: 'x unified', legend: { orientation: 'h', y: -0.2 }
+  };
+  const PLOT_CONFIG = { responsive: true, displayModeBar: false };
+  const GRID_THEME = agGrid.themeQuartz.withParams({ fontFamily: 'Open Sans, system-ui, sans-serif', headerBackgroundColor: '#E8F1F8', foregroundColor: '#003B71', accentColor: '#0072CE' });
+  const fmt = v => (v === null || v === undefined || Number.isNaN(v)) ? '' : Number(v).toLocaleString(undefined, { maximumFractionDigits: 2 });
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const sqlText = s => `'${String(s).replace(/'/g, "''")}'`;
+
+  // ───────────────────────── Data access (read only) ─────────────────────────
+  async function getJSON(url, params) {
+    const resp = await fetch(params ? `${url}?${new URLSearchParams(params)}` : url);
+    if (!resp.ok) throw new Error(`${resp.status} from ${url}`);
+    const json = await resp.json();
+    if (json.error) throw new Error(json.error.message || JSON.stringify(json.error));
+    return json;
+  }
+
+  // Server-side group-by summary. Pages through results 2,000 groups at a time.
+  async function stats(url, groupBy, statistics, where = '1=1', having = null) {
+    const out = [];
+    let offset = 0;
+    while (true) {
+      const params = {
+        where, f: 'json', groupByFieldsForStatistics: groupBy.join(','), orderByFields: groupBy.join(','),
+        outStatistics: JSON.stringify(statistics.map(([t, field, name]) => ({ statisticType: t, onStatisticField: field, outStatisticFieldName: name }))),
+        resultOffset: offset, resultRecordCount: 2000
+      };
+      if (having) params.having = having;
+      const json = await getJSON(`${url}/query`, params);
+      const rows = (json.features || []).map(f => lowerKeys(f.attributes, groupBy, statistics));
+      out.push(...rows);
+      if (rows.length < 2000) break;
+      offset += rows.length;
+    }
+    return out;
+  }
+  // ArcGIS sometimes changes the case of output field names; map them back to what was asked for.
+  function lowerKeys(attrs, groupBy, statistics) {
+    const wanted = [...groupBy, ...statistics.map(s => s[2])];
+    const byLower = Object.fromEntries(Object.entries(attrs).map(([k, v]) => [k.toLowerCase(), v]));
+    return Object.fromEntries(wanted.map(k => [k, byLower[k.toLowerCase()]]));
+  }
+  async function query(url, where, outFields, extra = {}) {
+    const out = [];
+    let offset = 0;
+    while (true) {
+      const json = await getJSON(`${url}/query`, { where, outFields, returnGeometry: false, f: 'json', resultOffset: offset, resultRecordCount: 2000, ...extra });
+      const rows = (json.features || []).map(f => f.attributes);
+      out.push(...rows);
+      if (rows.length < 2000) break;
+      offset += rows.length;
+    }
+    return out;
+  }
+  async function count(url, where = '1=1') {
+    return (await getJSON(`${url}/query`, { where, returnCountOnly: true, f: 'json' })).count;
+  }
+
+  // Inventory: one row per variable, category, dataset, and level, with years and record counts.
+  const inventoryCache = {};
+  function inventory(key) {
+    if (!inventoryCache[key]) {
+      const s = SOURCES[key];
+      const groupBy = ['code', 'name', 'category', 'dataset', 'level'].map(k => s.f[k]).filter(Boolean);
+      inventoryCache[key] = stats(s.url, groupBy, [['count', 'OBJECTID', 'records'], ['min', s.f.year, 'first_year'], ['max', s.f.year, 'last_year'], ['min', s.f.value, 'min_value'], ['max', s.f.value, 'max_value']])
+        .then(rows => rows.map(r => ({
+          code: r[s.f.code], name: s.f.name ? r[s.f.name] : '', category: r[s.f.category], dataset: r[s.f.dataset],
+          level: s.f.level ? r[s.f.level] : '', records: r.records, first_year: r.first_year, last_year: r.last_year,
+          min_value: r.min_value, max_value: r.max_value
+        })));
+    }
+    return inventoryCache[key];
+  }
+
+  // Files from the config folder, read when the page is served from the repository (GitHub Pages).
+  const configCache = {};
+  function configCSV(name) {
+    if (!configCache[name]) {
+      configCache[name] = fetch(`${CONFIG_DIR}/${name}`).then(r => r.ok ? r.text() : '').then(parseCSV).catch(() => []);
+    }
+    return configCache[name];
+  }
+  // config/variables.csv: TRPA names, aggregation rules, and notes on known problems.
+  const registry = () => configCSV('variables.csv');
+  function parseCSV(text) {
+    if (!text) return [];
+    const rows = []; let row = [], field = '', quoted = false;
+    for (let i = 0; i < text.length; i++) {
+      const c = text[i];
+      if (quoted) {
+        if (c === '"' && text[i + 1] === '"') { field += '"'; i++; }
+        else if (c === '"') quoted = false;
+        else field += c;
+      } else if (c === '"') quoted = true;
+      else if (c === ',') { row.push(field); field = ''; }
+      else if (c === '\n' || c === '\r') {
+        if (c === '\r' && text[i + 1] === '\n') i++;
+        row.push(field); field = ''; if (row.some(v => v !== '')) rows.push(row); row = [];
+      } else field += c;
+    }
+    if (field || row.length) { row.push(field); rows.push(row); }
+    const [head, ...body] = rows;
+    return body.map(r => Object.fromEntries(head.map((h, i) => [h, r[i] ?? ''])));
+  }
+
+  // Census Bureau definition of a variable. Grouped and non-Census codes return null.
+  const definitionCache = {};
+  async function censusDefinition(code, year, dataset) {
+    if (!/^[A-Z]{1,3}\d+[A-Z]?_\d+[A-Z]*$/.test(code) || !KNOWN_DATASETS.includes(dataset)) return null;
+    const key = `${year}|${dataset}|${code}`;
+    if (!(key in definitionCache)) {
+      definitionCache[key] = getJSON(`${CENSUS_API}/${year}/${dataset}/variables/${code}.json`).catch(() => null);
+    }
+    return definitionCache[key];
+  }
+  const plainLabel = label => String(label || '').replace(/^Estimate!!/, '').replace(/!!/g, ' > ').replace(/:/g, '');
+
+  // ───────────────────────── Shared UI helpers ─────────────────────────
+  function fillSelect(el, options, keepFirst = false) {
+    const first = keepFirst ? el.querySelector('calcite-option') : null;
+    el.innerHTML = '';
+    if (first) el.appendChild(first);
+    for (const [value, label] of options) {
+      const opt = document.createElement('calcite-option');
+      opt.value = value; opt.textContent = label;
+      el.appendChild(opt);
+    }
+  }
+  const onSelect = (el, fn) => el.addEventListener('calciteSelectChange', () => fn(el.value));
+  function makeGrid(el, columnDefs, rowData, options = {}) {
+    return agGrid.createGrid(el, {
+      theme: GRID_THEME, columnDefs, rowData,
+      defaultColDef: { sortable: true, filter: true, resizable: true, minWidth: 90 },
+      pagination: options.pagination ?? true, paginationPageSize: 25, paginationPageSizeSelector: [25, 50, 100],
+      domLayout: options.domLayout ?? 'autoHeight', ...options.extra
+    });
+  }
+  const numCol = (field, headerName, width = 120) => ({ field, headerName, width, type: 'numericColumn', valueFormatter: p => fmt(p.value), filter: 'agNumberColumnFilter' });
+  function showError(container, err) {
+    container.innerHTML = `<calcite-notice open kind="danger" icon="exclamation-mark-triangle" scale="s"><span slot="message">Could not load data: ${esc(err.message)}. The service may be down or blocked on this network.</span></calcite-notice>`;
+  }
+  function resetChart(id) {
+    const el = document.getElementById(id);
+    Plotly.purge(el);
+    el.innerHTML = '';
+  }
+  function loader(container, text) {
+    container.innerHTML = `<calcite-loader label="${esc(text)}" text="${esc(text)}" scale="s"></calcite-loader>`;
+  }
+  const sourceOptions = Object.entries(SOURCES).map(([k, s]) => [k, s.label]);
+
+  // ───────────────────────── Overview ─────────────────────────
+  async function loadOverview() {
+    const cards = document.getElementById('source-cards');
+    cards.innerHTML = Object.entries(SOURCES).map(([k, s]) => `
+      <div class="card"><h3>${esc(s.label)}</h3><p>${esc(s.about)}</p>
+      <p class="muted" id="about-${k}">Loading...</p>
+      <a href="${s.url}" target="_blank" rel="noopener noreferrer">Open the service page</a></div>`).join('');
+    const set = (id, v) => document.getElementById(id).textContent = v;
+    try {
+      const [raw, climate, summaries, inv] = await Promise.all([
+        count(SOURCES.census.url), count(SOURCES.climate.url), count(SOURCES.summaries.url), inventory('census')]);
+      set('kpi-raw', fmt(raw)); set('kpi-climate', fmt(climate)); set('kpi-summaries', fmt(summaries));
+      set('kpi-vars', fmt(new Set(inv.map(r => r.code)).size));
+      const first = Math.min(...inv.map(r => r.first_year)), last = Math.max(...inv.map(r => r.last_year));
+      set('kpi-years', `${first} to ${last}`);
+    } catch (err) { showError(document.getElementById('kpis'), err); }
+    for (const k of Object.keys(SOURCES)) {
+      inventory(k).then(inv => {
+        const cats = new Set(inv.map(r => r.category)).size;
+        const years = [Math.min(...inv.map(r => r.first_year)), Math.max(...inv.map(r => r.last_year))];
+        document.getElementById(`about-${k}`).textContent = `${fmt(new Set(inv.map(r => r.code)).size)} variable codes in ${fmt(cats)} categories, ${years[0]} to ${years[1]}.`;
+      }).catch(err => document.getElementById(`about-${k}`).textContent = `Could not load: ${err.message}`);
+    }
+  }
+
+  // ───────────────────────── Variables ─────────────────────────
+  let varGrid = null, detailGrid = null, currentSource = 'census';
+  async function loadVariables(sourceKey) {
+    currentSource = sourceKey;
+    const countEl = document.getElementById('var-count');
+    countEl.textContent = 'Loading variables...';
+    document.getElementById('detail').classList.remove('open');
+    try {
+      const [inv, reg] = await Promise.all([inventory(sourceKey), registry()]);
+      const notes = Object.fromEntries(reg.map(r => [`${r.variable_code}|${r.dataset}`, r]));
+      const rows = inv.map(r => ({ ...r, trpa_note: notes[`${r.code}|${r.dataset}`]?.notes || '' }));
+      fillSelect(document.getElementById('var-category'), [...new Set(rows.map(r => r.category))].sort().map(c => [c, c]), true);
+      const cols = [
+        { field: 'code', headerName: 'Variable code', width: 190, pinned: 'left' },
+        { field: 'name', headerName: 'Name', flex: 2, minWidth: 220, hide: !SOURCES[sourceKey].f.name },
+        { field: 'category', headerName: 'Category', flex: 1, minWidth: 180 },
+        { field: 'dataset', headerName: 'Dataset', width: 170 },
+        { field: 'level', headerName: 'Level', width: 120, hide: !SOURCES[sourceKey].f.level },
+        { field: 'first_year', headerName: 'First year', width: 110, type: 'numericColumn' },
+        { field: 'last_year', headerName: 'Last year', width: 110, type: 'numericColumn' },
+        numCol('records', 'Records', 110), numCol('min_value', 'Lowest value'), numCol('max_value', 'Highest value'),
+        { field: 'trpa_note', headerName: 'TRPA note', flex: 1, minWidth: 200, tooltipField: 'trpa_note' }
+      ];
+      if (varGrid) varGrid.destroy();
+      // Grid used for scanning and picking a variable, so it scrolls instead of paging.
+      varGrid = makeGrid(document.getElementById('variable-grid'), cols, rows, {
+        pagination: false, domLayout: 'normal',
+        extra: { rowSelection: { mode: 'singleRow', checkboxes: false, enableClickSelection: true }, onRowClicked: e => showDetail(e.data), onFilterChanged: updateCount, quickFilterText: document.getElementById('var-search').value || '' }
+      });
+      updateCount();
+    } catch (err) { showError(countEl, err); }
+  }
+  function updateCount() {
+    if (!varGrid) return;
+    const total = varGrid.getGridOption('rowData').length;
+    document.getElementById('var-count').textContent = `${fmt(varGrid.getDisplayedRowCount())} of ${fmt(total)} rows. Select a row to see its definition and values.`;
+  }
+
+  async function showDetail(row) {
+    const s = SOURCES[currentSource];
+    const panel = document.getElementById('detail');
+    panel.classList.add('open');
+    document.getElementById('detail-title').textContent = row.name ? `${row.code}: ${row.name}` : row.code;
+    document.getElementById('detail-chips').innerHTML = [row.category, row.dataset, row.level, `${row.first_year} to ${row.last_year}`, `${fmt(row.records)} records`]
+      .filter(Boolean).map(t => `<calcite-chip scale="s" label="${esc(t)}">${esc(t)}</calcite-chip>`).join('');
+    renderDefinition(row);
+    const chartEl = document.getElementById('detail-chart');
+    loader(chartEl, 'Loading values');
+    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    try {
+      if (currentSource === 'census') await detailCensus(row, s);
+      else await detailSummary(row, s);
+    } catch (err) { showError(chartEl, err); }
+  }
+
+  async function renderDefinition(row) {
+    const box = document.getElementById('detail-definition');
+    const reg = (await registry()).find(r => r.variable_code === row.code && r.dataset === row.dataset);
+    const parts = [];
+    if (reg?.notes) parts.push(`<div class="definition warn"><b>TRPA note:</b> ${esc(reg.notes)}</div>`);
+    if (String(row.code).includes(':')) {
+      const [set, members] = String(row.code).split(/:\s(.+)/);
+      parts.push(`<div class="definition"><b>TRPA grouped value.</b> The "${esc(set)}" grouping set adds these Census variables: ${esc(members || '')}. See config/groupings.csv.</div>`);
+    } else {
+      parts.push('<div class="definition" id="census-def">Looking up the Census Bureau definition...</div>');
+    }
+    box.innerHTML = parts.join('');
+    const defBox = document.getElementById('census-def');
+    if (!defBox) return;
+    const def = await censusDefinition(row.code, row.last_year, row.dataset);
+    const table = String(row.code).split('_')[0];
+    const link = `<a href="https://data.census.gov/table?q=${encodeURIComponent(table)}" target="_blank" rel="noopener noreferrer">Open table ${esc(table)} on data.census.gov</a>`;
+    defBox.innerHTML = def
+      ? `<b>Census definition (${esc(row.last_year)} ${esc(row.dataset)}):</b> ${esc(plainLabel(def.label))}<br/><span class="muted">Table concept: ${esc(def.concept || '')}</span><br/>${link}`
+      : `No Census Bureau definition was found for this code and year. ${link}`;
+    if (def && row.name && NON_ADDITIVE.test(row.name) !== NON_ADDITIVE.test(def.label + ' ' + (def.concept || ''))) {
+      defBox.classList.add('warn');
+      defBox.insertAdjacentHTML('beforeend', '<br/><b>Check this label:</b> the TRPA name and the Census definition disagree about whether this is a median, average, or percentage.');
+    }
+  }
+
+  async function detailCensus(row, s) {
+    const additive = !NON_ADDITIVE.test(`${row.name} ${row.category}`);
+    let where = `${s.f.code} = ${sqlText(row.code)} AND ${s.f.dataset} = ${sqlText(row.dataset)}`;
+    if (row.level) where += ` AND ${s.f.level} = ${sqlText(row.level)}`;
+    const byYear = await stats(s.url, [s.f.year, 'county'], [['count', 'OBJECTID', 'records'], ['sum', s.f.value, 'total'], ['min', s.f.value, 'low'], ['max', s.f.value, 'high']], where);
+    const blanks = await stats(s.url, [s.f.year], [['count', 'OBJECTID', 'blank']], `${where} AND ${s.f.value} IS NULL`).catch(() => []);
+    const blankBy = Object.fromEntries(blanks.map(b => [b[s.f.year], b.blank]));
+    const countyNames = { '017': 'El Dorado', '061': 'Placer', '005': 'Douglas', '031': 'Washoe' };
+    const years = [...new Set(byYear.map(r => r[s.f.year]))].sort();
+    const traces = Object.keys(countyNames).map(c => ({
+      name: `${countyNames[c]} County (basin part)`, type: additive ? 'bar' : 'scatter', mode: 'lines+markers',
+      x: years.map(String), y: years.map(y => byYear.find(r => r[s.f.year] === y && r.county === c)?.[additive ? 'total' : 'high'] ?? null)
+    }));
+    resetChart('detail-chart');
+    Plotly.newPlot('detail-chart', traces, { ...LAYOUT, barmode: 'stack', xaxis: { ...LAYOUT.xaxis, type: 'category' }, yaxis: { ...LAYOUT.yaxis, title: additive ? 'Sum of values' : 'Highest value' } }, PLOT_CONFIG);
+    document.getElementById('detail-chart-title').textContent = additive ? 'Basin total by year, stacked by county' : 'Highest tract or block group value by year';
+    document.getElementById('detail-chart-note').textContent = additive
+      ? `Sum of ${row.level || ''} values. Margins of error are not shown here. Source: ${s.label}.`
+      : 'This variable is a median, average, or percentage. Its values cannot be added, so the chart shows the highest value instead of a total.';
+    const tableRows = years.map(y => {
+      const rs = byYear.filter(r => r[s.f.year] === y);
+      return { year: y, records: rs.reduce((a, r) => a + r.records, 0), blank: blankBy[y] || 0,
+        low: Math.min(...rs.map(r => r.low ?? Infinity)), high: Math.max(...rs.map(r => r.high ?? -Infinity)),
+        total: additive ? rs.reduce((a, r) => a + (r.total || 0), 0) : null };
+    });
+    if (detailGrid) detailGrid.destroy();
+    detailGrid = makeGrid(document.getElementById('detail-grid'), [
+      { field: 'year', headerName: 'Year', width: 100 }, numCol('records', 'Records'), numCol('blank', 'Blank values'),
+      numCol('low', 'Lowest value'), numCol('high', 'Highest value'), { ...numCol('total', 'Basin total', 150), hide: !additive }
+    ], tableRows);
+  }
+
+  async function detailSummary(row, s) {
+    let where = `${s.f.code} = ${sqlText(row.code)} AND ${s.f.category} = ${sqlText(row.category)}`;
+    if (row.dataset) where += ` AND ${s.f.dataset} = ${sqlText(row.dataset)}`;
+    if (row.level) where += ` AND ${s.f.level} = ${sqlText(row.level)}`;
+    const fields = [s.f.geo, s.f.year, s.f.value].join(',');
+    const data = await query(s.url, where, fields, { orderByFields: s.f.year });
+    const geos = [...new Set(data.map(d => d[s.f.geo]))].sort((a, b) => (a === 'Basin' ? -1 : b === 'Basin' ? 1 : a.localeCompare(b)));
+    const traces = geos.map(g => {
+      const pts = data.filter(d => d[s.f.geo] === g).sort((a, b) => a[s.f.year] - b[s.f.year]);
+      return { name: g, type: 'scatter', mode: 'lines+markers', x: pts.map(p => String(p[s.f.year])), y: pts.map(p => p[s.f.value]), visible: g === 'Basin' || geos.length < 4 ? true : 'legendonly' };
+    });
+    resetChart('detail-chart');
+    Plotly.newPlot('detail-chart', traces, { ...LAYOUT, xaxis: { ...LAYOUT.xaxis, type: 'category', categoryorder: 'category ascending' }, yaxis: { ...LAYOUT.yaxis, title: row.name || row.category } }, PLOT_CONFIG);
+    document.getElementById('detail-chart-title').textContent = 'Values by year and geography';
+    document.getElementById('detail-chart-note').textContent = `Select names in the legend to show or hide geographies. Source: ${s.label}.`;
+    if (detailGrid) detailGrid.destroy();
+    const yearsAll = [...new Set(data.map(d => d[s.f.year]))].sort();
+    const wide = geos.map(g => Object.fromEntries([['geography', g], ...yearsAll.map(y => [String(y), data.find(d => d[s.f.geo] === g && d[s.f.year] === y)?.[s.f.value] ?? null])]));
+    detailGrid = makeGrid(document.getElementById('detail-grid'), [
+      { field: 'geography', headerName: 'Geography', pinned: 'left', width: 260 }, ...yearsAll.map(y => numCol(String(y), String(y), 110))
+    ], wide);
+  }
+
+  // ───────────────────────── Coverage ─────────────────────────
+  async function loadCoverage() {
+    const key = document.getElementById('cov-source').value || 'census';
+    const category = document.getElementById('cov-category').value;
+    const s = SOURCES[key];
+    const el = document.getElementById('cov-chart');
+    loader(el, 'Loading coverage');
+    try {
+      const rowField = category ? s.f.code : s.f.category;
+      const where = category ? `${s.f.category} = ${sqlText(category)}` : '1=1';
+      const data = await stats(s.url, [rowField, s.f.year], [['count', 'OBJECTID', 'records']], where);
+      const rows = [...new Set(data.map(d => d[rowField]))].sort().reverse();
+      const years = [...new Set(data.map(d => d[s.f.year]))].sort((a, b) => a - b);
+      const z = rows.map(r => years.map(y => data.find(d => d[rowField] === r && d[s.f.year] === y)?.records ?? null));
+      resetChart('cov-chart');
+      Plotly.newPlot(el, [{
+        type: 'heatmap', x: years.map(String), y: rows, z, hoverongaps: false, xgap: 2, ygap: 2,
+        colorscale: [[0, '#E8F1F8'], [0.5, '#0072CE'], [1, '#003B71']], colorbar: { title: 'Records' },
+        hovertemplate: '%{y}<br>%{x}: %{z:,} records<extra></extra>'
+      }], { ...LAYOUT, hovermode: 'closest', height: Math.max(360, 26 * rows.length + 120), margin: { t: 20, r: 20, b: 50, l: Math.min(420, 8 + 7 * Math.max(...rows.map(r => String(r).length))) }, xaxis: { type: 'category', side: 'top' }, yaxis: { automargin: true } }, PLOT_CONFIG);
+    } catch (err) { showError(el, err); }
+  }
+  async function fillCoverageCategories() {
+    const key = document.getElementById('cov-source').value || 'census';
+    const inv = await inventory(key);
+    fillSelect(document.getElementById('cov-category'), [...new Set(inv.map(r => r.category))].sort().map(c => [c, c]), true);
+  }
+
+  // ───────────────────────── Data quality ─────────────────────────
+  // Each check returns { status: pass | review | fail, rows, columns, message }.
+  const CHECKS = [
+    {
+      id: 'duplicates', title: 'Duplicate records in Census Data', severity: 'fail',
+      description: 'The same geography, variable, year, level, and dataset appears more than once. Duplicates double count in any total.',
+      run: async () => {
+        const year = document.getElementById('qa-year').value;
+        const s = SOURCES.census, k = s.f;
+        const rows = await stats(s.url, [k.geo, k.code, k.year, k.level, k.dataset], [['count', 'OBJECTID', 'copies']], year ? `${k.year} = ${Number(year)}` : '1=1', 'COUNT(OBJECTID) > 1');
+        return { rows, columns: [k.geo, k.code, k.year, k.level, k.dataset, 'copies'] };
+      }
+    },
+    {
+      id: 'flagged', title: 'Records flagged for deletion', severity: 'review',
+      description: 'Records with delete_flag = 1 were marked by an earlier duplicate review and are still published.',
+      run: async () => {
+        const s = SOURCES.census;
+        const rows = await stats(s.url, [s.f.year, s.f.code], [['count', 'OBJECTID', 'records']], 'delete_flag = 1');
+        return { rows, columns: [s.f.year, s.f.code, 'records'] };
+      }
+    },
+    {
+      id: 'negative', title: 'Negative values', severity: 'fail',
+      description: 'Values such as -666666666 are Census annotation codes that mean "not available". Stored as numbers, they wreck any sum.',
+      run: async () => {
+        const s = SOURCES.census, k = s.f;
+        const rows = await stats(s.url, [k.code, k.name, k.year, k.level], [['count', 'OBJECTID', 'records'], ['min', k.value, 'lowest']], `${k.value} < 0`);
+        return { rows, columns: [k.code, k.name, k.year, k.level, 'records', 'lowest'] };
+      }
+    },
+    {
+      id: 'blank', title: 'Blank values', severity: 'review',
+      description: 'Blank values usually mean the Census Bureau does not publish the variable at that level, such as some tables at block group.',
+      run: async () => {
+        const s = SOURCES.census, k = s.f;
+        const rows = await stats(s.url, [k.code, k.name, k.year, k.level], [['count', 'OBJECTID', 'records']], `${k.value} IS NULL`);
+        return { rows, columns: [k.code, k.name, k.year, k.level, 'records'] };
+      }
+    },
+    {
+      id: 'labels', title: 'One code, several names or categories', severity: 'review',
+      description: 'A variable code should keep one name and one category in every year. Different labels split one variable into several rows in charts and filters.',
+      run: async () => {
+        const inv = await inventory('census');
+        const by = {};
+        inv.forEach(r => { (by[r.code] ||= { names: new Set(), cats: new Set() }); by[r.code].names.add(r.name); by[r.code].cats.add(r.category); });
+        const rows = Object.entries(by).filter(([, v]) => v.names.size > 1 || v.cats.size > 1)
+          .map(([code, v]) => ({ variable_code: code, names: [...v.names].join(' | '), categories: [...v.cats].join(' | ') }));
+        return { rows, columns: ['variable_code', 'names', 'categories'] };
+      }
+    },
+    {
+      id: 'spelling', title: 'Category names that differ only in capitalization or spacing', severity: 'review',
+      description: 'For example "Tenure By Age Of Householder" and "Tenure by Age of Householder". Filters treat these as different categories.',
+      run: async () => {
+        const rows = [];
+        for (const key of Object.keys(SOURCES)) {
+          const cats = [...new Set((await inventory(key)).map(r => r.category))];
+          const groups = {};
+          cats.forEach(c => (groups[String(c).toLowerCase().replace(/\s+/g, ' ').trim()] ||= []).push(c));
+          Object.values(groups).filter(g => g.length > 1).forEach(g => rows.push({ source: SOURCES[key].label, variants: g.join(' | ') }));
+        }
+        return { rows, columns: ['source', 'variants'] };
+      }
+    },
+    {
+      id: 'datasets', title: 'Dataset values that are not Census dataset names', severity: 'review',
+      description: 'The dataset field should name the Census dataset, such as acs/acs5. Older grouping runs added prefixes such as "TRPA 5-year Age Categories: acs/acs5", and one run left out the separator.',
+      run: async () => {
+        const rows = [];
+        for (const key of ['census', 'climate']) {
+          const inv = await inventory(key);
+          const by = {};
+          inv.filter(r => !KNOWN_DATASETS.includes(r.dataset)).forEach(r => { by[r.dataset] = (by[r.dataset] || 0) + r.records; });
+          Object.entries(by).forEach(([dataset, records]) => rows.push({ source: SOURCES[key].label, dataset, records }));
+        }
+        return { rows, columns: ['source', 'dataset', 'records'] };
+      }
+    },
+    {
+      id: 'known', title: 'Known errors that are still published', severity: 'fail',
+      description: 'Rules in config/corrections list wrong labels (such as counts named as medians), misspelled categories, and grouped rows that double count. This counts published records that still match a rule. The corrections command builds append files that fix them.',
+      run: async () => {
+        const [relabel, spelling, regroup] = await Promise.all(['relabel', 'spelling', 'regroup'].map(name => configCSV(`corrections/${name}.csv`)));
+        if (!relabel.length) return { rows: [], columns: [], message: 'config/corrections could not be read. Open this page from the repository site (GitHub Pages) to run this check.', status: 'error' };
+        const layers = { census_data: 'census', demographic_summaries: 'summaries', climate_dashboard_census_data: 'climate' };
+        const rows = [];
+        const countRule = async (layer, where, rule, reason) => {
+          const s = SOURCES[layers[layer]];
+          const n = await count(s.url, where);
+          if (n) rows.push({ source: s.label, rule, records: n, reason });
+        };
+        for (const r of relabel) {
+          const f = SOURCES[layers[r.layer]].f;
+          const parts = [];
+          if (r.variable_code) parts.push(`${f.code} = ${sqlText(r.variable_code)}`);
+          if (r.match_name && f.name) parts.push(`${f.name} = ${sqlText(r.match_name)}`);
+          if (r.match_category) parts.push(`${f.category} = ${sqlText(r.match_category)}`);
+          await countRule(r.layer, parts.join(' AND '), `${r.variable_code || r.match_name} labeled "${r.match_name || r.match_category}"`, r.reason);
+        }
+        for (const r of spelling) await countRule(r.layer, `${r.field} = ${sqlText(r.old_value)}`, `${r.field} "${r.old_value}"`, r.reason);
+        for (const r of regroup) {
+          const f = SOURCES[layers[r.layer]].f;
+          await countRule(r.layer, `${f.category} = ${sqlText(r.old_variable_category)}`, `grouped rows in "${r.old_variable_category}"`, r.reason);
+        }
+        return { rows, columns: ['source', 'rule', 'records', 'reason'] };
+      }
+    },
+    {
+      id: 'medians', title: 'Medians added across geographies in summaries', severity: 'fail',
+      description: 'A median cannot be added across tracts. This lists summary rows whose code is a published median (aggregation none in config/variables.csv).',
+      run: async () => {
+        const reg = await registry();
+        if (!reg.length) return { rows: [], columns: [], message: 'config/variables.csv could not be read. Open this page from the repository site (GitHub Pages) to run this check.', status: 'error' };
+        const flagged = Object.fromEntries(reg.filter(r => r.aggregation === 'none').map(r => [r.variable_code, r]));
+        const rows = [];
+        for (const key of ['climate', 'summaries']) {
+          (await inventory(key)).filter(r => flagged[r.code]).forEach(r => rows.push({
+            source: SOURCES[key].label, code: r.code, category: r.category, dataset: r.dataset, records: r.records, note: flagged[r.code].notes
+          }));
+        }
+        return { rows, columns: ['source', 'code', 'category', 'dataset', 'records', 'note'] };
+      }
+    },
+    {
+      id: 'geographies', title: 'Unexpected summary geography names', severity: 'review',
+      description: 'Current summaries use nine names: Basin, North Lake, South Lake, California, Nevada, and the basin part of each county. Other names are neighborhoods, older names, or comparison geographies.',
+      run: async () => {
+        const s = SOURCES.climate;
+        const rows = (await stats(s.url, [s.f.geo], [['count', 'OBJECTID', 'records']])).filter(r => !EXPECTED_GEOGRAPHIES.includes(r[s.f.geo]));
+        return { rows, columns: [s.f.geo, 'records'] };
+      }
+    },
+    {
+      id: 'truncated', title: 'Grouped codes cut at the field length limit', severity: 'review',
+      description: 'Grouped codes list every member variable. Long lists are cut at 255 characters, so the code no longer shows every member.',
+      run: async () => {
+        const rows = (await inventory('census')).filter(r => String(r.code).length >= 250).map(r => ({ code: r.code, length: String(r.code).length, category: r.category, records: r.records }));
+        return { rows, columns: ['code', 'length', 'category', 'records'] };
+      }
+    }
+  ];
+
+  function checkCard(check) {
+    return `<section class="card" id="qa-${check.id}">
+      <div class="check-head"><h3>${esc(check.title)}</h3><span class="status" id="qa-status-${check.id}">not run</span></div>
+      <p>${esc(check.description)}</p>
+      <div id="qa-body-${check.id}"></div></section>`;
+  }
+  async function runChecks() {
+    const container = document.getElementById('qa-results');
+    container.innerHTML = CHECKS.map(checkCard).join('');
+    for (const check of CHECKS) {
+      const statusEl = document.getElementById(`qa-status-${check.id}`);
+      const body = document.getElementById(`qa-body-${check.id}`);
+      loader(body, 'Running check');
+      try {
+        const result = await check.run();
+        const status = result.status || (result.rows.length ? check.severity : 'pass');
+        statusEl.textContent = status; statusEl.className = `status ${status}`;
+        if (result.message) { body.innerHTML = `<p class="muted">${esc(result.message)}</p>`; continue; }
+        if (!result.rows.length) { body.innerHTML = '<p class="muted">Nothing found.</p>'; continue; }
+        body.innerHTML = `<p><b>${fmt(result.rows.length)}</b> found. <calcite-button scale="s" appearance="outline" icon-start="download" id="qa-csv-${check.id}">CSV</calcite-button></p><div class="check-grid" id="qa-grid-${check.id}"></div>`;
+        const grid = makeGrid(document.getElementById(`qa-grid-${check.id}`), result.columns.map(c => (/year/i.test(c) ? { field: c, headerName: c, width: 120 } : typeof result.rows[0][c] === 'number' ? numCol(c, c, 130) : { field: c, headerName: c, flex: 1, minWidth: 140 })), result.rows);
+        document.getElementById(`qa-csv-${check.id}`).addEventListener('click', () => grid.exportDataAsCsv({ fileName: `qaqc_${check.id}.csv` }));
+      } catch (err) {
+        statusEl.textContent = 'error'; statusEl.className = 'status error';
+        showError(body, err);
+      }
+    }
+  }
+
+  // ───────────────────────── Geography ─────────────────────────
+  let mapState = null;
+  async function loadGeography() {
+    const gridEl = document.getElementById('geo-grid');
+    try {
+      const rows = await stats(GEOMETRY_URL, ['YEAR', 'GEOGRAPHY'], [['count', 'OBJECTID', 'shapes']]);
+      makeGrid(gridEl, [{ field: 'YEAR', headerName: 'Boundary year', width: 140 }, { field: 'GEOGRAPHY', headerName: 'Level', flex: 1 }, numCol('shapes', 'Shapes in the basin', 180)], rows, { pagination: false });
+      const years = [...new Set(rows.map(r => r.YEAR))].sort((a, b) => b - a);
+      const levels = [...new Set(rows.map(r => r.GEOGRAPHY))].sort();
+      fillSelect(document.getElementById('geo-year'), years.map(y => [String(y), String(y)]));
+      fillSelect(document.getElementById('geo-level'), levels.map(l => [l, l]));
+      const tract = levels.find(l => /tract/i.test(l));
+      if (tract) document.getElementById('geo-level').value = tract;
+    } catch (err) { showError(gridEl, err); }
+    loadMap();
+  }
+  function loadMap() {
+    if (mapState) return updateMap();
+    const css = document.createElement('link');
+    css.rel = 'stylesheet'; css.href = 'https://js.arcgis.com/4.31/esri/themes/light/main.css';
+    document.head.appendChild(css);
+    const script = document.createElement('script');
+    script.src = 'https://js.arcgis.com/4.31/';
+    script.onload = () => typeof require !== 'function' ? showError(document.getElementById('map-view'), new Error('the ArcGIS Maps SDK did not load')) : require(['esri/Map', 'esri/views/MapView', 'esri/layers/FeatureLayer', 'esri/widgets/Legend', 'esri/widgets/Home'], (Map, MapView, FeatureLayer, Legend, Home) => {
+      const layer = new FeatureLayer({
+        url: GEOMETRY_URL, outFields: ['TRPAID', 'NEIGHBORHOOD', 'YEAR', 'GEOGRAPHY'], title: 'Basin Census geographies',
+        renderer: { type: 'simple', symbol: { type: 'simple-fill', color: [0, 114, 206, 0.12], outline: { color: [0, 59, 113, 0.9], width: 0.8 } } },
+        popupTemplate: { title: 'TRPAID {TRPAID}', content: 'Neighborhood: {NEIGHBORHOOD}<br/>Boundary year: {YEAR}<br/>Level: {GEOGRAPHY}' }
+      });
+      const view = new MapView({ container: 'map-view', map: new Map({ basemap: 'gray-vector', layers: [layer] }), center: [-120.04, 39.09], zoom: 10 });
+      view.ui.add(new Home({ view }), 'top-left');
+      view.ui.add(new Legend({ view }), 'bottom-right');
+      mapState = { layer, view };
+      updateMap();
+    });
+    script.onerror = () => showError(document.getElementById('map-view'), new Error('the ArcGIS Maps SDK did not load'));
+    document.body.appendChild(script);
+  }
+  function updateMap() {
+    if (!mapState) return;
+    const year = document.getElementById('geo-year').value, level = document.getElementById('geo-level').value;
+    const parts = [];
+    if (year) parts.push(`YEAR = ${Number(year)}`);
+    if (level) parts.push(`GEOGRAPHY = ${sqlText(level)}`);
+    mapState.layer.definitionExpression = parts.join(' AND ') || '1=1';
+  }
+
+  // ───────────────────────── Wiring ─────────────────────────
+  const loaded = {};
+  function openTab(name) {
+    if (loaded[name]) return;
+    loaded[name] = true;
+    if (name === 'variables') loadVariables('census');
+    if (name === 'coverage') fillCoverageCategories().then(loadCoverage).catch(err => showError(document.getElementById('cov-chart'), err));
+    if (name === 'quality') inventory('census').then(inv => {
+      const first = Math.min(...inv.map(r => r.first_year)), last = Math.max(...inv.map(r => r.last_year));
+      const years = Array.from({ length: last - first + 1 }, (_, i) => last - i);
+      fillSelect(document.getElementById('qa-year'), years.map(y => [String(y), String(y)]), true);
+    }).catch(() => {});
+    if (name === 'geography') loadGeography();
+  }
+
+  document.addEventListener('DOMContentLoaded', async () => {
+    document.getElementById('opened').textContent = new Date().toLocaleString();
+    await customElements.whenDefined('calcite-select');
+    fillSelect(document.getElementById('var-source'), sourceOptions);
+    fillSelect(document.getElementById('cov-source'), sourceOptions);
+    document.getElementById('tab-nav').addEventListener('calciteTabChange', e => openTab(e.target.selectedTitle?.tab || e.target.selectedTitle?.getAttribute('tab')));
+    document.querySelectorAll('calcite-tab-title').forEach(t => t.addEventListener('click', () => openTab(t.getAttribute('tab'))));
+    onSelect(document.getElementById('var-source'), loadVariables);
+    onSelect(document.getElementById('var-category'), value => {
+      varGrid?.setColumnFilterModel('category', value ? { filterType: 'text', type: 'equals', filter: value } : null).then(() => varGrid.onFilterChanged());
+    });
+    document.getElementById('var-search').addEventListener('calciteInputInput', e => { varGrid?.setGridOption('quickFilterText', e.target.value); updateCount(); });
+    document.getElementById('var-export').addEventListener('click', () => varGrid?.exportDataAsCsv({ fileName: `variables_${currentSource}.csv` }));
+    onSelect(document.getElementById('cov-source'), () => fillCoverageCategories().then(loadCoverage));
+    onSelect(document.getElementById('cov-category'), loadCoverage);
+    document.getElementById('qa-run').addEventListener('click', runChecks);
+    onSelect(document.getElementById('geo-year'), updateMap);
+    onSelect(document.getElementById('geo-level'), updateMap);
+    document.getElementById('qa-results').innerHTML = CHECKS.map(checkCard).join('');
+    loadOverview();
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+wrong_code,dataset,replacement_code,reason
+B25075_001E,acs/acs5,B25077_001E,A2: download the real median home value for the same years and levels
+B25063_001E,acs/acs5,B25064_001E,A2: download the real median gross rent for the same years and levels
+B06011_001E,acs/acs5,B19013_001E,A2: download the real median household income for the same years and levels
+B25004_007E,acs/acs5,B25004_008E,A3: download Other vacant for the same years and levels

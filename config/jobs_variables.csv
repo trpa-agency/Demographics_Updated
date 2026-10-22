@@ -1,0 +1,5 @@
+variable_code,variable_name,noise_flag_codes,suppression_flag_code,notes
+EMP,Total Employees,EMP_N_F,EMP_F,"Employees in the pay period including March 12. Noise flags start in 2007; suppression flags are published before 2017."
+ESTAB,Number of Establishments,,,
+PAYQTR1,Total First Quarter Payroll,PAYQTR1_N_F,PAYQTR1_F,Thousands of dollars
+PAYANN,Annual Payroll,PAYANN_N_F,PAYANN_F,Thousands of dollars

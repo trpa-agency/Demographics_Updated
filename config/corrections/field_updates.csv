@@ -1,0 +1,2 @@
+layer,field,variable_code,dataset,sample_levels,reason
+tahoe_census_curated,vacant_housing_units_other_vacant,B25004_008E,acs/acs5,tract;block group,"A3: the field was filled from B25004_007E (For migrant workers). Other vacant is B25004_008E."

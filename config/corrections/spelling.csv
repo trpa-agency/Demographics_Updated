@@ -1,0 +1,15 @@
+layer,field,old_value,new_value,reason
+census_data,variable_category,Tenure By Age Of Householder,Tenure by Age of Householder,B4: one spelling per category
+census_data,variable_category,Tenure By Race Of Householder,Tenure by Race of Householder,B4: one spelling per category
+census_data,variable_category,Home Values (Median),Home Value (Median),B4: one spelling per category
+census_data,variable_category,Tenure by Prescence of Children,Tenure by Presence of Children,B4: spelling
+census_data,variable_name,Total Owner Occupied Housholds,Total Owner Occupied Households,B4: spelling
+census_data,variable_name,Total Renter Occupied Housholds,Total Renter Occupied Households,B4: spelling
+census_data,variable_name,Total Owner Occupied Housholds by Presence of Children,Total Owner Occupied Households by Presence of Children,B4: spelling
+census_data,variable_name,Total Renter Occupied Housholds by Presence of Children,Total Renter Occupied Households by Presence of Children,B4: spelling
+census_data,variable_name,Vehicles Available: Total Houselholds,Vehicles Available: Total Households,B4: spelling
+census_data,variable_name,Income below povety with disability,Income below poverty with disability,B4: spelling
+demographic_summaries,Category,Tenure By Age Of Householder,Tenure by Age of Householder,B4: one spelling per category
+demographic_summaries,Category,Tenure By Race Of Householder,Tenure by Race of Householder,B4: one spelling per category
+demographic_summaries,Category,Tenure by Prescence of Children,Tenure by Presence of Children,B4: spelling
+demographic_summaries,Geography,Sanfranciso CMSA,San Francisco CSA,B4: spelling

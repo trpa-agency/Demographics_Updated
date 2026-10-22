@@ -1,0 +1,47 @@
+layer,issue,variable_code,published_name,published_category,dataset,sample_level,years,records,fix_rule
+Census Data (Demographics MapServer/28),A2 count or individual median labeled as a household median,B25075_001E,Median home value,Home Value (Median),acs/acs5,block group,2020-2021,154,relabel.csv; replacements.csv (B25077_001E)
+Census Data (Demographics MapServer/28),A2 count labeled as a median,B25075_001E,Median home value,Home Value (Median),acs/acs5,tract,2011-2019,234,relabel.csv; replacements.csv (B25077_001E)
+Census Data (Demographics MapServer/28),A2 count or individual median labeled as a household median,B25075_001E,Median home value,Home Value (Median),acs/acs5,tract,2020-2024,155,relabel.csv; replacements.csv (B25077_001E)
+Census Data (Demographics MapServer/28),A2 count or individual median labeled as a household median,B25063_001E,Median Gross Rent,Rent (Median),acs/acs5,block group,2020-2021,154,relabel.csv; replacements.csv (B25064_001E)
+Census Data (Demographics MapServer/28),A2 count labeled as a median,B25063_001E,Median Gross Rent,Rent (Median),acs/acs5,tract,2011-2019,234,relabel.csv; replacements.csv (B25064_001E)
+Census Data (Demographics MapServer/28),A2 count or individual median labeled as a household median,B25063_001E,Median Gross Rent,Rent (Median),acs/acs5,tract,2020-2024,155,relabel.csv; replacements.csv (B25064_001E)
+Census Data (Demographics MapServer/28),A2 count or individual median labeled as a household median,B06011_001E,Median Household Income,Income (Median),acs/acs5,block group,2020-2021,154,relabel.csv; replacements.csv (B19013_001E)
+Census Data (Demographics MapServer/28),A2 individual median labeled as household median,B06011_001E,Median Household Income,Income (Median),acs/acs5,tract,2010-2019,260,relabel.csv; replacements.csv (B19013_001E)
+Census Data (Demographics MapServer/28),A2 count or individual median labeled as a household median,B06011_001E,Median Household Income,Income (Median),acs/acs5,tract,2020-2024,155,relabel.csv; replacements.csv (B19013_001E)
+Census Data (Demographics MapServer/28),A2 household total filed under a median category,B19001_001E,Total Households,Income (Median),acs/acs5,tract,2010,26,relabel.csv
+Census Data (Demographics MapServer/28),A3 For migrant workers labeled Other Vacant,B25004_007E,Vacant Housing Units: Other Vacant,Housing Units,acs/acs5,block group,2013-2024,896,relabel.csv; replacements.csv (B25004_008E)
+Census Data (Demographics MapServer/28),A3 For migrant workers labeled Other Vacant,B25004_007E,Vacant Housing Units: Other Vacant,Housing Units,acs/acs5,tract,2010-2024,415,relabel.csv; replacements.csv (B25004_008E)
+Census Data (Demographics MapServer/28),A4 grouped households counted two or three times,Prescence of Children: (4 grouped codes),With Children and With No Children (owner and renter),Tenure by Prescence of Children Grouped,Prescence of Children: acs/acs5,tract,2023,124,regroup.csv
+Tahoe Census Curated (Demographics MapServer/3),A3 field filled from B25004_007E (For migrant workers),B25004_007E,vacant_housing_units_other_vacant,,acs/acs5,block group and tract,2010-2024,1311,field_updates.csv (block group and tract rows; Hex Grid rows hold no value for this field)
+Demographic Summaries (Demographics MapServer/18),A2 count of owner units published as median home value,B25075_001E,,Home Value (Median),acs/acs5,,2023,9,relabel.csv
+Demographic Summaries (Demographics MapServer/18),A2 count of renter units published as median gross rent,B25063_001E,,Rent (Median),acs/acs5,,2023,9,relabel.csv
+Demographic Summaries (Demographics MapServer/18),A4 grouped households counted two or three times,Prescence of Children: (4 grouped codes),,Tenure by Prescence of Children Grouped,Prescence of Children: acs/acs5,,2023,36,regroup.csv
+Census Data (Demographics MapServer/28),B2 dataset holds a grouping prefix,, ,Household Vehicle Numbers Grouped,Household Vehicle Numbers: acs/acs5,,,311,built in rule (valid_datasets in settings.json)
+Census Data (Demographics MapServer/28),B2 dataset holds a grouping prefix,, ,Household Vehicle Numbers: Tenure by Vehicles Available,Household Vehicle Numbers: acs/acs5,,,77,built in rule (valid_datasets in settings.json)
+Census Data (Demographics MapServer/28),B2 dataset holds a grouping prefix,, ,English Fluency: Language,English Fluency: acs/acs5,,,524,built in rule (valid_datasets in settings.json)
+Census Data (Demographics MapServer/28),B2 dataset holds a grouping prefix,, ,Education Grouped: Education,Education Grouped:acs/acs5/subject,,,155,built in rule (valid_datasets in settings.json)
+Census Data (Demographics MapServer/28),B2 dataset holds a grouping prefix,, ,TRPA 5-year Age Categories,TRPA 5-year Age Categories: acs/acs5,,,2052,built in rule (valid_datasets in settings.json)
+Census Data (Demographics MapServer/28),B2 dataset holds a grouping prefix,, ,TRPA 5-year Age Categories,TRPA 5-year Age Categoriesacs/acs5,,,589,built in rule (valid_datasets in settings.json)
+Census Data (Demographics MapServer/28),B2 dataset holds a grouping prefix,, ,TRPA Age Categories Grouped: Age,TRPA Age Categories Grouped: acs/acs5,,,693,built in rule (valid_datasets in settings.json)
+Census Data (Demographics MapServer/28),B2 dataset holds a grouping prefix,, ,TRPA Census Age Categories Grouped: Age,"TRPA Census Age Categories Grouped: (acs/acs5, dec/dhc, dec/sf1, dec/sf3)",,,3908,built in rule (valid_datasets in settings.json)
+Census Data (Demographics MapServer/28),B2 dataset holds a grouping prefix,, ,TRPA 10-year Age Categories Grouped: Age,"TRPA 10-year Age Categories Grouped: (dec/dhc, dec/dp, dec/sf1, dec/sf3, and one double prefix)",,,1306,built in rule (valid_datasets in settings.json)
+Census Data (Demographics MapServer/28),B2 dataset holds a grouping prefix,, ,TRPA Census Age Sex Categories Grouped: Age,"TRPA Census Age Sex Categories Grouped: (acs/acs5, Age: dec/sf3, dec/dhc, dec/sf1)",,,7636,built in rule (valid_datasets in settings.json)
+Demographic Summaries (Demographics MapServer/18),B2 Source holds a grouping prefix,,,English Fluency: Language,English Fluency: acs/acs5,,,18,built in rule
+Demographic Summaries (Demographics MapServer/18),B2 Source holds a grouping prefix,,,Household Vehicle Numbers Grouped,Household Vehicle Numbers: acs/acs5,,,72,built in rule
+Demographic Summaries (Demographics MapServer/18),B2 Source holds a grouping prefix,,,TRPA 5-year Age Categories,TRPA 5-year Age Categories: acs/acs5,,,171,built in rule
+Climate Dashboard Census Data (MapServer/135),B2 dataset holds a grouping prefix with no separator,,,Age,TRPA 5-year Age Categoriesacs/acs5,,,57,built in rule
+Census Data (Demographics MapServer/28),B4 category spelling,,,Tenure By Age Of Householder,acs/acs5,,"2011-2019, 2021-2024",7160,spelling.csv
+Census Data (Demographics MapServer/28),B4 category spelling,,,Tenure By Race Of Householder,acs/acs5,,2011-2024,8169,spelling.csv
+Census Data (Demographics MapServer/28),B4 category spelling,B25077_001E,Median Home Value,Home Values (Median),acs/acs5,tract,2011-2024,389,spelling.csv
+Census Data (Demographics MapServer/28),B4 category spelling,B25012 and HCT010 codes,,Tenure by Prescence of Children,acs/acs5 and dec/sf2,tract,,6938,spelling.csv
+Census Data (Demographics MapServer/28),B4 name spelling,,Total Owner Occupied Housholds,Tenure by Household Size,,,,1046,spelling.csv
+Census Data (Demographics MapServer/28),B4 name spelling,,Total Renter Occupied Housholds,Tenure by Household Size,,,,1046,spelling.csv
+Census Data (Demographics MapServer/28),B4 name spelling,,Total Owner Occupied Housholds by Presence of Children,Tenure by Prescence of Children,,,,414,spelling.csv
+Census Data (Demographics MapServer/28),B4 name spelling,,Total Renter Occupied Housholds by Presence of Children,Tenure by Prescence of Children,,,,414,spelling.csv
+Census Data (Demographics MapServer/28),B4 name spelling,,Vehicles Available: Total Houselholds,Household Vehicle Numbers (two categories),,,,262,spelling.csv
+Census Data (Demographics MapServer/28),B4 name spelling,,Income below povety with disability,Disability By Work,,,,1259,spelling.csv
+Demographic Summaries (Demographics MapServer/18),B4 category spelling,,,Tenure By Age Of Householder,acs/acs5,,,180,spelling.csv
+Demographic Summaries (Demographics MapServer/18),B4 category spelling,,,Tenure By Race Of Householder,acs/acs5,,,189,spelling.csv
+Demographic Summaries (Demographics MapServer/18),B4 category spelling,,,Tenure by Prescence of Children,acs/acs5,,,153,spelling.csv
+Demographic Summaries (Demographics MapServer/18),B4 geography spelling,,Sanfranciso CMSA,Total Population,,,"2010, 2020",2,spelling.csv
+Census Data (Demographics MapServer/28),C2 group renamed (B23024 counts ages 20 to 64),"With Disability: B23024_003E, B23024_018E",With_Disability,With Disability: Disability By Work,acs/acs5,tract and block group,,1259,relabel.csv

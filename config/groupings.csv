@@ -1,0 +1,661 @@
+grouping_set,output_category,group_name,group_order,variable_code,dataset,notes
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,Total,1,B01001_002E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,Under 5,2,B01001_003E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,5 to 9,3,B01001_004E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,10 to 14,4,B01001_005E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,15 to 19,5,B01001_006E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,15 to 19,5,B01001_007E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,20 to 24,6,B01001_008E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,20 to 24,6,B01001_009E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,20 to 24,6,B01001_010E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,25 to 29,7,B01001_011E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,30 to 34,8,B01001_012E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,35 to 39,9,B01001_013E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,40 to 44,10,B01001_014E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,45 to 49,11,B01001_015E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,50 to 54,12,B01001_016E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,55 to 59,13,B01001_017E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,60 to 64,14,B01001_018E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,60 to 64,14,B01001_019E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,65 to 69,15,B01001_020E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,65 to 69,15,B01001_021E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,70 to 74,16,B01001_022E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,75 to 79,17,B01001_023E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,80 to 84,18,B01001_024E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,Over 85,19,B01001_025E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,Total,1,B01001_026E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,Under 5,2,B01001_027E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,5 to 9,3,B01001_028E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,10 to 14,4,B01001_029E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,15 to 19,5,B01001_030E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,15 to 19,5,B01001_031E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,20 to 24,6,B01001_032E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,20 to 24,6,B01001_033E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,20 to 24,6,B01001_034E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,25 to 29,7,B01001_035E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,30 to 34,8,B01001_036E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,35 to 39,9,B01001_037E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,40 to 44,10,B01001_038E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,45 to 49,11,B01001_039E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,50 to 54,12,B01001_040E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,55 to 59,13,B01001_041E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,60 to 64,14,B01001_042E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,60 to 64,14,B01001_043E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,65 to 69,15,B01001_044E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,65 to 69,15,B01001_045E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,70 to 74,16,B01001_046E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,75 to 79,17,B01001_047E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,80 to 84,18,B01001_048E,acs/acs5,
+TRPA 5-year Age Categories,TRPA 5-year Age Categories,Over 85,19,B01001_049E,acs/acs5,
+Household Vehicle Numbers,Household Vehicle Numbers Grouped,Vehicles Available: Total Households,1,B25044_001E,acs/acs5,
+Household Vehicle Numbers,Household Vehicle Numbers Grouped,Vehicle Available: Total,2,B25044_002E,acs/acs5,
+Household Vehicle Numbers,Household Vehicle Numbers Grouped,No Vehicle Available,3,B25044_003E,acs/acs5,
+Household Vehicle Numbers,Household Vehicle Numbers Grouped,1 Vehicle Available,4,B25044_004E,acs/acs5,
+Household Vehicle Numbers,Household Vehicle Numbers Grouped,2 Vehicles Available,5,B25044_005E,acs/acs5,
+Household Vehicle Numbers,Household Vehicle Numbers Grouped,3 Vehicles Available,6,B25044_006E,acs/acs5,
+Household Vehicle Numbers,Household Vehicle Numbers Grouped,4 Vehicles Available,7,B25044_007E,acs/acs5,
+Household Vehicle Numbers,Household Vehicle Numbers Grouped,5 Vehicles Available,8,B25044_008E,acs/acs5,
+Household Vehicle Numbers,Household Vehicle Numbers Grouped,Vehicle Available: Total,2,B25044_009E,acs/acs5,
+Household Vehicle Numbers,Household Vehicle Numbers Grouped,No Vehicle Available,3,B25044_010E,acs/acs5,
+Household Vehicle Numbers,Household Vehicle Numbers Grouped,1 Vehicle Available,4,B25044_011E,acs/acs5,
+Household Vehicle Numbers,Household Vehicle Numbers Grouped,2 Vehicles Available,5,B25044_012E,acs/acs5,
+Household Vehicle Numbers,Household Vehicle Numbers Grouped,3 Vehicles Available,6,B25044_013E,acs/acs5,
+Household Vehicle Numbers,Household Vehicle Numbers Grouped,4 Vehicles Available,7,B25044_014E,acs/acs5,
+Household Vehicle Numbers,Household Vehicle Numbers Grouped,5 Vehicles Available,8,B25044_015E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Native, Very Well, Well",1,B16004_003E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Native, Very Well, Well",1,B16004_005E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Native, Very Well, Well",1,B16004_006E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Not Well, Not at All",2,B16004_007E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Not Well, Not at All",2,B16004_008E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Native, Very Well, Well",1,B16004_010E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Native, Very Well, Well",1,B16004_011E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Not Well, Not at All",2,B16004_012E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Not Well, Not at All",2,B16004_013E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Native, Very Well, Well",1,B16004_015E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Native, Very Well, Well",1,B16004_016E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Not Well, Not at All",2,B16004_017E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Not Well, Not at All",2,B16004_018E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Native, Very Well, Well",1,B16004_020E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Native, Very Well, Well",1,B16004_021E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Not Well, Not at All",2,B16004_022E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Not Well, Not at All",2,B16004_023E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Native, Very Well, Well",1,B16004_025E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Native, Very Well, Well",1,B16004_027E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Native, Very Well, Well",1,B16004_028E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Not Well, Not at All",2,B16004_029E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Not Well, Not at All",2,B16004_030E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Native, Very Well, Well",1,B16004_032E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Native, Very Well, Well",1,B16004_033E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Not Well, Not at All",2,B16004_034E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Not Well, Not at All",2,B16004_035E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Native, Very Well, Well",1,B16004_037E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Native, Very Well, Well",1,B16004_038E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Not Well, Not at All",2,B16004_039E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Not Well, Not at All",2,B16004_040E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Native, Very Well, Well",1,B16004_042E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Native, Very Well, Well",1,B16004_043E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Not Well, Not at All",2,B16004_044E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Not Well, Not at All",2,B16004_045E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Native, Very Well, Well",1,B16004_047E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Native, Very Well, Well",1,B16004_049E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Native, Very Well, Well",1,B16004_050E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Not Well, Not at All",2,B16004_051E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Not Well, Not at All",2,B16004_052E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Native, Very Well, Well",1,B16004_054E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Native, Very Well, Well",1,B16004_055E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Not Well, Not at All",2,B16004_056E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Not Well, Not at All",2,B16004_057E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Native, Very Well, Well",1,B16004_059E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Native, Very Well, Well",1,B16004_060E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Not Well, Not at All",2,B16004_061E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Not Well, Not at All",2,B16004_062E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Native, Very Well, Well",1,B16004_064E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Native, Very Well, Well",1,B16004_065E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Not Well, Not at All",2,B16004_066E,acs/acs5,
+English Fluency,English Fluency: {source_category},"Not Well, Not at All",2,B16004_067E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_Under_18,1,B01001_003E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_Under_18,1,B01001_004E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_Under_18,1,B01001_005E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_Under_18,1,B01001_006E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_18_to_65,2,B01001_007E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_18_to_65,2,B01001_008E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_18_to_65,2,B01001_009E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_18_to_65,2,B01001_010E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_18_to_65,2,B01001_011E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_18_to_65,2,B01001_012E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_18_to_65,2,B01001_013E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_18_to_65,2,B01001_014E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_18_to_65,2,B01001_015E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_18_to_65,2,B01001_016E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_18_to_65,2,B01001_017E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_18_to_65,2,B01001_018E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_18_to_65,2,B01001_019E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_65_and_Over,3,B01001_020E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_65_and_Over,3,B01001_021E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_65_and_Over,3,B01001_022E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_65_and_Over,3,B01001_023E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_65_and_Over,3,B01001_024E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_65_and_Over,3,B01001_025E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_Under_18,1,B01001_027E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_Under_18,1,B01001_028E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_Under_18,1,B01001_029E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_Under_18,1,B01001_030E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_18_to_65,2,B01001_031E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_18_to_65,2,B01001_032E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_18_to_65,2,B01001_033E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_18_to_65,2,B01001_034E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_18_to_65,2,B01001_035E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_18_to_65,2,B01001_036E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_18_to_65,2,B01001_037E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_18_to_65,2,B01001_038E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_18_to_65,2,B01001_039E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_18_to_65,2,B01001_040E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_18_to_65,2,B01001_041E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_18_to_65,2,B01001_042E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_18_to_65,2,B01001_043E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_65_and_Over,3,B01001_044E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_65_and_Over,3,B01001_045E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_65_and_Over,3,B01001_046E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_65_and_Over,3,B01001_047E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_65_and_Over,3,B01001_048E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},Age_65_and_Over,3,B01001_049E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},White_Alone,4,B03002_003E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},BIPOC,5,B03002_004E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},BIPOC,5,B03002_005E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},BIPOC,5,B03002_006E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},BIPOC,5,B03002_007E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},BIPOC,5,B03002_008E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},BIPOC,5,B03002_009E,acs/acs5,
+TRPA Grouped,TRPA Grouped: {source_category},BIPOC,5,B03002_012E,acs/acs5,
+With Disability,With Disability: {source_category},With_Disability_20_to_64,1,B23024_003E,acs/acs5,B23024 universe is the population 20 to 64 years. Renamed from With_Disability in Oct. 2026.
+With Disability,With Disability: {source_category},With_Disability_20_to_64,1,B23024_018E,acs/acs5,B23024 universe is the population 20 to 64 years. Renamed from With_Disability in Oct. 2026.
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},Total,1,P12_002N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},Under 5,2,P12_003N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},5 to 9,3,P12_004N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},10 to 14,4,P12_005N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},15 to 19,5,P12_006N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},15 to 19,5,P12_007N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},20 to 24,6,P12_008N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},20 to 24,6,P12_009N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},20 to 24,6,P12_010N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},25 to 29,7,P12_011N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},30 to 34,8,P12_012N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},35 to 39,9,P12_013N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},40 to 44,10,P12_014N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},45 to 49,11,P12_015N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},50 to 54,12,P12_016N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},55 to 59,13,P12_017N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},60 to 64,14,P12_018N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},60 to 64,14,P12_019N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},65 to 69,15,P12_020N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},65 to 69,15,P12_021N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},70 to 74,16,P12_022N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},75 to 79,17,P12_023N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},80 to 84,18,P12_024N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},Over 85,19,P12_025N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},Total,1,P12_026N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},Under 5,2,P12_027N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},5 to 9,3,P12_028N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},10 to 14,4,P12_029N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},15 to 19,5,P12_030N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},15 to 19,5,P12_031N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},20 to 24,6,P12_032N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},20 to 24,6,P12_033N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},20 to 24,6,P12_034N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},25 to 29,7,P12_035N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},30 to 34,8,P12_036N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},35 to 39,9,P12_037N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},40 to 44,10,P12_038N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},45 to 49,11,P12_039N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},50 to 54,12,P12_040N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},55 to 59,13,P12_041N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},60 to 64,14,P12_042N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},60 to 64,14,P12_043N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},65 to 69,15,P12_044N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},65 to 69,15,P12_045N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},70 to 74,16,P12_046N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},75 to 79,17,P12_047N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},80 to 84,18,P12_048N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},Over 85,19,P12_049N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Total,1,P12_002N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Under 10,2,P12_003N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Under 10,2,P12_004N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,3,P12_005N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,3,P12_006N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,3,P12_007N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},20 to 29,4,P12_008N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},20 to 29,4,P12_009N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},20 to 29,4,P12_010N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},20 to 29,4,P12_011N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},30 to 39,5,P12_012N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},30 to 39,5,P12_013N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},40 to 49,6,P12_014N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},40 to 49,6,P12_015N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},50 to 59,7,P12_016N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},50 to 59,7,P12_017N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},60 to 69,8,P12_018N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},60 to 69,8,P12_019N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},60 to 69,8,P12_020N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},60 to 69,8,P12_021N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},70 to 79,9,P12_022N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},70 to 79,9,P12_023N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Over 80,10,P12_024N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Over 80,10,P12_025N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Total,1,P12_026N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Under 10,2,P12_027N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Under 10,2,P12_028N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,3,P12_029N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,3,P12_030N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,3,P12_031N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},20 to 29,4,P12_032N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},20 to 29,4,P12_033N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},20 to 29,4,P12_034N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},20 to 29,4,P12_035N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},30 to 39,5,P12_036N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},30 to 39,5,P12_037N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},40 to 49,6,P12_038N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},40 to 49,6,P12_039N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},50 to 59,7,P12_040N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},50 to 59,7,P12_041N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},60 to 69,8,P12_042N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},60 to 69,8,P12_043N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},60 to 69,8,P12_044N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},60 to 69,8,P12_045N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},70 to 79,9,P12_046N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},70 to 79,9,P12_047N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Over 80,10,P12_048N,dec/dhc,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Over 80,10,P12_049N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},Total: Male,1,P12_002N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},Under 5: Male,2,P12_003N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},5 to 9: Male,3,P12_004N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},10 to 14: Male,4,P12_005N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},15 to 19: Male,5,P12_006N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},15 to 19: Male,5,P12_007N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},20 to 24: Male,6,P12_008N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},20 to 24: Male,6,P12_009N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},20 to 24: Male,6,P12_010N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},25 to 29: Male,7,P12_011N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},30 to 34: Male,8,P12_012N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},35 to 39: Male,9,P12_013N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},40 to 44: Male,10,P12_014N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},45 to 49: Male,11,P12_015N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},50 to 54: Male,12,P12_016N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},55 to 59: Male,13,P12_017N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},60 to 64: Male,14,P12_018N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},60 to 64: Male,14,P12_019N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},65 to 69: Male,15,P12_020N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},65 to 69: Male,15,P12_021N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},70 to 74: Male,16,P12_022N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},75 to 79: Male,17,P12_023N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},80 to 84: Male,18,P12_024N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},Over 85: Male,19,P12_025N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},Total: Female,20,P12_026N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},Under 5: Female,21,P12_027N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},5 to 9: Female,22,P12_028N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},10 to 14: Female,23,P12_029N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},15 to 19: Female,24,P12_030N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},15 to 19: Female,24,P12_031N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},20 to 24: Female,25,P12_032N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},20 to 24: Female,25,P12_033N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},20 to 24: Female,25,P12_034N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},25 to 29: Female,26,P12_035N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},30 to 34: Female,27,P12_036N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},35 to 39: Female,28,P12_037N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},40 to 44: Female,29,P12_038N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},45 to 49: Female,30,P12_039N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},50 to 54: Female,31,P12_040N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},55 to 59: Female,32,P12_041N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},60 to 64: Female,33,P12_042N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},60 to 64: Female,33,P12_043N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},65 to 69: Female,34,P12_044N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},65 to 69: Female,34,P12_045N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},70 to 74: Female,35,P12_046N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},75 to 79: Female,36,P12_047N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},80 to 84: Female,37,P12_048N,dec/dhc,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},Over 85: Female,38,P12_049N,dec/dhc,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},Total,1,P012002,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},Under 5,2,P012003,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},5 to 9,3,P012004,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},10 to 14,4,P012005,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},15 to 19,5,P012006,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},15 to 19,5,P012007,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},20 to 24,6,P012008,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},20 to 24,6,P012009,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},20 to 24,6,P012010,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},25 to 29,7,P012011,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},30 to 34,8,P012012,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},35 to 39,9,P012013,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},40 to 44,10,P012014,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},45 to 49,11,P012015,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},50 to 54,12,P012016,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},55 to 59,13,P012017,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},60 to 64,14,P012018,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},60 to 64,14,P012019,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},65 to 69,15,P012020,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},65 to 69,15,P012021,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},70 to 74,16,P012022,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},75 to 79,17,P012023,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},80 to 84,18,P012024,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},Over 85,19,P012025,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},Total,1,P012026,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},Under 5,2,P012027,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},5 to 9,3,P012028,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},10 to 14,4,P012029,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},15 to 19,5,P012030,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},15 to 19,5,P012031,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},20 to 24,6,P012032,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},20 to 24,6,P012033,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},20 to 24,6,P012034,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},25 to 29,7,P012035,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},30 to 34,8,P012036,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},35 to 39,9,P012037,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},40 to 44,10,P012038,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},45 to 49,11,P012039,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},50 to 54,12,P012040,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},55 to 59,13,P012041,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},60 to 64,14,P012042,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},60 to 64,14,P012043,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},65 to 69,15,P012044,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},65 to 69,15,P012045,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},70 to 74,16,P012046,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},75 to 79,17,P012047,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},80 to 84,18,P012048,dec/sf1,
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},Over 85,19,P012049,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Total,1,P012002,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Under 10,2,P012003,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Under 10,2,P012004,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,3,P012005,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,3,P012006,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,3,P012007,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},20 to 29,4,P012008,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},20 to 29,4,P012009,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},20 to 29,4,P012010,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},20 to 29,4,P012011,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},30 to 39,5,P012012,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},30 to 39,5,P012013,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},40 to 49,6,P012014,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},40 to 49,6,P012015,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},50 to 59,7,P012016,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},50 to 59,7,P012017,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},60 to 69,8,P012018,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},60 to 69,8,P012019,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},60 to 69,8,P012020,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},60 to 69,8,P012021,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},70 to 79,9,P012022,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},70 to 79,9,P012023,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Over 80,10,P012024,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Over 80,10,P012025,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Total,1,P012026,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Under 10,2,P012027,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Under 10,2,P012028,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,3,P012029,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,3,P012030,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,3,P012031,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},20 to 29,4,P012032,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},20 to 29,4,P012033,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},20 to 29,4,P012034,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},20 to 29,4,P012035,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},30 to 39,5,P012036,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},30 to 39,5,P012037,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},40 to 49,6,P012038,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},40 to 49,6,P012039,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},50 to 59,7,P012040,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},50 to 59,7,P012041,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},60 to 69,8,P012042,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},60 to 69,8,P012043,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},60 to 69,8,P012044,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},60 to 69,8,P012045,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},70 to 79,9,P012046,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},70 to 79,9,P012047,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Over 80,10,P012048,dec/sf1,
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Over 80,10,P012049,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},Total: Male,1,P012002,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},Under 5: Male,2,P012003,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},5 to 9: Male,3,P012004,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},10 to 14: Male,4,P012005,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},15 to 19: Male,5,P012006,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},15 to 19: Male,5,P012007,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},20 to 24: Male,6,P012008,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},20 to 24: Male,6,P012009,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},20 to 24: Male,6,P012010,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},25 to 29: Male,7,P012011,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},30 to 34: Male,8,P012012,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},35 to 39: Male,9,P012013,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},40 to 44: Male,10,P012014,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},45 to 49: Male,11,P012015,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},50 to 54: Male,12,P012016,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},55 to 59: Male,13,P012017,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},60 to 64: Male,14,P012018,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},60 to 64: Male,14,P012019,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},65 to 69: Male,15,P012020,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},65 to 69: Male,15,P012021,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},70 to 74: Male,16,P012022,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},75 to 79: Male,17,P012023,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},80 to 84: Male,18,P012024,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},Over 85: Male,19,P012025,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},Total: Female,20,P012026,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},Under 5: Female,21,P012027,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},5 to 9: Female,22,P012028,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},10 to 14: Female,23,P012029,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},15 to 19: Female,24,P012030,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},15 to 19: Female,24,P012031,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},20 to 24: Female,25,P012032,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},20 to 24: Female,25,P012033,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},20 to 24: Female,25,P012034,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},25 to 29: Female,26,P012035,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},30 to 34: Female,27,P012036,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},35 to 39: Female,28,P012037,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},40 to 44: Female,29,P012038,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},45 to 49: Female,30,P012039,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},50 to 54: Female,31,P012040,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},55 to 59: Female,32,P012041,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},60 to 64: Female,33,P012042,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},60 to 64: Female,33,P012043,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},65 to 69: Female,34,P012044,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},65 to 69: Female,34,P012045,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},70 to 74: Female,35,P012046,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},75 to 79: Female,36,P012047,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},80 to 84: Female,37,P012048,dec/sf1,
+TRPA Census Age Sex Categories Grouped,TRPA Census Age Sex Categories Grouped: {source_category},Over 85: Female,38,P012049,dec/sf1,
+Presence of Children,Tenure by Presence of Children Grouped,Owner Occupied Households With Children,1,B25012_003E,acs/acs5,With children means related children of the householder under 18 (includes own children). Corrected Oct. 2026; the earlier set counted nested variables more than once.
+Presence of Children,Tenure by Presence of Children Grouped,Owner Occupied Households With No Children,2,B25012_009E,acs/acs5,With children means related children of the householder under 18 (includes own children). Corrected Oct. 2026; the earlier set counted nested variables more than once.
+Presence of Children,Tenure by Presence of Children Grouped,Renter Occupied Households With Children,3,B25012_011E,acs/acs5,With children means related children of the householder under 18 (includes own children). Corrected Oct. 2026; the earlier set counted nested variables more than once.
+Presence of Children,Tenure by Presence of Children Grouped,Renter Occupied Households With No Children,4,B25012_017E,acs/acs5,With children means related children of the householder under 18 (includes own children). Corrected Oct. 2026; the earlier set counted nested variables more than once.
+Disability All Ages,Disability All Ages: {source_category},With_Disability,1,B18101_004E,acs/acs5,"B18101, civilian noninstitutionalized population of all ages. Tract level only."
+Disability All Ages,Disability All Ages: {source_category},With_Disability,1,B18101_007E,acs/acs5,"B18101, civilian noninstitutionalized population of all ages. Tract level only."
+Disability All Ages,Disability All Ages: {source_category},With_Disability,1,B18101_010E,acs/acs5,"B18101, civilian noninstitutionalized population of all ages. Tract level only."
+Disability All Ages,Disability All Ages: {source_category},With_Disability,1,B18101_013E,acs/acs5,"B18101, civilian noninstitutionalized population of all ages. Tract level only."
+Disability All Ages,Disability All Ages: {source_category},With_Disability,1,B18101_016E,acs/acs5,"B18101, civilian noninstitutionalized population of all ages. Tract level only."
+Disability All Ages,Disability All Ages: {source_category},With_Disability,1,B18101_019E,acs/acs5,"B18101, civilian noninstitutionalized population of all ages. Tract level only."
+Disability All Ages,Disability All Ages: {source_category},With_Disability,1,B18101_023E,acs/acs5,"B18101, civilian noninstitutionalized population of all ages. Tract level only."
+Disability All Ages,Disability All Ages: {source_category},With_Disability,1,B18101_026E,acs/acs5,"B18101, civilian noninstitutionalized population of all ages. Tract level only."
+Disability All Ages,Disability All Ages: {source_category},With_Disability,1,B18101_029E,acs/acs5,"B18101, civilian noninstitutionalized population of all ages. Tract level only."
+Disability All Ages,Disability All Ages: {source_category},With_Disability,1,B18101_032E,acs/acs5,"B18101, civilian noninstitutionalized population of all ages. Tract level only."
+Disability All Ages,Disability All Ages: {source_category},With_Disability,1,B18101_035E,acs/acs5,"B18101, civilian noninstitutionalized population of all ages. Tract level only."
+Disability All Ages,Disability All Ages: {source_category},With_Disability,1,B18101_038E,acs/acs5,"B18101, civilian noninstitutionalized population of all ages. Tract level only."
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},Under 5,1,P014A001,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},Under 5,1,P014A002,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},Under 5,1,P014A003,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},5 to 9,2,P014A004,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},5 to 9,2,P014A005,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},5 to 9,2,P014A006,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},10 to 14,3,P014A007,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},10 to 14,3,P014A008,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},10 to 14,3,P014A009,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},15 to 19,4,P014A010,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},15 to 19,4,P014A011,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},15 to 19,4,P014A012,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},15 to 19,4,P014A013,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},15 to 19,4,P014A014,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},20 to 24,5,P014A015,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},20 to 24,5,P014A016,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},20 to 24,5,P014A017,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},25 to 29,6,P014A018,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},30 to 34,7,P014A019,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},35 to 39,8,P014A020,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},40 to 44,9,P014A021,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},45 to 49,10,P014A022,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},50 to 54,11,P014A023,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},55 to 59,12,P014A024,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},60 to 64,13,P014A025,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},60 to 64,13,P014A026,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},65 to 69,14,P014A027,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},70 to 74,15,P014A028,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},75 to 79,16,P014A029,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},80 to 84,17,P014A030,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},Over 85,18,P014A031,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},Under 5,1,P014B001,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},Under 5,1,P014B002,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},Under 5,1,P014B003,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},5 to 9,2,P014B004,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},5 to 9,2,P014B005,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},5 to 9,2,P014B006,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},10 to 14,3,P014B007,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},10 to 14,3,P014B008,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},10 to 14,3,P014B009,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},15 to 19,4,P014B010,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},15 to 19,4,P014B011,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},15 to 19,4,P014B012,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},15 to 19,4,P014B013,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},15 to 19,4,P014B014,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},20 to 24,5,P014B015,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},20 to 24,5,P014B016,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},20 to 24,5,P014B017,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},25 to 29,6,P014B018,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},30 to 34,7,P014B019,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},35 to 39,8,P014B020,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},40 to 44,9,P014B021,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},45 to 49,10,P014B022,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},50 to 54,11,P014B023,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},55 to 59,12,P014B024,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},60 to 64,13,P014B025,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},60 to 64,13,P014B026,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},65 to 69,14,P014B027,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},70 to 74,15,P014B028,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},75 to 79,16,P014B029,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},80 to 84,17,P014B030,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},Over 85,18,P014B031,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},Under 5,1,P014C001,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},Under 5,1,P014C002,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},Under 5,1,P014C003,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},5 to 9,2,P014C004,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},5 to 9,2,P014C005,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},5 to 9,2,P014C006,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},10 to 14,3,P014C007,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},10 to 14,3,P014C008,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},10 to 14,3,P014C009,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},15 to 19,4,P014C010,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},15 to 19,4,P014C011,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},15 to 19,4,P014C012,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},15 to 19,4,P014C013,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},15 to 19,4,P014C014,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},20 to 24,5,P014C015,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},20 to 24,5,P014C016,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},20 to 24,5,P014C017,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},25 to 29,6,P014C018,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},30 to 34,7,P014C019,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},35 to 39,8,P014C020,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},40 to 44,9,P014C021,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},45 to 49,10,P014C022,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},50 to 54,11,P014C023,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},55 to 59,12,P014C024,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},60 to 64,13,P014C025,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},60 to 64,13,P014C026,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},65 to 69,14,P014C027,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},70 to 74,15,P014C028,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},75 to 79,16,P014C029,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},80 to 84,17,P014C030,dec/sf3,1990 STF3
+TRPA Census Age Categories Grouped,TRPA Census Age Categories Grouped: {source_category},Over 85,18,P014C031,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Under 10,1,P014A001,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Under 10,1,P014A002,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Under 10,1,P014A003,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Under 10,1,P014A004,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Under 10,1,P014A005,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Under 10,1,P014A006,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,2,P014A007,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,2,P014A008,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,2,P014A009,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,2,P014A010,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,2,P014A011,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,2,P014A012,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,2,P014A013,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,2,P014A014,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},20 to 29,3,P014A015,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},20 to 29,3,P014A016,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},20 to 29,3,P014A017,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},20 to 29,3,P014A018,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},30 to 39,4,P014A019,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},30 to 39,4,P014A020,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},40 to 49,5,P014A021,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},40 to 49,5,P014A022,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},50 to 59,6,P014A023,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},50 to 59,6,P014A024,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},60 to 69,7,P014A025,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},60 to 69,7,P014A026,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},60 to 69,7,P014A027,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},70 to 79,8,P014A028,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},70 to 79,8,P014A029,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Over 80,9,P014A030,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Over 80,9,P014A031,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Under 10,1,P014B001,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Under 10,1,P014B002,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Under 10,1,P014B003,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Under 10,1,P014B004,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Under 10,1,P014B005,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Under 10,1,P014B006,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,2,P014B007,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,2,P014B008,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,2,P014B009,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,2,P014B010,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,2,P014B011,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,2,P014B012,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,2,P014B013,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,2,P014B014,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},20 to 29,3,P014B015,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},20 to 29,3,P014B016,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},20 to 29,3,P014B017,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},20 to 29,3,P014B018,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},30 to 39,4,P014B019,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},30 to 39,4,P014B020,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},40 to 49,5,P014B021,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},40 to 49,5,P014B022,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},50 to 59,6,P014B023,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},50 to 59,6,P014B024,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},60 to 69,7,P014B025,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},60 to 69,7,P014B026,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},60 to 69,7,P014B027,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},70 to 79,8,P014B028,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},70 to 79,8,P014B029,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Over 80,9,P014B030,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Over 80,9,P014B031,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Under 10,1,P014C001,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Under 10,1,P014C002,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Under 10,1,P014C003,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Under 10,1,P014C004,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Under 10,1,P014C005,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Under 10,1,P014C006,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,2,P014C007,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,2,P014C008,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,2,P014C009,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,2,P014C010,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,2,P014C011,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,2,P014C012,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,2,P014C013,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},10 to 19,2,P014C014,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},20 to 29,3,P014C015,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},20 to 29,3,P014C016,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},20 to 29,3,P014C017,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},20 to 29,3,P014C018,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},30 to 39,4,P014C019,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},30 to 39,4,P014C020,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},40 to 49,5,P014C021,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},40 to 49,5,P014C022,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},50 to 59,6,P014C023,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},50 to 59,6,P014C024,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},60 to 69,7,P014C025,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},60 to 69,7,P014C026,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},60 to 69,7,P014C027,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},70 to 79,8,P014C028,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},70 to 79,8,P014C029,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Over 80,9,P014C030,dec/sf3,1990 STF3
+TRPA 10-year Age Categories Grouped,TRPA 10-year Age Categories Grouped: {source_category},Over 80,9,P014C031,dec/sf3,1990 STF3

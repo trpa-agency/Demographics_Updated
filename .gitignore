@@ -1,0 +1,10 @@
+# Local outputs: downloads, checkpoints, summaries, QAQC reports, and caches
+outputs/
+# Secrets
+.env
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+*.egg-info/

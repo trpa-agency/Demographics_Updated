@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trpa-demographics"
+version = "1.0.0"
+description = "Download, group, summarize, and check US Census data for the Lake Tahoe Basin"
+requires-python = ">=3.9"
+dependencies = ["pandas>=1.4", "numpy>=1.21", "requests>=2.25", "openpyxl>=3.0"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

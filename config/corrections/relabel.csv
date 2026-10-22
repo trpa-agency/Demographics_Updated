@@ -1,0 +1,9 @@
+layer,variable_code,dataset,match_name,match_category,new_name,new_category,reason
+census_data,B25075_001E,acs/acs5,Median home value,Home Value (Median),Owner-occupied housing units (home value table total),Home Value,"A2: B25075_001E counts owner-occupied units. It is not a median. Median home value is B25077_001E."
+census_data,B25063_001E,acs/acs5,Median Gross Rent,Rent (Median),Renter-occupied housing units (gross rent table total),Gross Rent,"A2: B25063_001E counts renter-occupied units. It is not a median. Median gross rent is B25064_001E."
+census_data,B06011_001E,acs/acs5,Median Household Income,Income (Median),Median income of individuals 15 and over,Income (Median),"A2: B06011 is median income of individuals by place of birth. Median household income is B19013_001E."
+census_data,B19001_001E,acs/acs5,Total Households,Income (Median),Total Households,Household Income,"A2: total households belongs with the household income table, not with medians."
+census_data,B25004_007E,acs/acs5,Vacant Housing Units: Other Vacant,Housing Units,Vacant Housing Units: For migrant workers,Housing Units,"A3: B25004_007E is For migrant workers. Other vacant is B25004_008E."
+census_data,,acs/acs5,With_Disability,With Disability: Disability By Work,With_Disability_20_to_64,With Disability: Disability By Work,"C2: B23024 counts the population 20 to 64. With_Disability now means all ages from B18101."
+demographic_summaries,B25075_001E,acs/acs5,,Home Value (Median),,Home Value,"A2: the Value is a count of owner-occupied units, not a median home value."
+demographic_summaries,B25063_001E,acs/acs5,,Rent (Median),,Gross Rent,"A2: the Value is a count of renter-occupied units, not a median gross rent."

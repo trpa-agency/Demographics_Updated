@@ -1,0 +1,130 @@
+{
+  "census_api": {
+    "base_url": "https://api.census.gov/data",
+    "api_key_env_var": "CENSUS_API_KEY",
+    "max_variables_per_request": 24,
+    "pause_between_requests_seconds": 0.5,
+    "timeout_seconds": 60
+  },
+  "services": {
+    "tahoe_geometry": "https://maps.trpa.org/server/rest/services/Demographics/MapServer/27",
+    "census_data": "https://maps.trpa.org/server/rest/services/Demographics/MapServer/28",
+    "demographic_summaries": "https://maps.trpa.org/server/rest/services/Demographics/MapServer/18",
+    "climate_dashboard_census_data": "https://maps.trpa.org/server/rest/services/LTinfo_Climate_Resilience_Dashboard/MapServer/135",
+    "tahoe_census_curated": "https://maps.trpa.org/server/rest/services/Demographics/MapServer/3",
+    "demographics_tessellation": "https://maps.trpa.org/server/rest/services/Demographics/MapServer/2",
+    "census_jobs": "https://maps.trpa.org/server/rest/services/Demographics/MapServer/35",
+    "school_enrollment": "https://maps.trpa.org/server/rest/services/Demographics/MapServer/32",
+    "lodes_origin_destination": "https://maps.trpa.org/server/rest/services/LTinfo_Climate_Resilience_Dashboard/MapServer/141",
+    "lodes_work_locations": "https://maps.trpa.org/server/rest/services/LTinfo_Climate_Resilience_Dashboard/MapServer/142",
+    "tigerweb_2020_tracts": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Tracts_Blocks/MapServer/10",
+    "tigerweb_2020_blocks": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Tracts_Blocks/MapServer/12"
+  },
+  "counties": [
+    {"state": "06", "county": "017", "county_name": "El Dorado County (Tahoe Basin)", "county_short": "El Dorado County", "state_name": "California", "state_abbr": "CA", "north_south": "South Lake"},
+    {"state": "06", "county": "061", "county_name": "Placer County (Tahoe Basin)", "county_short": "Placer County", "state_name": "California", "state_abbr": "CA", "north_south": "North Lake"},
+    {"state": "32", "county": "005", "county_name": "Douglas County (Tahoe Basin)", "county_short": "Douglas County", "state_name": "Nevada", "state_abbr": "NV", "north_south": "South Lake"},
+    {"state": "32", "county": "031", "county_name": "Washoe County (Tahoe Basin)", "county_short": "Washoe County", "state_name": "Nevada", "state_abbr": "NV", "north_south": "North Lake"}
+  ],
+  "geometry_vintages": [
+    {"first_data_year": 2020, "census_geom_year": 2020},
+    {"first_data_year": 2010, "census_geom_year": 2010},
+    {"first_data_year": 2000, "census_geom_year": 2000},
+    {"first_data_year": 1990, "census_geom_year": 1990}
+  ],
+  "valid_datasets": ["acs/acs5", "acs/acs5/subject", "acs/acs5/profile", "dec/sf1", "dec/sf2", "dec/sf3", "dec/dhc", "dec/dp", "dec/pl", "cbp", "zbp"],
+  "summary_levels": ["Basin", "County", "North/South", "State", "Neighborhood"],
+  "basin_label": "Basin",
+  "grouped_code_max_length": 255,
+  "demographic_summaries_layout": {
+    "sample_level": "tract",
+    "note": "Layer 18 has no sample level field. Rows are written from this level only."
+  },
+  "qaqc": {
+    "cv_high_reliability_max": 0.12,
+    "cv_medium_reliability_max": 0.40,
+    "year_over_year_change_warning": 0.25,
+    "tract_vs_block_group_tolerance": 0.01
+  },
+  "medians": {
+    "moe_constant_numerator": 99,
+    "moe_constant_years": 5,
+    "z_value": 1.645,
+    "note": "SE(50 percent) = design factor x sqrt((99 / (5 x total)) x 50 squared). From the Census Bureau ACS 5-year PUMS accuracy statement. An approximation; see docs/groupings_and_medians.md."
+  },
+  "comparison_geographies": [
+    {"name": "El Dorado County", "level": "county", "for": "county:017", "in": "state:06"},
+    {"name": "Placer County", "level": "county", "for": "county:061", "in": "state:06"},
+    {"name": "Douglas County", "level": "county", "for": "county:005", "in": "state:32"},
+    {"name": "Washoe County", "level": "county", "for": "county:031", "in": "state:32"},
+    {"name": "Carson City County", "level": "county", "for": "county:510", "in": "state:32"},
+    {"name": "CA", "level": "state", "for": "state:06", "in": ""},
+    {"name": "NV", "level": "state", "for": "state:32", "in": ""},
+    {"name": "Reno-Sparks MSA", "level": "MSA", "for": "metropolitan statistical area/micropolitan statistical area:39900", "in": "", "first_year": 2003},
+    {"name": "Sacramento MSA", "level": "MSA", "for": "metropolitan statistical area/micropolitan statistical area:40900", "in": "", "first_year": 2003},
+    {"name": "San Francisco CSA", "level": "CSA", "for": "combined statistical area:488", "in": "", "first_year": 2003}
+  ],
+  "jobs": {
+    "zip_list": "config/jobs_zip_codes.csv",
+    "variables": "config/jobs_variables.csv",
+    "datasets": [
+      {"first_year": 2018, "dataset": "cbp", "zip_predicates": ["zip code"]},
+      {"first_year": 1994, "dataset": "zbp", "zip_predicates": ["zipcode", "zip code"]}
+    ],
+    "total_codes": {"NAICS": ["00", "0", "------"], "EMPSZES": ["001", "1"], "LFO": ["001", "1"]},
+    "withheld_flag": "D",
+    "replacement_source": "County Business Patterns download (zbp before 2018)"
+  },
+  "lodes": {
+    "base_url": "https://lehd.ces.census.gov/data/lodes/LODES8",
+    "states": ["ca", "nv"],
+    "od_job_type": "JT01",
+    "wac_segment": "S000",
+    "wac_job_type": "JT01",
+    "block_geometry_year": 2020,
+    "known_boundary_tracts": ["6003010000", "6061022014", "32031003206", "32031980300"],
+    "total_jobs_range": [25000, 40000],
+    "category_change_warning": 0.15
+  },
+  "school_enrollment": {
+    "schools": "config/school_enrollment_schools.csv",
+    "california_enrollment_type": "C",
+    "california_files": [
+      {"first_fall_year": 1998, "last_fall_year": 2006, "url": "https://www3.cde.ca.gov/demo-downloads/enrsch/enr199806-v2.txt"},
+      {"first_fall_year": 2007, "last_fall_year": 2013, "url": "https://www3.cde.ca.gov/demo-downloads/enrsch/enr200713-v3.txt"},
+      {"first_fall_year": 2014, "last_fall_year": 2016, "url": "https://www3.cde.ca.gov/demo-downloads/enrsch/enr201416-v2.txt"},
+      {"first_fall_year": 2017, "last_fall_year": 2019, "url": "https://www3.cde.ca.gov/demo-downloads/enrsch/enr201719-v2.txt"},
+      {"first_fall_year": 2020, "last_fall_year": 2022, "url": "https://www3.cde.ca.gov/demo-downloads/enrsch/enr202022-v2.txt"},
+      {"first_fall_year": 2023, "last_fall_year": 2023, "url": "https://www3.cde.ca.gov/demo-downloads/census/cdenroll2324-v2.txt"},
+      {"first_fall_year": 2024, "last_fall_year": 2024, "url": "https://www3.cde.ca.gov/demo-downloads/census/cdenroll2425.txt"},
+      {"first_fall_year": 2025, "last_fall_year": 2025, "url": "https://www3.cde.ca.gov/demo-downloads/census/cdenroll2526.txt"}
+    ],
+    "nevada_files": {
+      "2015": "https://webapp-strapi-paas-prod-nde-001.azurewebsites.net/uploads/2015_2016_SY_Student_Counts_a632177572.xlsx",
+      "2016": "https://webapp-strapi-paas-prod-nde-001.azurewebsites.net/uploads/20162017_Oct1_Enrol_Num_1a5ef511e2.xlsx",
+      "2017": "https://webapp-strapi-paas-prod-nde-001.azurewebsites.net/uploads/20172018_Numberofstudents_c45aa90c9a.xlsx",
+      "2018": "https://webapp-strapi-paas-prod-nde-001.azurewebsites.net/uploads/20182019_Numberof_Student102018_1ea97446e0.xlsx",
+      "2019": "https://webapp-strapi-paas-prod-nde-001.azurewebsites.net/uploads/20192020_Numberof_Student11142019_651a96a7a8.xlsx",
+      "2020": "https://webapp-strapi-paas-prod-nde-001.azurewebsites.net/uploads/2020_2021_School_Year_Numberof_Students_f703bba063.xlsx",
+      "2021": "https://webapp-strapi-paas-prod-nde-001.azurewebsites.net/uploads/2021_2022schoolyearcounts1021_0199ab6d3b.xlsx",
+      "2022": "https://webapp-strapi-paas-prod-nde-001.azurewebsites.net/uploads/2022_2023_enrollment_numbers_2224fa62e5.xlsx",
+      "2023": "https://webapp-strapi-paas-prod-nde-001.azurewebsites.net/uploads/2023_2024_school_year_validation_day_student_counts_2e68b10570.xlsx",
+      "2024": "https://webapp-strapi-paas-prod-nde-001.azurewebsites.net/uploads/2024_2025_school_year_validation_day_student_counts_16036836ca.xlsx",
+      "2025": "https://webapp-strapi-paas-prod-nde-001.azurewebsites.net/uploads/suppressed_2025_2026_school_year_enrollment_counts_for_website_11_03_25_c9f4d44d51.xlsx"
+    }
+  },
+  "inflation": {
+    "factors": "config/inflation_adjustments.csv",
+    "base_year": 2021,
+    "source_url": "https://www.bls.gov/cpi/research-series/r-cpi-u-rs-allitems.xlsx"
+  },
+  "tessellation": {
+    "parcel_feature_class": "F:\\GIS\\DB_CONNECT\\Vector.sde\\SDE.Parcels\\SDE.Parcel_History_Attributed",
+    "tessellation_feature_class": "F:\\GIS\\DB_CONNECT\\Vector.sde\\SDE.Census\\SDE.Tahoe_Tessellation",
+    "polygon_id": "GRID_ID",
+    "variables": "config/tessellation_variables.csv",
+    "output_gdb": "C:\\GIS\\Scratch.gdb",
+    "note": "The SDE paths are read only. Outputs go to the file geodatabase."
+  },
+  "outputs_folder": "outputs"
+}

@@ -1,0 +1,459 @@
+variable_code,variable_name,variable_category,dataset,sample_level,years,aggregation,active,notes
+B01003_001E,Total Population,Population,acs/acs5,tract;block group,,sum,Y,
+B01001_001E,Total: Total,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_002E,Male: Total,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_003E,Male: Under 5 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_004E,Male: 5 to 9 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_005E,Male: 10 to 14 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_006E,Male: 15 to 17 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_007E,Male: 18 and 19 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_008E,Male: 20 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_009E,Male: 21 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_010E,Male: 22 to 24 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_011E,Male: 25 to 29 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_012E,Male: 30 to 34 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_013E,Male: 35 to 39 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_014E,Male: 40 to 44 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_015E,Male: 45 to 49 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_016E,Male: 50 to 54 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_017E,Male: 55 to 59 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_018E,Male: 60 and 61 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_019E,Male: 62 to 64 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_020E,Male: 65 and 66 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_021E,Male: 67 to 69 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_022E,Male: 70 to 74 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_023E,Male: 75 to 79 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_024E,Male: 80 to 84 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_025E,Male: 85 years and over,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_026E,Female: Total,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_027E,Female: Under 5 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_028E,Female: 5 to 9 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_029E,Female: 10 to 14 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_030E,Female: 15 to 17 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_031E,Female: 18 and 19 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_032E,Female: 20 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_033E,Female: 21 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_034E,Female: 22 to 24 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_035E,Female: 25 to 29 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_036E,Female: 30 to 34 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_037E,Female: 35 to 39 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_038E,Female: 40 to 44 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_039E,Female: 45 to 49 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_040E,Female: 50 to 54 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_041E,Female: 55 to 59 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_042E,Female: 60 and 61 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_043E,Female: 62 to 64 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_044E,Female: 65 and 66 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_045E,Female: 67 to 69 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_046E,Female: 70 to 74 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_047E,Female: 75 to 79 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_048E,Female: 80 to 84 years,Age,acs/acs5,tract;block group,,sum,Y,
+B01001_049E,Female: 85 years and over,Age,acs/acs5,tract;block group,,sum,Y,
+B01002_001E,Median Age,Age (Median),acs/acs5,tract;block group,,none,Y,Published median. Never add medians across geographies.
+B03002_001E,Total population,Race,acs/acs5,tract;block group,,sum,Y,
+B03002_002E,Total population:  Not Hispanic or Latino,Race,acs/acs5,tract;block group,,sum,Y,
+B03002_003E,Total population:  Not Hispanic or Latino; White alone,Race,acs/acs5,tract;block group,,sum,Y,
+B03002_004E,Total population:  Not Hispanic or Latino; Black or African American alone,Race,acs/acs5,tract;block group,,sum,Y,
+B03002_005E,Total population:  Not Hispanic or Latino; American Indian and Alaska Native alone,Race,acs/acs5,tract;block group,,sum,Y,
+B03002_006E,Total population:  Not Hispanic or Latino; Asian alone,Race,acs/acs5,tract;block group,,sum,Y,
+B03002_007E,Total population:  Not Hispanic or Latino; Native Hawaiian and Other Pacific Islander alone,Race,acs/acs5,tract;block group,,sum,Y,
+B03002_008E,Total population:  Not Hispanic or Latino; Some other race alone,Race,acs/acs5,tract;block group,,sum,Y,
+B03002_009E,Total population:  Not Hispanic or Latino; Two or more races,Race,acs/acs5,tract;block group,,sum,Y,
+B03002_012E,Total population:  Hispanic or Latino,Race,acs/acs5,tract;block group,,sum,Y,
+B19001_001E,Total Households,Household Income,acs/acs5,tract;block group,,sum,Y,
+B19001_002E,"Less than $10,000",Household Income,acs/acs5,tract;block group,,sum,Y,
+B19001_003E,"$10,000 to $14,999",Household Income,acs/acs5,tract;block group,,sum,Y,
+B19001_004E,"$15,000 to $19,999",Household Income,acs/acs5,tract;block group,,sum,Y,
+B19001_005E,"$20,000 to $24,999",Household Income,acs/acs5,tract;block group,,sum,Y,
+B19001_006E,"$25,000 to $29,999",Household Income,acs/acs5,tract;block group,,sum,Y,
+B19001_007E,"$30,000 to $34,999",Household Income,acs/acs5,tract;block group,,sum,Y,
+B19001_008E,"$35,000 to $39,999",Household Income,acs/acs5,tract;block group,,sum,Y,
+B19001_009E,"$40,000 to $44,999",Household Income,acs/acs5,tract;block group,,sum,Y,
+B19001_010E,"$45,000 to $49,999",Household Income,acs/acs5,tract;block group,,sum,Y,
+B19001_011E,"$50,000 to $59,999",Household Income,acs/acs5,tract;block group,,sum,Y,
+B19001_012E,"$60,000 to $74,999",Household Income,acs/acs5,tract;block group,,sum,Y,
+B19001_013E,"$75,000 to $99,999",Household Income,acs/acs5,tract;block group,,sum,Y,
+B19001_014E,"$100,000 to $124,999",Household Income,acs/acs5,tract;block group,,sum,Y,
+B19001_015E,"$125,000 to $149,999",Household Income,acs/acs5,tract;block group,,sum,Y,
+B19001_016E,"$150,000 to $199,999",Household Income,acs/acs5,tract;block group,,sum,Y,
+B19001_017E,"$200,000 or more",Household Income,acs/acs5,tract;block group,,sum,Y,
+B19013_001E,Median Household Income,Income (Median),acs/acs5,tract;block group,,none,Y,Published median. Never add medians across geographies.
+B16004_001E,Total population 5 years and over,Language,acs/acs5,tract;block group,,sum,Y,
+B16004_003E,Speak Only English (5 to 17),Language,acs/acs5,tract;block group,,sum,Y,
+B16004_005E,"Speak Spanish - Speak English ""Very Well""  (5 to 17)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_006E,"Speak Spanish - Speak English ""Well""  (5 to 17)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_007E,"Speak Spanish - Speak English ""Not Well""  (5 to 17)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_008E,"Speak Spanish - Speak English ""Not at  All""  (5 to 17)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_010E,"Speak other Indo-European languages - Speak English ""Very Well""  (5 to 17)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_011E,"Speak other Indo-European languages - Speak English ""Well""  (5 to 17)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_012E,"Speak other Indo-European languages - Speak English ""Not Well""  (5 to 17)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_013E,"Speak other Indo-European languages - Speak English ""Not at  All""  (5 to 17)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_015E,"Speak Asian and Pacific Island languages - Speak English ""Very Well""  (5 to 17)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_016E,"Speak Asian and Pacific Island languages - Speak English ""Well""  (5 to 17)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_017E,"Speak Asian and Pacific Island languages- Speak English ""Not Well""  (5 to 17)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_018E,"Speak Asian and Pacific Island languages - Speak English ""Not at  All""  (5 to 17)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_020E,"Speak other languages - Speak English ""Very Well""  (5 to 17)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_021E,"Speak other languages - Speak English ""Well""  (5 to 17)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_022E,"Speak other languages - Speak English ""Not Well""  (5 to 17)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_023E,"Speak other languages - Speak English ""Not at  All""  (5 to 17)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_025E,Speak Only English (18 to 64),Language,acs/acs5,tract;block group,,sum,Y,
+B16004_027E,"Speak Spanish - Speak English ""Very Well""  (18 to 64)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_028E,"Speak Spanish - Speak English ""Well""  (18 to 64)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_029E,"Speak Spanish - Speak English ""Not Well""  (18 to 64)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_030E,"Speak Spanish - Speak English ""Not at  All""  (18 to 64)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_032E,"Speak other Indo-European languages - Speak English ""Very Well""  (18 to 64)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_033E,"Speak other Indo-European languages - Speak English ""Well""  (18 to 64)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_034E,"Speak other Indo-European languages - Speak English ""Not Well""  (18 to 64)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_035E,"Speak other Indo-European languages - Speak English ""Not at  All""  (18 to 64)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_037E,"Speak Asian and Pacific Island languages - Speak English ""Very Well""  (18 to 64)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_038E,"Speak Asian and Pacific Island languages - Speak English ""Well""  (18 to 64)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_039E,"Speak Asian and Pacific Island languages- Speak English ""Not Well""  (18 to 64)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_040E,"Speak Asian and Pacific Island languages - Speak English ""Not at  All""  (18 to 64)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_042E,"Speak other languages - Speak English ""Very Well""  (18 to 64)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_043E,"Speak other languages - Speak English ""Well""  (18 to 64)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_044E,"Speak other languages - Speak English ""Not Well""  (18 to 64)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_045E,"Speak other languages - Speak English ""Not at  All""  (18 to 64)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_047E,Speak Only English (65 years and over),Language,acs/acs5,tract;block group,,sum,Y,
+B16004_049E,"Speak Spanish - Speak English ""Very Well""  (65 years and over)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_050E,"Speak Spanish - Speak English ""Well""  (65 years and over)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_051E,"Speak Spanish - Speak English ""Not Well""  (65 years and over)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_052E,"Speak Spanish - Speak English ""Not at  All""  (65 years and over)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_054E,"Speak other Indo-European languages - Speak English ""Very Well""  (65 years and over)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_055E,"Speak other Indo-European languages - Speak English ""Well""  (65 years and over)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_056E,"Speak other Indo-European languages - Speak English ""Not Well""  (65 years and over)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_057E,"Speak other Indo-European languages - Speak English ""Not at  All""  (65 years and over)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_059E,"Speak Asian and Pacific Island languages - Speak English ""Very Well""  (65 years and over)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_060E,"Speak Asian and Pacific Island languages - Speak English ""Well""  (65 years and over)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_061E,"Speak Asian and Pacific Island languages- Speak English ""Not Well""  (65 years and over)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_062E,"Speak Asian and Pacific Island languages - Speak English ""Not at  All""  (65 years and over)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_064E,"Speak other languages - Speak English ""Very Well""  (65 years and over)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_065E,"Speak other languages - Speak English ""Well""  (65 years and over)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_066E,"Speak other languages - Speak English ""Not Well""  (65 years and over)",Language,acs/acs5,tract;block group,,sum,Y,
+B16004_067E,"Speak other languages - Speak English ""Not at  All""  (65 years and over)",Language,acs/acs5,tract;block group,,sum,Y,
+B25044_001E,Total Households Vehicles Available,Tenure by Vehicles Available,acs/acs5,tract;block group,,sum,Y,
+B25044_002E,Total Owner Occupied Households Vehicle Available,Tenure by Vehicles Available,acs/acs5,tract;block group,,sum,Y,
+B25044_003E,Total Owner Occupied Households No Vehicle Available,Tenure by Vehicles Available,acs/acs5,tract;block group,,sum,Y,
+B25044_004E,Total Owner Occupied Households 1 Vehicle Available,Tenure by Vehicles Available,acs/acs5,tract;block group,,sum,Y,
+B25044_005E,Total Owner Occupied Households 2 Vehicles Available,Tenure by Vehicles Available,acs/acs5,tract;block group,,sum,Y,
+B25044_006E,Total Owner Occupied Households 3 Vehicles Available,Tenure by Vehicles Available,acs/acs5,tract;block group,,sum,Y,
+B25044_007E,Total Owner Occupied Households 4 Vehicles Available,Tenure by Vehicles Available,acs/acs5,tract;block group,,sum,Y,
+B25044_008E,Total Owner Occupied Households 5 or more Vehicles Available,Tenure by Vehicles Available,acs/acs5,tract;block group,,sum,Y,
+B25044_009E,Total Renter Occupied Households Vehicle Available,Tenure by Vehicles Available,acs/acs5,tract;block group,,sum,Y,
+B25044_010E,Total Renter Occupied Households No Vehicle Available,Tenure by Vehicles Available,acs/acs5,tract;block group,,sum,Y,
+B25044_011E,Total Renter Occupied Households 1 Vehicle Available,Tenure by Vehicles Available,acs/acs5,tract;block group,,sum,Y,
+B25044_012E,Total Renter Occupied Households 2 Vehicles Available,Tenure by Vehicles Available,acs/acs5,tract;block group,,sum,Y,
+B25044_013E,Total Renter Occupied Households 3 Vehicles Available,Tenure by Vehicles Available,acs/acs5,tract;block group,,sum,Y,
+B25044_014E,Total Renter Occupied Households 4 Vehicles Available,Tenure by Vehicles Available,acs/acs5,tract;block group,,sum,Y,
+B25044_015E,Total Renter Occupied Households 5 or more Vehicles Available,Tenure by Vehicles Available,acs/acs5,tract;block group,,sum,Y,
+B25012_001E,Total occupied housing units,Tenure by Presence of Children,acs/acs5,tract;block group,,sum,Y,
+B25012_002E,Owner Occupied Households,Tenure by Presence of Children,acs/acs5,tract;block group,,sum,Y,
+B25012_003E,Owner Occupied Households With Related Children under 18,Tenure by Presence of Children,acs/acs5,tract;block group,,sum,Y,
+B25012_004E,Owner Occupied Households With Own Children under 18,Tenure by Presence of Children,acs/acs5,tract;block group,,sum,Y,
+B25012_005E,Owner Occupied Households With Own Children under 6 years only,Tenure by Presence of Children,acs/acs5,tract;block group,,sum,Y,
+B25012_006E,Owner Occupied Households With Own Children under 6 years and 6 to 17 years,Tenure by Presence of Children,acs/acs5,tract;block group,,sum,Y,
+B25012_007E,Owner Occupied Households With Own Children 6 to 17 years,Tenure by Presence of Children,acs/acs5,tract;block group,,sum,Y,
+B25012_008E,Owner Occupied Households No Own Children under 18,Tenure by Presence of Children,acs/acs5,tract;block group,,sum,Y,
+B25012_009E,Owner Occupied Households No Related Children under 18,Tenure by Presence of Children,acs/acs5,tract;block group,,sum,Y,
+B25012_010E,Renter Occupied Households,Tenure by Presence of Children,acs/acs5,tract;block group,,sum,Y,
+B25012_011E,Renter Occupied Households With Related Children under 18,Tenure by Presence of Children,acs/acs5,tract;block group,,sum,Y,
+B25012_012E,Renter Occupied Households With Own Children under 18,Tenure by Presence of Children,acs/acs5,tract;block group,,sum,Y,
+B25012_013E,Renter Occupied Households With Own Children under 6 years only,Tenure by Presence of Children,acs/acs5,tract;block group,,sum,Y,
+B25012_014E,Renter Occupied Households With Own Children under 6 years and 6 to 17 years,Tenure by Presence of Children,acs/acs5,tract;block group,,sum,Y,
+B25012_015E,Renter Occupied Households With Own Children 6 to 17 years,Tenure by Presence of Children,acs/acs5,tract;block group,,sum,Y,
+B25012_016E,Renter Occupied Households No Own Children under 18,Tenure by Presence of Children,acs/acs5,tract;block group,,sum,Y,
+B25012_017E,Renter Occupied Households No Related Children under 18,Tenure by Presence of Children,acs/acs5,tract;block group,,sum,Y,
+B23024_001E,Total Disability Population,Disability By Work,acs/acs5,tract;block group,,sum,Y,Universe is the population 20 to 64 years.
+B23024_003E,Income below poverty with disability,Disability By Work,acs/acs5,tract;block group,,sum,Y,Universe is the population 20 to 64 years.
+B23024_018E,Income above poverty with disability,Disability By Work,acs/acs5,tract;block group,,sum,Y,Universe is the population 20 to 64 years.
+B17017_002E,Poverty Status of Households Below Poverty level,Poverty Status,acs/acs5,tract;block group,,sum,Y,
+B17021_002E,Below Poverty Status (Individuals),Poverty Status,acs/acs5,tract;block group,,sum,Y,
+B25001_001E,Total Housing Units,Housing Units,acs/acs5,tract;block group,,sum,Y,
+B25002_002E,Total Housing Units: Occupied,Housing Units,acs/acs5,tract;block group,,sum,Y,
+B25002_003E,Total Housing Units: Vacant,Housing Units,acs/acs5,tract;block group,,sum,Y,
+B25003_002E,Occupied Housing Units: Owner Occupied,Housing Units,acs/acs5,tract;block group,,sum,Y,
+B25003_003E,Occupied Housing Units: Renter Occupied,Housing Units,acs/acs5,tract;block group,,sum,Y,
+B25004_002E,Vacant Housing Units: For rent,Housing Units,acs/acs5,tract;block group,,sum,Y,
+B25004_003E,"Vacant Housing Units: Rented, not occupied",Housing Units,acs/acs5,tract;block group,,sum,Y,
+B25004_004E,Vacant Housing Units: For sale only,Housing Units,acs/acs5,tract;block group,,sum,Y,
+B25004_005E,"Vacant Housing Units: Sold, not occupied",Housing Units,acs/acs5,tract;block group,,sum,Y,
+B25004_006E,"Vacant Housing Units: Seasonal, recreational, or occasional use",Housing Units,acs/acs5,tract;block group,,sum,Y,
+B25004_007E,Vacant Housing Units: For migrant workers,Housing Units,acs/acs5,tract;block group,,sum,Y,For migrant workers. The published service labeled it Other Vacant; see docs/corrections.md.
+B25004_008E,Vacant Housing Units: Other vacant,Housing Units,acs/acs5,tract;block group,,sum,Y,Other vacant. Replaces B25004_007E in the Tahoe Census Curated layer.
+B25077_001E,Median Home Value,Home Value (Median),acs/acs5,tract;block group,,none,Y,Published median. Never add medians across geographies.
+B25064_001E,Median Gross Rent,Rent (Median),acs/acs5,tract;block group,,none,Y,Published median. Never add medians across geographies.
+B08119_055E,Worked From Home,Employment,acs/acs5,tract,,sum,Y,Returns blank values at block group level.
+B25075_001E,Owner-occupied housing units (home value table total),Home Value,acs/acs5,tract;block group,,sum,Y,Total of the home value table: a count of owner-occupied units. The published service labeled it Median home value; see docs/corrections.md.
+B25063_001E,Renter-occupied housing units (gross rent table total),Gross Rent,acs/acs5,tract;block group,,sum,Y,Total of the gross rent table: a count of renter-occupied units. The published service labeled it Median Gross Rent; see docs/corrections.md.
+B06011_001E,Median income of individuals 15 and over,Income (Median),acs/acs5,tract;block group,,none,N,"Median income of individuals 15 and over, by place of birth. The published service labeled it Median Household Income; see docs/corrections.md. Median household income is B19013_001E."
+P1_001N,Total Population,Population,dec/dhc,tract;block group,2020,sum,Y,
+H1_001N,Total Housing Units,Housing Units,dec/dhc,tract;block group,2020,sum,Y,
+H1_002N,Total Housing Units: Occupied,Housing Units,dec/dhc,tract;block group,2020,sum,Y,
+H1_003N,Total Housing Units: Vacant,Housing Units,dec/dhc,tract;block group,2020,sum,Y,
+P12_001N,Total: Total,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_002N,Male: Total,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_003N,Male: Under 5 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_004N,Male: 5 to 9 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_005N,Male: 10 to 14 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_006N,Male: 15 to 17 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_007N,Male: 18 and 19 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_008N,Male: 20 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_009N,Male: 21 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_010N,Male: 22 to 24 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_011N,Male: 25 to 29 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_012N,Male: 30 to 34 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_013N,Male: 35 to 39 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_014N,Male: 40 to 44 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_015N,Male: 45 to 49 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_016N,Male: 50 to 54 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_017N,Male: 55 to 59 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_018N,Male: 60 and 61 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_019N,Male: 62 to 64 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_020N,Male: 65 and 66 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_021N,Male: 67 to 69 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_022N,Male: 70 to 74 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_023N,Male: 75 to 79 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_024N,Male: 80 to 84 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_025N,Male: 85 years and over,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_026N,Female: Total,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_027N,Female: Under 5 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_028N,Female: 5 to 9 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_029N,Female: 10 to 14 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_030N,Female: 15 to 17 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_031N,Female: 18 and 19 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_032N,Female: 20 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_033N,Female: 21 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_034N,Female: 22 to 24 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_035N,Female: 25 to 29 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_036N,Female: 30 to 34 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_037N,Female: 35 to 39 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_038N,Female: 40 to 44 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_039N,Female: 45 to 49 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_040N,Female: 50 to 54 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_041N,Female: 55 to 59 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_042N,Female: 60 and 61 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_043N,Female: 62 to 64 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_044N,Female: 65 and 66 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_045N,Female: 67 to 69 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_046N,Female: 70 to 74 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_047N,Female: 75 to 79 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_048N,Female: 80 to 84 years,Age,dec/dhc,tract;block group,2020,sum,Y,
+P12_049N,Female: 85 years and over,Age,dec/dhc,tract;block group,2020,sum,Y,
+B18101_001E,Total civilian noninstitutionalized population,Disability Status by Sex and Age,acs/acs5,tract,,sum,Y,"Universe is the civilian noninstitutionalized population, all ages. Published for tracts, not block groups."
+B18101_004E,Male: Under 5 years: With a disability,Disability Status by Sex and Age,acs/acs5,tract,,sum,Y,
+B18101_005E,Male: Under 5 years: No disability,Disability Status by Sex and Age,acs/acs5,tract,,sum,Y,
+B18101_007E,Male: 5 to 17 years: With a disability,Disability Status by Sex and Age,acs/acs5,tract,,sum,Y,
+B18101_008E,Male: 5 to 17 years: No disability,Disability Status by Sex and Age,acs/acs5,tract,,sum,Y,
+B18101_010E,Male: 18 to 34 years: With a disability,Disability Status by Sex and Age,acs/acs5,tract,,sum,Y,
+B18101_011E,Male: 18 to 34 years: No disability,Disability Status by Sex and Age,acs/acs5,tract,,sum,Y,
+B18101_013E,Male: 35 to 64 years: With a disability,Disability Status by Sex and Age,acs/acs5,tract,,sum,Y,
+B18101_014E,Male: 35 to 64 years: No disability,Disability Status by Sex and Age,acs/acs5,tract,,sum,Y,
+B18101_016E,Male: 65 to 74 years: With a disability,Disability Status by Sex and Age,acs/acs5,tract,,sum,Y,
+B18101_017E,Male: 65 to 74 years: No disability,Disability Status by Sex and Age,acs/acs5,tract,,sum,Y,
+B18101_019E,Male: 75 years and over: With a disability,Disability Status by Sex and Age,acs/acs5,tract,,sum,Y,
+B18101_020E,Male: 75 years and over: No disability,Disability Status by Sex and Age,acs/acs5,tract,,sum,Y,
+B18101_023E,Female: Under 5 years: With a disability,Disability Status by Sex and Age,acs/acs5,tract,,sum,Y,
+B18101_024E,Female: Under 5 years: No disability,Disability Status by Sex and Age,acs/acs5,tract,,sum,Y,
+B18101_026E,Female: 5 to 17 years: With a disability,Disability Status by Sex and Age,acs/acs5,tract,,sum,Y,
+B18101_027E,Female: 5 to 17 years: No disability,Disability Status by Sex and Age,acs/acs5,tract,,sum,Y,
+B18101_029E,Female: 18 to 34 years: With a disability,Disability Status by Sex and Age,acs/acs5,tract,,sum,Y,
+B18101_030E,Female: 18 to 34 years: No disability,Disability Status by Sex and Age,acs/acs5,tract,,sum,Y,
+B18101_032E,Female: 35 to 64 years: With a disability,Disability Status by Sex and Age,acs/acs5,tract,,sum,Y,
+B18101_033E,Female: 35 to 64 years: No disability,Disability Status by Sex and Age,acs/acs5,tract,,sum,Y,
+B18101_035E,Female: 65 to 74 years: With a disability,Disability Status by Sex and Age,acs/acs5,tract,,sum,Y,
+B18101_036E,Female: 65 to 74 years: No disability,Disability Status by Sex and Age,acs/acs5,tract,,sum,Y,
+B18101_038E,Female: 75 years and over: With a disability,Disability Status by Sex and Age,acs/acs5,tract,,sum,Y,
+B18101_039E,Female: 75 years and over: No disability,Disability Status by Sex and Age,acs/acs5,tract,,sum,Y,
+B25075_002E,"Owner-occupied units valued Less than $10,000",Home Value,acs/acs5,tract;block group,,sum,Y,
+B25075_003E,"Owner-occupied units valued $10,000 to $14,999",Home Value,acs/acs5,tract;block group,,sum,Y,
+B25075_004E,"Owner-occupied units valued $15,000 to $19,999",Home Value,acs/acs5,tract;block group,,sum,Y,
+B25075_005E,"Owner-occupied units valued $20,000 to $24,999",Home Value,acs/acs5,tract;block group,,sum,Y,
+B25075_006E,"Owner-occupied units valued $25,000 to $29,999",Home Value,acs/acs5,tract;block group,,sum,Y,
+B25075_007E,"Owner-occupied units valued $30,000 to $34,999",Home Value,acs/acs5,tract;block group,,sum,Y,
+B25075_008E,"Owner-occupied units valued $35,000 to $39,999",Home Value,acs/acs5,tract;block group,,sum,Y,
+B25075_009E,"Owner-occupied units valued $40,000 to $49,999",Home Value,acs/acs5,tract;block group,,sum,Y,
+B25075_010E,"Owner-occupied units valued $50,000 to $59,999",Home Value,acs/acs5,tract;block group,,sum,Y,
+B25075_011E,"Owner-occupied units valued $60,000 to $69,999",Home Value,acs/acs5,tract;block group,,sum,Y,
+B25075_012E,"Owner-occupied units valued $70,000 to $79,999",Home Value,acs/acs5,tract;block group,,sum,Y,
+B25075_013E,"Owner-occupied units valued $80,000 to $89,999",Home Value,acs/acs5,tract;block group,,sum,Y,
+B25075_014E,"Owner-occupied units valued $90,000 to $99,999",Home Value,acs/acs5,tract;block group,,sum,Y,
+B25075_015E,"Owner-occupied units valued $100,000 to $124,999",Home Value,acs/acs5,tract;block group,,sum,Y,
+B25075_016E,"Owner-occupied units valued $125,000 to $149,999",Home Value,acs/acs5,tract;block group,,sum,Y,
+B25075_017E,"Owner-occupied units valued $150,000 to $174,999",Home Value,acs/acs5,tract;block group,,sum,Y,
+B25075_018E,"Owner-occupied units valued $175,000 to $199,999",Home Value,acs/acs5,tract;block group,,sum,Y,
+B25075_019E,"Owner-occupied units valued $200,000 to $249,999",Home Value,acs/acs5,tract;block group,,sum,Y,
+B25075_020E,"Owner-occupied units valued $250,000 to $299,999",Home Value,acs/acs5,tract;block group,,sum,Y,
+B25075_021E,"Owner-occupied units valued $300,000 to $399,999",Home Value,acs/acs5,tract;block group,,sum,Y,
+B25075_022E,"Owner-occupied units valued $400,000 to $499,999",Home Value,acs/acs5,tract;block group,,sum,Y,
+B25075_023E,"Owner-occupied units valued $500,000 to $749,999",Home Value,acs/acs5,tract;block group,,sum,Y,
+B25075_024E,"Owner-occupied units valued $750,000 to $999,999",Home Value,acs/acs5,tract;block group,,sum,Y,
+B25075_025E,"Owner-occupied units valued $1,000,000 or more (2011 to 2014); $1,000,000 to $1,499,999 (2015 and later)",Home Value,acs/acs5,tract;block group,,sum,Y,Bin changed in 2015. See config/medians.csv.
+B25075_026E,"Owner-occupied units valued $1,500,000 to $1,999,999",Home Value,acs/acs5,tract;block group,2015-,sum,Y,Added in 2015.
+B25075_027E,"Owner-occupied units valued $2,000,000 or more",Home Value,acs/acs5,tract;block group,2015-,sum,Y,Added in 2015.
+B25063_002E,Renter-occupied units with cash rent,Gross Rent,acs/acs5,tract;block group,,sum,Y,
+B25063_003E,Cash rent Less than $100,Gross Rent,acs/acs5,tract;block group,,sum,Y,
+B25063_004E,Cash rent $100 to $149,Gross Rent,acs/acs5,tract;block group,,sum,Y,
+B25063_005E,Cash rent $150 to $199,Gross Rent,acs/acs5,tract;block group,,sum,Y,
+B25063_006E,Cash rent $200 to $249,Gross Rent,acs/acs5,tract;block group,,sum,Y,
+B25063_007E,Cash rent $250 to $299,Gross Rent,acs/acs5,tract;block group,,sum,Y,
+B25063_008E,Cash rent $300 to $349,Gross Rent,acs/acs5,tract;block group,,sum,Y,
+B25063_009E,Cash rent $350 to $399,Gross Rent,acs/acs5,tract;block group,,sum,Y,
+B25063_010E,Cash rent $400 to $449,Gross Rent,acs/acs5,tract;block group,,sum,Y,
+B25063_011E,Cash rent $450 to $499,Gross Rent,acs/acs5,tract;block group,,sum,Y,
+B25063_012E,Cash rent $500 to $549,Gross Rent,acs/acs5,tract;block group,,sum,Y,
+B25063_013E,Cash rent $550 to $599,Gross Rent,acs/acs5,tract;block group,,sum,Y,
+B25063_014E,Cash rent $600 to $649,Gross Rent,acs/acs5,tract;block group,,sum,Y,
+B25063_015E,Cash rent $650 to $699,Gross Rent,acs/acs5,tract;block group,,sum,Y,
+B25063_016E,Cash rent $700 to $749,Gross Rent,acs/acs5,tract;block group,,sum,Y,
+B25063_017E,Cash rent $750 to $799,Gross Rent,acs/acs5,tract;block group,,sum,Y,
+B25063_018E,Cash rent $800 to $899,Gross Rent,acs/acs5,tract;block group,,sum,Y,
+B25063_019E,Cash rent $900 to $999,Gross Rent,acs/acs5,tract;block group,,sum,Y,
+B25063_020E,"Cash rent $1,000 to $1,249",Gross Rent,acs/acs5,tract;block group,,sum,Y,
+B25063_021E,"Cash rent $1,250 to $1,499",Gross Rent,acs/acs5,tract;block group,,sum,Y,
+B25063_022E,"Cash rent $1,500 to $1,999",Gross Rent,acs/acs5,tract;block group,,sum,Y,
+B25063_023E,"Cash rent $2,000 or more (2011 to 2014); $2,000 to $2,499 (2015 and later)",Gross Rent,acs/acs5,tract;block group,,sum,Y,Bin changed in 2015. See config/medians.csv.
+B25063_024E,"No cash rent (2011 to 2014); cash rent $2,500 to $2,999 (2015 and later)",Gross Rent,acs/acs5,tract;block group,,sum,Y,Meaning changed in 2015. See config/medians.csv.
+B25063_025E,"Cash rent $3,000 to $3,499",Gross Rent,acs/acs5,tract;block group,2015-,sum,Y,
+B25063_026E,"Cash rent $3,500 or more",Gross Rent,acs/acs5,tract;block group,2015-,sum,Y,
+B25063_027E,No cash rent,Gross Rent,acs/acs5,tract;block group,2015-,sum,Y,
+P014A001,Under 1 year (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A002,1 and 2 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A003,3 and 4 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A004,5 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A005,6 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A006,7 to 9 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A007,10 and 11 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A008,12 and 13 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A009,14 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A010,15 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A011,16 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A012,17 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A013,18 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A014,19 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A015,20 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A016,21 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A017,22 to 24 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A018,25 to 29 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A019,30 to 34 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A020,35 to 39 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A021,40 to 44 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A022,45 to 49 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A023,50 to 54 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A024,55 to 59 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A025,60 and 61 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A026,62 to 64 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A027,65 to 69 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A028,70 to 74 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A029,75 to 79 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A030,80 to 84 years (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014A031,85 years and over (STF3 table P014A),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B001,Under 1 year (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B002,1 and 2 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B003,3 and 4 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B004,5 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B005,6 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B006,7 to 9 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B007,10 and 11 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B008,12 and 13 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B009,14 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B010,15 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B011,16 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B012,17 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B013,18 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B014,19 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B015,20 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B016,21 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B017,22 to 24 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B018,25 to 29 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B019,30 to 34 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B020,35 to 39 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B021,40 to 44 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B022,45 to 49 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B023,50 to 54 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B024,55 to 59 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B025,60 and 61 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B026,62 to 64 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B027,65 to 69 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B028,70 to 74 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B029,75 to 79 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B030,80 to 84 years (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014B031,85 years and over (STF3 table P014B),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C001,Under 1 year (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C002,1 and 2 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C003,3 and 4 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C004,5 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C005,6 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C006,7 to 9 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C007,10 and 11 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C008,12 and 13 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C009,14 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C010,15 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C011,16 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C012,17 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C013,18 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C014,19 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C015,20 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C016,21 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C017,22 to 24 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C018,25 to 29 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C019,30 to 34 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C020,35 to 39 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C021,40 to 44 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C022,45 to 49 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C023,50 to 54 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C024,55 to 59 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C025,60 and 61 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C026,62 to 64 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C027,65 to 69 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C028,70 to 74 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C029,75 to 79 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C030,80 to 84 years (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P014C031,85 years and over (STF3 table P014C),Age,dec/sf3,tract,1990,sum,Y,"1990 STF3, loaded from DBF files with import-1990. Parts A, B, and C are added together in the published age groups; their individual meaning was not checked."
+P012001,Total: Total,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012002,Male: Total,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012003,Male: Under 5 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012004,Male: 5 to 9 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012005,Male: 10 to 14 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012006,Male: 15 to 17 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012007,Male: 18 and 19 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012008,Male: 20 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012009,Male: 21 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012010,Male: 22 to 24 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012011,Male: 25 to 29 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012012,Male: 30 to 34 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012013,Male: 35 to 39 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012014,Male: 40 to 44 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012015,Male: 45 to 49 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012016,Male: 50 to 54 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012017,Male: 55 to 59 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012018,Male: 60 and 61 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012019,Male: 62 to 64 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012020,Male: 65 and 66 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012021,Male: 67 to 69 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012022,Male: 70 to 74 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012023,Male: 75 to 79 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012024,Male: 80 to 84 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012025,Male: 85 years and over,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012026,Female: Total,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012027,Female: Under 5 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012028,Female: 5 to 9 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012029,Female: 10 to 14 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012030,Female: 15 to 17 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012031,Female: 18 and 19 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012032,Female: 20 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012033,Female: 21 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012034,Female: 22 to 24 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012035,Female: 25 to 29 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012036,Female: 30 to 34 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012037,Female: 35 to 39 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012038,Female: 40 to 44 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012039,Female: 45 to 49 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012040,Female: 50 to 54 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012041,Female: 55 to 59 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012042,Female: 60 and 61 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012043,Female: 62 to 64 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012044,Female: 65 and 66 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012045,Female: 67 to 69 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012046,Female: 70 to 74 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012047,Female: 75 to 79 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012048,Female: 80 to 84 years,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1
+P012049,Female: 85 years and over,Age,dec/sf1,tract;block group,2010,sum,Y,2010 Decennial Census Summary File 1

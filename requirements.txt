@@ -1,0 +1,7 @@
+# Everything here ships with the ArcGIS Pro arcgispro-py3 environment.
+pandas>=1.4
+numpy>=1.21
+requests>=2.25
+openpyxl>=3.0  # reads the Nevada enrollment workbooks
+# For running tests
+pytest

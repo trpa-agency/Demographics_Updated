@@ -1,0 +1,115 @@
+median_set,output_name,output_category,variable_code,dataset,first_year,last_year,bin_lower,bin_upper,design_factor,notes
+TRPA Median Household Income,Median Household Income (from income bins),TRPA Medians: Household Income,B19001_002E,acs/acs5,,,0,10000,1.6,"B19001 bins, same in every ACS year since 2011"
+TRPA Median Household Income,Median Household Income (from income bins),TRPA Medians: Household Income,B19001_003E,acs/acs5,,,10000,15000,1.6,"B19001 bins, same in every ACS year since 2011"
+TRPA Median Household Income,Median Household Income (from income bins),TRPA Medians: Household Income,B19001_004E,acs/acs5,,,15000,20000,1.6,"B19001 bins, same in every ACS year since 2011"
+TRPA Median Household Income,Median Household Income (from income bins),TRPA Medians: Household Income,B19001_005E,acs/acs5,,,20000,25000,1.6,"B19001 bins, same in every ACS year since 2011"
+TRPA Median Household Income,Median Household Income (from income bins),TRPA Medians: Household Income,B19001_006E,acs/acs5,,,25000,30000,1.6,"B19001 bins, same in every ACS year since 2011"
+TRPA Median Household Income,Median Household Income (from income bins),TRPA Medians: Household Income,B19001_007E,acs/acs5,,,30000,35000,1.6,"B19001 bins, same in every ACS year since 2011"
+TRPA Median Household Income,Median Household Income (from income bins),TRPA Medians: Household Income,B19001_008E,acs/acs5,,,35000,40000,1.6,"B19001 bins, same in every ACS year since 2011"
+TRPA Median Household Income,Median Household Income (from income bins),TRPA Medians: Household Income,B19001_009E,acs/acs5,,,40000,45000,1.6,"B19001 bins, same in every ACS year since 2011"
+TRPA Median Household Income,Median Household Income (from income bins),TRPA Medians: Household Income,B19001_010E,acs/acs5,,,45000,50000,1.6,"B19001 bins, same in every ACS year since 2011"
+TRPA Median Household Income,Median Household Income (from income bins),TRPA Medians: Household Income,B19001_011E,acs/acs5,,,50000,60000,1.6,"B19001 bins, same in every ACS year since 2011"
+TRPA Median Household Income,Median Household Income (from income bins),TRPA Medians: Household Income,B19001_012E,acs/acs5,,,60000,75000,1.6,"B19001 bins, same in every ACS year since 2011"
+TRPA Median Household Income,Median Household Income (from income bins),TRPA Medians: Household Income,B19001_013E,acs/acs5,,,75000,100000,1.6,"B19001 bins, same in every ACS year since 2011"
+TRPA Median Household Income,Median Household Income (from income bins),TRPA Medians: Household Income,B19001_014E,acs/acs5,,,100000,125000,1.6,"B19001 bins, same in every ACS year since 2011"
+TRPA Median Household Income,Median Household Income (from income bins),TRPA Medians: Household Income,B19001_015E,acs/acs5,,,125000,150000,1.6,"B19001 bins, same in every ACS year since 2011"
+TRPA Median Household Income,Median Household Income (from income bins),TRPA Medians: Household Income,B19001_016E,acs/acs5,,,150000,200000,1.6,"B19001 bins, same in every ACS year since 2011"
+TRPA Median Household Income,Median Household Income (from income bins),TRPA Medians: Household Income,B19001_017E,acs/acs5,,,200000,,1.6,"B19001 bins, same in every ACS year since 2011"
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_003E,acs/acs5,,,0,5,1.1,B01001 male; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_027E,acs/acs5,,,0,5,1.1,B01001 female; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_004E,acs/acs5,,,5,10,1.1,B01001 male; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_028E,acs/acs5,,,5,10,1.1,B01001 female; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_005E,acs/acs5,,,10,15,1.1,B01001 male; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_029E,acs/acs5,,,10,15,1.1,B01001 female; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_006E,acs/acs5,,,15,18,1.1,B01001 male; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_030E,acs/acs5,,,15,18,1.1,B01001 female; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_007E,acs/acs5,,,18,20,1.1,B01001 male; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_031E,acs/acs5,,,18,20,1.1,B01001 female; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_008E,acs/acs5,,,20,21,1.1,B01001 male; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_032E,acs/acs5,,,20,21,1.1,B01001 female; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_009E,acs/acs5,,,21,22,1.1,B01001 male; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_033E,acs/acs5,,,21,22,1.1,B01001 female; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_010E,acs/acs5,,,22,25,1.1,B01001 male; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_034E,acs/acs5,,,22,25,1.1,B01001 female; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_011E,acs/acs5,,,25,30,1.1,B01001 male; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_035E,acs/acs5,,,25,30,1.1,B01001 female; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_012E,acs/acs5,,,30,35,1.1,B01001 male; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_036E,acs/acs5,,,30,35,1.1,B01001 female; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_013E,acs/acs5,,,35,40,1.1,B01001 male; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_037E,acs/acs5,,,35,40,1.1,B01001 female; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_014E,acs/acs5,,,40,45,1.1,B01001 male; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_038E,acs/acs5,,,40,45,1.1,B01001 female; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_015E,acs/acs5,,,45,50,1.1,B01001 male; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_039E,acs/acs5,,,45,50,1.1,B01001 female; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_016E,acs/acs5,,,50,55,1.1,B01001 male; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_040E,acs/acs5,,,50,55,1.1,B01001 female; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_017E,acs/acs5,,,55,60,1.1,B01001 male; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_041E,acs/acs5,,,55,60,1.1,B01001 female; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_018E,acs/acs5,,,60,62,1.1,B01001 male; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_042E,acs/acs5,,,60,62,1.1,B01001 female; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_019E,acs/acs5,,,62,65,1.1,B01001 male; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_043E,acs/acs5,,,62,65,1.1,B01001 female; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_020E,acs/acs5,,,65,67,1.1,B01001 male; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_044E,acs/acs5,,,65,67,1.1,B01001 female; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_021E,acs/acs5,,,67,70,1.1,B01001 male; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_045E,acs/acs5,,,67,70,1.1,B01001 female; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_022E,acs/acs5,,,70,75,1.1,B01001 male; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_046E,acs/acs5,,,70,75,1.1,B01001 female; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_023E,acs/acs5,,,75,80,1.1,B01001 male; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_047E,acs/acs5,,,75,80,1.1,B01001 female; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_024E,acs/acs5,,,80,85,1.1,B01001 male; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_048E,acs/acs5,,,80,85,1.1,B01001 female; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_025E,acs/acs5,,,85,,1.1,B01001 male; male and female counts in the same bin are added together
+TRPA Median Age,Median Age (from age bins),TRPA Medians: Age,B01001_049E,acs/acs5,,,85,,1.1,B01001 female; male and female counts in the same bin are added together
+TRPA Median Home Value,Median Home Value (from value bins),TRPA Medians: Home Value,B25075_002E,acs/acs5,,,0,10000,1.5,Owner-occupied units by value
+TRPA Median Home Value,Median Home Value (from value bins),TRPA Medians: Home Value,B25075_003E,acs/acs5,,,10000,15000,1.5,Owner-occupied units by value
+TRPA Median Home Value,Median Home Value (from value bins),TRPA Medians: Home Value,B25075_004E,acs/acs5,,,15000,20000,1.5,Owner-occupied units by value
+TRPA Median Home Value,Median Home Value (from value bins),TRPA Medians: Home Value,B25075_005E,acs/acs5,,,20000,25000,1.5,Owner-occupied units by value
+TRPA Median Home Value,Median Home Value (from value bins),TRPA Medians: Home Value,B25075_006E,acs/acs5,,,25000,30000,1.5,Owner-occupied units by value
+TRPA Median Home Value,Median Home Value (from value bins),TRPA Medians: Home Value,B25075_007E,acs/acs5,,,30000,35000,1.5,Owner-occupied units by value
+TRPA Median Home Value,Median Home Value (from value bins),TRPA Medians: Home Value,B25075_008E,acs/acs5,,,35000,40000,1.5,Owner-occupied units by value
+TRPA Median Home Value,Median Home Value (from value bins),TRPA Medians: Home Value,B25075_009E,acs/acs5,,,40000,50000,1.5,Owner-occupied units by value
+TRPA Median Home Value,Median Home Value (from value bins),TRPA Medians: Home Value,B25075_010E,acs/acs5,,,50000,60000,1.5,Owner-occupied units by value
+TRPA Median Home Value,Median Home Value (from value bins),TRPA Medians: Home Value,B25075_011E,acs/acs5,,,60000,70000,1.5,Owner-occupied units by value
+TRPA Median Home Value,Median Home Value (from value bins),TRPA Medians: Home Value,B25075_012E,acs/acs5,,,70000,80000,1.5,Owner-occupied units by value
+TRPA Median Home Value,Median Home Value (from value bins),TRPA Medians: Home Value,B25075_013E,acs/acs5,,,80000,90000,1.5,Owner-occupied units by value
+TRPA Median Home Value,Median Home Value (from value bins),TRPA Medians: Home Value,B25075_014E,acs/acs5,,,90000,100000,1.5,Owner-occupied units by value
+TRPA Median Home Value,Median Home Value (from value bins),TRPA Medians: Home Value,B25075_015E,acs/acs5,,,100000,125000,1.5,Owner-occupied units by value
+TRPA Median Home Value,Median Home Value (from value bins),TRPA Medians: Home Value,B25075_016E,acs/acs5,,,125000,150000,1.5,Owner-occupied units by value
+TRPA Median Home Value,Median Home Value (from value bins),TRPA Medians: Home Value,B25075_017E,acs/acs5,,,150000,175000,1.5,Owner-occupied units by value
+TRPA Median Home Value,Median Home Value (from value bins),TRPA Medians: Home Value,B25075_018E,acs/acs5,,,175000,200000,1.5,Owner-occupied units by value
+TRPA Median Home Value,Median Home Value (from value bins),TRPA Medians: Home Value,B25075_019E,acs/acs5,,,200000,250000,1.5,Owner-occupied units by value
+TRPA Median Home Value,Median Home Value (from value bins),TRPA Medians: Home Value,B25075_020E,acs/acs5,,,250000,300000,1.5,Owner-occupied units by value
+TRPA Median Home Value,Median Home Value (from value bins),TRPA Medians: Home Value,B25075_021E,acs/acs5,,,300000,400000,1.5,Owner-occupied units by value
+TRPA Median Home Value,Median Home Value (from value bins),TRPA Medians: Home Value,B25075_022E,acs/acs5,,,400000,500000,1.5,Owner-occupied units by value
+TRPA Median Home Value,Median Home Value (from value bins),TRPA Medians: Home Value,B25075_023E,acs/acs5,,,500000,750000,1.5,Owner-occupied units by value
+TRPA Median Home Value,Median Home Value (from value bins),TRPA Medians: Home Value,B25075_024E,acs/acs5,,,750000,1000000,1.5,Owner-occupied units by value
+TRPA Median Home Value,Median Home Value (from value bins),TRPA Medians: Home Value,B25075_025E,acs/acs5,,2014,1000000,,1.5,"2011 to 2014: $1,000,000 or more"
+TRPA Median Home Value,Median Home Value (from value bins),TRPA Medians: Home Value,B25075_025E,acs/acs5,2015,,1000000,1500000,1.5,2015 and later
+TRPA Median Home Value,Median Home Value (from value bins),TRPA Medians: Home Value,B25075_026E,acs/acs5,2015,,1500000,2000000,1.5,
+TRPA Median Home Value,Median Home Value (from value bins),TRPA Medians: Home Value,B25075_027E,acs/acs5,2015,,2000000,,1.5,"$2,000,000 or more"
+TRPA Median Gross Rent,Median Gross Rent (from rent bins),TRPA Medians: Gross Rent,B25063_003E,acs/acs5,,,0,100,1.7,"Renter-occupied units paying cash rent. No cash rent is left out, as in the published median."
+TRPA Median Gross Rent,Median Gross Rent (from rent bins),TRPA Medians: Gross Rent,B25063_004E,acs/acs5,,,100,150,1.7,"Renter-occupied units paying cash rent. No cash rent is left out, as in the published median."
+TRPA Median Gross Rent,Median Gross Rent (from rent bins),TRPA Medians: Gross Rent,B25063_005E,acs/acs5,,,150,200,1.7,"Renter-occupied units paying cash rent. No cash rent is left out, as in the published median."
+TRPA Median Gross Rent,Median Gross Rent (from rent bins),TRPA Medians: Gross Rent,B25063_006E,acs/acs5,,,200,250,1.7,"Renter-occupied units paying cash rent. No cash rent is left out, as in the published median."
+TRPA Median Gross Rent,Median Gross Rent (from rent bins),TRPA Medians: Gross Rent,B25063_007E,acs/acs5,,,250,300,1.7,"Renter-occupied units paying cash rent. No cash rent is left out, as in the published median."
+TRPA Median Gross Rent,Median Gross Rent (from rent bins),TRPA Medians: Gross Rent,B25063_008E,acs/acs5,,,300,350,1.7,"Renter-occupied units paying cash rent. No cash rent is left out, as in the published median."
+TRPA Median Gross Rent,Median Gross Rent (from rent bins),TRPA Medians: Gross Rent,B25063_009E,acs/acs5,,,350,400,1.7,"Renter-occupied units paying cash rent. No cash rent is left out, as in the published median."
+TRPA Median Gross Rent,Median Gross Rent (from rent bins),TRPA Medians: Gross Rent,B25063_010E,acs/acs5,,,400,450,1.7,"Renter-occupied units paying cash rent. No cash rent is left out, as in the published median."
+TRPA Median Gross Rent,Median Gross Rent (from rent bins),TRPA Medians: Gross Rent,B25063_011E,acs/acs5,,,450,500,1.7,"Renter-occupied units paying cash rent. No cash rent is left out, as in the published median."
+TRPA Median Gross Rent,Median Gross Rent (from rent bins),TRPA Medians: Gross Rent,B25063_012E,acs/acs5,,,500,550,1.7,"Renter-occupied units paying cash rent. No cash rent is left out, as in the published median."
+TRPA Median Gross Rent,Median Gross Rent (from rent bins),TRPA Medians: Gross Rent,B25063_013E,acs/acs5,,,550,600,1.7,"Renter-occupied units paying cash rent. No cash rent is left out, as in the published median."
+TRPA Median Gross Rent,Median Gross Rent (from rent bins),TRPA Medians: Gross Rent,B25063_014E,acs/acs5,,,600,650,1.7,"Renter-occupied units paying cash rent. No cash rent is left out, as in the published median."
+TRPA Median Gross Rent,Median Gross Rent (from rent bins),TRPA Medians: Gross Rent,B25063_015E,acs/acs5,,,650,700,1.7,"Renter-occupied units paying cash rent. No cash rent is left out, as in the published median."
+TRPA Median Gross Rent,Median Gross Rent (from rent bins),TRPA Medians: Gross Rent,B25063_016E,acs/acs5,,,700,750,1.7,"Renter-occupied units paying cash rent. No cash rent is left out, as in the published median."
+TRPA Median Gross Rent,Median Gross Rent (from rent bins),TRPA Medians: Gross Rent,B25063_017E,acs/acs5,,,750,800,1.7,"Renter-occupied units paying cash rent. No cash rent is left out, as in the published median."
+TRPA Median Gross Rent,Median Gross Rent (from rent bins),TRPA Medians: Gross Rent,B25063_018E,acs/acs5,,,800,900,1.7,"Renter-occupied units paying cash rent. No cash rent is left out, as in the published median."
+TRPA Median Gross Rent,Median Gross Rent (from rent bins),TRPA Medians: Gross Rent,B25063_019E,acs/acs5,,,900,1000,1.7,"Renter-occupied units paying cash rent. No cash rent is left out, as in the published median."
+TRPA Median Gross Rent,Median Gross Rent (from rent bins),TRPA Medians: Gross Rent,B25063_020E,acs/acs5,,,1000,1250,1.7,"Renter-occupied units paying cash rent. No cash rent is left out, as in the published median."
+TRPA Median Gross Rent,Median Gross Rent (from rent bins),TRPA Medians: Gross Rent,B25063_021E,acs/acs5,,,1250,1500,1.7,"Renter-occupied units paying cash rent. No cash rent is left out, as in the published median."
+TRPA Median Gross Rent,Median Gross Rent (from rent bins),TRPA Medians: Gross Rent,B25063_022E,acs/acs5,,,1500,2000,1.7,"Renter-occupied units paying cash rent. No cash rent is left out, as in the published median."
+TRPA Median Gross Rent,Median Gross Rent (from rent bins),TRPA Medians: Gross Rent,B25063_023E,acs/acs5,,2014,2000,,1.7,"2011 to 2014: $2,000 or more"
+TRPA Median Gross Rent,Median Gross Rent (from rent bins),TRPA Medians: Gross Rent,B25063_023E,acs/acs5,2015,,2000,2500,1.7,
+TRPA Median Gross Rent,Median Gross Rent (from rent bins),TRPA Medians: Gross Rent,B25063_024E,acs/acs5,2015,,2500,3000,1.7,2015 and later. In 2011 to 2014 this code is No cash rent and is left out.
+TRPA Median Gross Rent,Median Gross Rent (from rent bins),TRPA Medians: Gross Rent,B25063_025E,acs/acs5,2015,,3000,3500,1.7,
+TRPA Median Gross Rent,Median Gross Rent (from rent bins),TRPA Medians: Gross Rent,B25063_026E,acs/acs5,2015,,3500,,1.7,"$3,500 or more"

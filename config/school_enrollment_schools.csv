@@ -1,0 +1,12 @@
+state,school_name,level,district,school_code,aggregate,notes
+California,Kings Beach Elementary,Elementary School,Tahoe-Truckee Unified,31669446031306,school,
+California,North Tahoe High,High School,Tahoe-Truckee Unified,31669443130010,school,
+California,North Tahoe Middle School,Middle School,Tahoe-Truckee Unified,31669446094502,school,CDE name is North Tahoe School (grades 5 to 8)
+California,Tahoe Lake Elementary,Elementary School,Tahoe-Truckee Unified,31669446031314,school,
+California,Lake Tahoe Unified Combined,All Levels,Lake Tahoe Unified,0961903,district,District total. CDE code 09-61903.
+Nevada,George Whittell High School,High School,Douglas County School District,03502,school,
+Nevada,Incline Elementary School,Elementary School,Washoe County School District,16251,school,
+Nevada,Incline High School,High School,Washoe County School District,16602,school,
+Nevada,Incline Middle School,Middle School,Washoe County School District,16309,school,
+Nevada,Kingsbury Middle School,Middle School,Douglas County School District,,school,Closed. Published as 0 since 2003-04 rows began.
+Nevada,Zephyr Cove Elementary School,Elementary School,Douglas County School District,03202,school,
