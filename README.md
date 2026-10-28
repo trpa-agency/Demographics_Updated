@@ -8,12 +8,12 @@ Nothing in this repository writes to SDE or to a published service. Every step w
 
 | I want to... | Do this |
 |---|---|
-| See what demographic data TRPA publishes | Double-click `tools/6_open_explorer.bat` to open the [Demographic Data Explorer](explorer/index.html). See [Explorer](docs/explorer.md). |
-| Add a new Census variable | Double-click `tools/1_find_census_variables.bat`, or see [Adding variables](docs/adding_variables.md) |
-| Download and summarize a new year | Double-click `tools/2_download_and_summarize_year.bat`, or see [Yearly update](docs/workflow.md) |
-| Change how variables are grouped | Edit `config/groupings.csv` in Excel, then run `tools/3_check_groupings.bat`. See [Groupings and medians](docs/groupings_and_medians.md) |
-| Check the published data for problems | Double-click `tools/4_check_published_service.bat`, or open the Data quality tab in the Explorer |
-| Fix known errors in published data | Double-click `tools/5_build_corrections.bat`, or see [Corrections](docs/corrections.md). It builds append files only. |
+| See what demographic data TRPA publishes | Double-click `tools/6_open_explorer.py` to open the [Demographic Data Explorer](explorer/index.html). See [Explorer](docs/explorer.md). |
+| Add a new Census variable | Double-click `tools/1_find_census_variables.py`, or see [Adding variables](docs/adding_variables.md) |
+| Download and summarize a new year | Double-click `tools/2_download_and_summarize_year.py`, or see [Yearly update](docs/workflow.md) |
+| Change how variables are grouped | Edit `config/groupings.csv` in Excel, then run `tools/3_check_groupings.py`. See [Groupings and medians](docs/groupings_and_medians.md) |
+| Check the published data for problems | Double-click `tools/4_check_published_service.py`, or open the Data quality tab in the Explorer |
+| Fix known errors in published data | Double-click `tools/5_build_corrections.py`, or see [Corrections](docs/corrections.md). It builds append files only. |
 | Download jobs, LODES, comparison areas, 1990 data, or enrollment, or build map layers | See [Other sources and map layers](docs/other_sources.md) |
 | Understand a column or a term | See the [Data dictionary](docs/data_dictionary.md) |
 | Set up Python and the Census API key | See [Setup](docs/setup.md) |
@@ -38,7 +38,7 @@ config/variables.csv ──> download ──> group ──> summarize ──> qa
 |---|---|
 | `config/` | Settings and the CSV lists that drive everything. Edit these, not the code. |
 | `src/trpa_demographics/` | The Python package. Each file starts with a plain-language description. |
-| `tools/` | Double-click batch files for people who do not use Python. |
+| `tools/` | Double-click Python scripts for people who do not use a command line. Each file starts with a plain-language description of what it reads and writes. |
 | `explorer/` | The Demographic Data Explorer web page. |
 | `docs/` | Guides and reference pages. |
 | `tests/` | Automated tests. Run `python -m pytest`. |

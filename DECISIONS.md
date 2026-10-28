@@ -44,3 +44,9 @@ Answers to each round of questions and what the code does as a result. New quest
 | 7 | School enrollment detail | Read individual schools | `enrollment` reads CDE school files (1998-99 on) and NDE workbooks (2015-16 on) for each school in `config/school_enrollment_schools.csv`. Nevada output matched every published value from 2015-16 to 2022-23. California could not be downloaded from here and needs a check run. |
 | 8 | Median design factors | National | No change |
 | 9 | Live checks | No answer | Carried to round 3 |
+
+## Other changes (Oct. 22, 2026)
+
+| Request | What was done |
+|---|---|
+| Replace the .bat files with standalone Python scripts | `tools/` now holds six `.py` scripts with the same numbers and names. Each starts with a plain-language description of what it does, reads, and writes. Shared code is in `src/trpa_demographics/launcher.py`. A script started in a Python without pandas restarts itself in ArcGIS Pro's environment. `explorer_port` was added to `config/settings.json`. `tests/test_tools.py` checks the descriptions. |

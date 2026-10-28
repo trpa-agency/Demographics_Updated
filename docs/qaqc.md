@@ -1,6 +1,6 @@
 # QAQC checks
 
-Run checks with `python -m trpa_demographics qaqc` or the batch files in `tools/`. Each run writes `qaqc_report.html`, `qaqc_summary.csv`, and one CSV per check that found something, under `outputs/qaqc/<label>/`.
+Run checks with `python -m trpa_demographics qaqc` or the scripts in `tools/`. Each run writes `qaqc_report.html`, `qaqc_summary.csv`, and one CSV per check that found something, under `outputs/qaqc/<label>/`.
 
 Severity:
 

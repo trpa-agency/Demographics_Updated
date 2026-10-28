@@ -5,10 +5,10 @@ Everything the toolkit downloads is listed in `config/variables.csv`. To add a v
 ## The easy way
 
 1. Find the Census table you want. data.census.gov lists tables by topic. For example, B25003 is Tenure (owner or renter).
-2. Double-click `tools/1_find_census_variables.bat`.
+2. Double-click `tools/1_find_census_variables.py`.
 3. Type the table code, the year, and a TRPA category name, and answer Y to add the rows.
 4. Open `config/variables.csv` in Excel and review the new rows at the bottom. Shorten names if you like and set `active` to `N` for anything you do not need.
-5. Run `tools/3_check_groupings.bat` if you also changed groupings.
+5. Run `tools/3_check_groupings.py` if you also changed groupings.
 
 ## Searching by words
 

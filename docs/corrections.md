@@ -24,7 +24,7 @@ python -m trpa_demographics corrections
 python -m trpa_demographics corrections --download
 ```
 
-Or double-click `tools/5_build_corrections.bat`.
+Or double-click `tools/5_build_corrections.py`.
 
 The first command only reads the services. `--download` also downloads the correct Census codes (B25077_001E, B25064_001E, B19013_001E, B25004_008E) for every year and level where a wrong code was published. It needs a Census API key.
 

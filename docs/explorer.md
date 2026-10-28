@@ -25,7 +25,7 @@
 
 Publish the repository with GitHub Pages from the root of the main branch. The page is then at `https://<org>.github.io/<repo>/explorer/`. Serving from the root lets the page read `config/variables.csv`.
 
-To use it on your own computer, double-click `tools/6_open_explorer.bat`. It starts a small web server that only this computer can reach and opens the page at `http://127.0.0.1:8000/explorer/index.html`. Leave the black window open while you use the page. Close it to stop the server.
+To use it on your own computer, double-click `tools/6_open_explorer.py`. It starts a small web server that only this computer can reach and opens the page at `http://127.0.0.1:8000/explorer/index.html`. Leave the black window open while you use the page. Close it to stop the server.
 
 Do not open `index.html` by double-clicking it. The browser then runs it from a `file:///` address and blocks it from reading `config/variables.csv` and the corrections files. The page shows a warning when this happens. The live data still loads, but TRPA notes, the known-errors check, and the added-medians check are empty.
 
@@ -37,6 +37,14 @@ python -m http.server 8000 --bind 127.0.0.1
 
 Then open `http://127.0.0.1:8000/explorer/`.
 
+## On the TRPA network
+
+Inside the TRPA network, maps.trpa.org points to an internal server address. Chrome and Edge (version 142 and later) treat a public website reaching an internal address as a local network request and block it until the user allows it. The page then shows "Failed to fetch."
+
+To allow it once per browser: select the site settings icon left of the address bar, turn on Local network access for trpa-agency.github.io, and reload. IT can allow the site for all staff with the browser's local network access policy. Outside the TRPA network, and through `tools/6_open_explorer.py`, no permission is needed.
+
 ## Changing it
 
 The page is one HTML file with no build step. Service addresses are at the top of the script in `SERVER` and `SOURCES`. Data quality checks are in the `CHECKS` list; each has a title, description, severity, and a `run` function that returns rows.
+
+Summaries by group (record counts, year ranges, and similar) are calculated by the server. The TRPA server returns at most 2,000 groups per request and ignores paging on these requests. When a summary has more than 2,000 groups, the page splits it into smaller requests by one of the grouped fields, such as dataset, and combines the results.

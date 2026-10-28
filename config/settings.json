@@ -126,5 +126,6 @@
     "output_gdb": "C:\\GIS\\Scratch.gdb",
     "note": "The SDE paths are read only. Outputs go to the file geodatabase."
   },
+  "explorer_port": 8000,
   "outputs_folder": "outputs"
 }

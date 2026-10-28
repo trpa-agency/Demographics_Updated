@@ -4,7 +4,7 @@ The Census Bureau usually releases new ACS 5-year estimates in December. Use the
 
 ## Quick version
 
-Double-click `tools/2_download_and_summarize_year.bat`, type the year, and press Enter twice. When it finishes, open the QAQC report it names.
+Double-click `tools/2_download_and_summarize_year.py`, type the year, and press Enter twice. When it finishes, open the QAQC report it names.
 
 ## Step by step
 

@@ -77,6 +77,10 @@
   </header>
 
   <main class="wrap">
+    <calcite-notice kind="warning" icon="exclamation-mark-triangle" id="file-notice">
+      <span slot="title">Opened as a file</span>
+      <span slot="message">Your browser blocks this page from reading the repository's config files when it is opened from disk. TRPA notes, the known-errors check, and the added-medians check will be empty. Close this tab and double-click <strong>tools/6_open_explorer.py</strong> instead.</span>
+    </calcite-notice>
     <p class="intro">This page reads the TRPA demographic services live. It shows which US Census Bureau variables are published for the Lake Tahoe Basin, which years and geographies they cover, what each variable means, and where the data needs review. It reads data only and never changes it.</p>
     <calcite-notice open icon="information" scale="s" id="source-notice">
       <span slot="message">Sources: TRPA ArcGIS Server, <a href="https://maps.trpa.org/server/rest/services/Demographics/MapServer" target="_blank" rel="noopener noreferrer">Demographics</a> and <a href="https://maps.trpa.org/server/rest/services/LTinfo_Climate_Resilience_Dashboard/MapServer" target="_blank" rel="noopener noreferrer">Climate Resilience Dashboard</a> services. Variable definitions: <a href="https://www.census.gov/data/developers/data-sets.html" target="_blank" rel="noopener noreferrer">US Census Bureau API</a>.</span>
@@ -258,22 +262,45 @@
     return json;
   }
 
-  // Server-side group-by summary. Pages through results 2,000 groups at a time.
+  // Server-side group-by summary.
+  // TRPA's server ignores resultOffset on group-by queries. It returns the same first 2,000 groups
+  // every time, so paging never ends. Instead, this sends one request. If the server cuts the
+  // result off at 2,000 groups, the request is split into smaller ones by a group-by field.
+  const STATS_LIMIT = 2000;
+  async function statsOnce(url, groupBy, statistics, where, having) {
+    const params = {
+      where, f: 'json', groupByFieldsForStatistics: groupBy.join(','), orderByFields: groupBy.join(','),
+      outStatistics: JSON.stringify(statistics.map(([t, field, name]) => ({ statisticType: t, onStatisticField: field, outStatisticFieldName: name }))),
+      resultRecordCount: STATS_LIMIT
+    };
+    if (having) params.having = having;
+    const json = await getJSON(`${url}/query`, params);
+    const rows = (json.features || []).map(f => lowerKeys(f.attributes, groupBy, statistics));
+    return { rows, cut: Boolean(json.exceededTransferLimit) || rows.length >= STATS_LIMIT };
+  }
   async function stats(url, groupBy, statistics, where = '1=1', having = null) {
+    const first = await statsOnce(url, groupBy, statistics, where, having);
+    return first.cut ? statsSplit(url, groupBy, statistics, where, having) : first.rows;
+  }
+  // Splits a summary by the group-by field with the fewest values, one request per value.
+  // Each piece has a single value of that field, so a piece that is still too big splits on another field.
+  async function statsSplit(url, groupBy, statistics, where, having) {
+    let best = null;
+    for (const field of groupBy) {
+      const distinct = await statsOnce(url, [field], [['count', 'OBJECTID', 'n']], where, null);
+      if (distinct.cut || distinct.rows.length < 2) continue;
+      if (!best || distinct.rows.length < best.values.length) best = { field, values: distinct.rows.map(r => r[field]) };
+    }
+    if (!best) throw new Error(`more than ${STATS_LIMIT} groups in ${url} and no field to split on`);
+    const pieces = best.values.map(value => {
+      const clause = value === null || value === undefined ? `${best.field} IS NULL`
+        : typeof value === 'number' ? `${best.field} = ${value}` : `${best.field} = ${sqlText(value)}`;
+      return `(${where}) AND ${clause}`;
+    });
     const out = [];
-    let offset = 0;
-    while (true) {
-      const params = {
-        where, f: 'json', groupByFieldsForStatistics: groupBy.join(','), orderByFields: groupBy.join(','),
-        outStatistics: JSON.stringify(statistics.map(([t, field, name]) => ({ statisticType: t, onStatisticField: field, outStatisticFieldName: name }))),
-        resultOffset: offset, resultRecordCount: 2000
-      };
-      if (having) params.having = having;
-      const json = await getJSON(`${url}/query`, params);
-      const rows = (json.features || []).map(f => lowerKeys(f.attributes, groupBy, statistics));
-      out.push(...rows);
-      if (rows.length < 2000) break;
-      offset += rows.length;
+    for (let i = 0; i < pieces.length; i += 6) {  // six requests at a time
+      const batch = await Promise.all(pieces.slice(i, i + 6).map(w => stats(url, groupBy, statistics, w, having)));
+      batch.forEach(rows => out.push(...rows));
     }
     return out;
   }
@@ -290,7 +317,7 @@
       const json = await getJSON(`${url}/query`, { where, outFields, returnGeometry: false, f: 'json', resultOffset: offset, resultRecordCount: 2000, ...extra });
       const rows = (json.features || []).map(f => f.attributes);
       out.push(...rows);
-      if (rows.length < 2000) break;
+      if (rows.length < 2000 || !json.exceededTransferLimit) break;  // stop when the server has nothing more
       offset += rows.length;
     }
     return out;
@@ -317,7 +344,10 @@
 
   // Files from the config folder, read when the page is served from the repository (GitHub Pages).
   const configCache = {};
+  const OPENED_AS_FILE = location.protocol === 'file:';
+  if (OPENED_AS_FILE) document.getElementById('file-notice').open = true;
   function configCSV(name) {
+    if (OPENED_AS_FILE) return Promise.resolve([]);  // browsers block file reads; the notice explains
     if (!configCache[name]) {
       configCache[name] = fetch(`${CONFIG_DIR}/${name}`).then(r => r.ok ? r.text() : '').then(parseCSV).catch(() => []);
     }
@@ -380,7 +410,10 @@
   }
   const numCol = (field, headerName, width = 120) => ({ field, headerName, width, type: 'numericColumn', valueFormatter: p => fmt(p.value), filter: 'agNumberColumnFilter' });
   function showError(container, err) {
-    container.innerHTML = `<calcite-notice open kind="danger" icon="exclamation-mark-triangle" scale="s"><span slot="message">Could not load data: ${esc(err.message)}. The service may be down or blocked on this network.</span></calcite-notice>`;
+    const network = /failed to fetch/i.test(err.message)
+      ? ' On the TRPA network, Chrome and Edge ask before a website can reach TRPA servers. Select the icon left of the address, turn on Local network access for this site, and reload.'
+      : '';
+    container.innerHTML = `<calcite-notice open kind="danger" icon="exclamation-mark-triangle" scale="s"><span slot="message">Could not load data: ${esc(err.message)}. The service may be down or blocked on this network.${network}</span></calcite-notice>`;
   }
   function resetChart(id) {
     const el = document.getElementById(id);

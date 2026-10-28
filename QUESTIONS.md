@@ -52,7 +52,7 @@ Lake Tahoe Unified is published as one district total. The code can also write e
 
 The corrections, jobs replacement, and California enrollment code were tested on made-up data only. Before loading anything, run:
 
-* `tools/5_build_corrections.bat` and `tools/4_check_published_service.bat`
+* `tools/5_build_corrections.py` and `tools/4_check_published_service.py`
 * `python -m trpa_demographics jobs --year 1998 --year-end 2017 --replace-published`
 * `python -m trpa_demographics enrollment --year 2020 --year-end 2025`
 

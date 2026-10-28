@@ -4,11 +4,24 @@
 
 Use the ArcGIS Pro Python environment (`arcgispro-py3`) or any clone of it. It already includes pandas, numpy, requests, and openpyxl, which is all the toolkit needs.
 
-The batch files in `tools/` find ArcGIS Pro's Python automatically through `propy.bat`. To use a different environment, set `TRPA_PYTHON` to the full path of its `python.exe` before running a batch file:
+## The scripts in tools/
+
+Each script in `tools/` asks a few questions, runs one toolkit command, and waits for Enter before its window closes. The top of each file says what it reads, what it writes, and the matching command line.
+
+To run one, double-click it. Windows opens a `.py` file with whatever program is set for that file type. If the file opens in an editor such as VS Code or Notepad instead of running, use one of these:
+
+* Right-click the file, select **Open with**, and choose **Python**.
+* Open the ArcGIS Pro Python Command Prompt in the repository folder and type `python tools\2_download_and_summarize_year.py`.
+
+The scripts need pandas, numpy, requests, and openpyxl. When the Python that Windows starts lacks them, the script restarts itself in ArcGIS Pro's active environment through `propy.bat`. To use a different environment, set `TRPA_PYTHON` to the full path of its `python.exe`:
 
 ```
 set TRPA_PYTHON=C:\Users\you\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\python.exe
 ```
+
+`tools/6_open_explorer.py` needs only the standard library and runs in any Python. The shared code for the scripts is in `src/trpa_demographics/launcher.py`.
+
+## Running commands yourself
 
 To run commands yourself, open the ArcGIS Pro Python Command Prompt in the repository folder and point Python at the source folder:
 
@@ -52,6 +65,7 @@ Never paste the key into a notebook, script, or config file.
 | `comparison_geographies`, `jobs`, `lodes`, `school_enrollment`, `inflation`, `tessellation` | Settings for the commands in [Other sources](other_sources.md) |
 | `grouped_code_max_length` | Length limit for grouped variable codes, matching the 255 character text field |
 | `qaqc` | Thresholds for reliability, year-over-year change, and tract versus block group totals |
+| `explorer_port` | Port used by `tools/6_open_explorer.py`. Change it when 8000 is taken. |
 | `outputs_folder` | Where results are written |
 
 ## Tests
