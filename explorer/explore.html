@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tahoe Basin Demographics | TRPA</title>
+  <meta name="description" content="Explore demographic trends for the Lake Tahoe Basin. Select a topic, choose variables, and compare geographies over time." />
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <link rel="stylesheet" href="https://trpa-agency.github.io/tools/assets/trpa-tokens.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --blue: #0072CE; --navy: #003B71; --orange: #E87722; --forest: #4A6118;
+      --brick: #9C3E27; --ice: #B4CBE8; --link: #0068A8;
+      --bg: #F5F5F5; --border: #DDDDDD; --muted: #555F6D;
+      --sidebar: 290px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; font-family: 'Open Sans', system-ui, sans-serif; color: var(--navy); background: var(--bg); font-size: 15px; line-height: 1.55; height: 100%; }
+    a { color: var(--link); }
+    :focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
+
+    /* ── Header ── */
+    .hdr { background: var(--navy); color: #fff; padding: 0.7rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .hdr-left { display: flex; align-items: center; gap: 1rem; }
+    .hdr img { height: 42px; width: auto; }
+    .hdr h1 { font-size: 1.25rem; margin: 0; font-weight: 700; line-height: 1.2; }
+    .hdr-sub { font-size: 0.8rem; opacity: 0.8; }
+    .hdr-link { color: rgba(255,255,255,0.7); font-size: 0.8rem; text-decoration: none; white-space: nowrap; display: flex; align-items: center; gap: 0.35rem; }
+    .hdr-link:hover { color: #fff; }
+
+    /* ── Layout ── */
+    .layout { display: flex; height: calc(100vh - 62px); overflow: hidden; }
+    .sidebar { width: var(--sidebar); min-width: var(--sidebar); background: #fff; border-right: 1px solid var(--border); overflow-y: auto; padding: 1.1rem; display: flex; flex-direction: column; gap: 1.1rem; }
+    .main { flex: 1; overflow-y: auto; padding: 1.25rem 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
+
+    /* ── Sidebar controls ── */
+    .ctrl-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 0.35rem; display: block; }
+    select.ctrl { width: 100%; padding: 0.42rem 0.6rem; border: 1px solid var(--border); border-radius: 5px; font-family: inherit; font-size: 0.9rem; color: var(--navy); background: #fff; appearance: auto; }
+    select.ctrl:focus { outline: 2px solid var(--blue); outline-offset: 1px; }
+    select.ctrl:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    /* ── View toggle ── */
+    .toggle { display: flex; border: 1px solid var(--border); border-radius: 5px; overflow: hidden; }
+    .toggle-btn { flex: 1; padding: 0.38rem 0; background: #fff; border: none; cursor: pointer; font-family: inherit; font-size: 0.82rem; color: var(--muted); transition: background 0.12s, color 0.12s; }
+    .toggle-btn.on { background: var(--blue); color: #fff; font-weight: 700; }
+    .toggle-btn:hover:not(.on) { background: var(--bg); }
+
+    /* ── Geography checkboxes ── */
+    .geo-scroll { max-height: 230px; overflow-y: auto; padding-right: 2px; }
+    .geo-group { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin: 0.55rem 0 0.25rem; border-bottom: 1px solid var(--border); padding-bottom: 0.15rem; }
+    .geo-group:first-child { margin-top: 0; }
+    .geo-item { display: flex; align-items: center; gap: 0.45rem; padding: 0.18rem 0; cursor: pointer; font-size: 0.88rem; }
+    .geo-item input { width: 14px; height: 14px; accent-color: var(--blue); cursor: pointer; flex-shrink: 0; }
+    .geo-swatch { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+    /* ── Chart card ── */
+    .card { background: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+    .card-head { padding: 1rem 1.25rem 0.5rem; display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; }
+    .card-title { font-size: 1.05rem; font-weight: 700; margin: 0; }
+    .card-sub { font-size: 0.82rem; color: var(--muted); margin: 0.15rem 0 0; }
+    .card-body { padding: 0 1.25rem 1rem; }
+    #main-chart { width: 100%; min-height: 400px; }
+    .chart-note { font-size: 0.79rem; color: var(--muted); margin: 0.4rem 0 0; }
+
+    /* ── Data table ── */
+    .tbl-wrap { overflow-x: auto; margin-top: 0.75rem; }
+    table.dtbl { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
+    table.dtbl th { background: #E8F1F8; padding: 0.38rem 0.75rem; font-weight: 700; text-align: right; border-bottom: 2px solid var(--border); white-space: nowrap; }
+    table.dtbl th:first-child { text-align: left; }
+    table.dtbl td { padding: 0.32rem 0.75rem; text-align: right; border-bottom: 1px solid var(--border); }
+    table.dtbl td:first-child { text-align: left; font-weight: 600; }
+    table.dtbl tr:last-child td { border-bottom: none; }
+    table.dtbl tr:hover td { background: #f6f9fd; }
+
+    /* ── Buttons ── */
+    .btn { padding: 0.38rem 0.9rem; border: 1px solid var(--border); border-radius: 5px; background: #fff; font-family: inherit; font-size: 0.84rem; color: var(--navy); cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; transition: background 0.12s; }
+    .btn:hover { background: var(--bg); }
+    .btn:disabled { opacity: 0.45; cursor: not-allowed; }
+    .btn-primary { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .btn-primary:hover { background: #005fad; border-color: #005fad; }
+
+    /* ── Welcome / empty state ── */
+    .welcome { background: linear-gradient(135deg, var(--navy) 0%, #005fad 100%); color: #fff; border-radius: 8px; padding: 2rem; }
+    .welcome h2 { margin: 0 0 0.4rem; font-size: 1.35rem; }
+    .welcome p { margin: 0 0 1rem; opacity: 0.9; font-size: 0.9rem; }
+    .topic-pills { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+    .topic-pill { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.35); color: #fff; padding: 0.3rem 0.85rem; border-radius: 999px; cursor: pointer; font-size: 0.84rem; font-family: inherit; transition: background 0.12s; }
+    .topic-pill:hover { background: rgba(255,255,255,0.28); }
+    .tip { background: #fff; border-radius: 8px; padding: 1rem 1.25rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); font-size: 0.88rem; color: var(--muted); }
+    .tip strong { color: var(--navy); }
+
+    /* ── Loading / error ── */
+    .spinner { display: flex; align-items: center; justify-content: center; min-height: 300px; }
+    .spinner::after { content: ''; width: 32px; height: 32px; border: 3px solid var(--border); border-top-color: var(--blue); border-radius: 50%; animation: spin 0.8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .err-msg { padding: 1.5rem; color: var(--brick); font-size: 0.9rem; }
+    .one-year-msg { padding: 2rem; text-align: center; color: var(--muted); font-size: 0.9rem; }
+
+    details summary { cursor: pointer; font-size: 0.84rem; font-weight: 700; color: var(--blue); user-select: none; padding: 0.5rem 0 0; }
+    details summary::-webkit-details-marker { color: var(--blue); }
+
+    .sidebar-meta { font-size: 0.78rem; color: var(--muted); margin-top: auto; padding-top: 0.5rem; border-top: 1px solid var(--border); }
+
+    @media (max-width: 720px) {
+      .layout { flex-direction: column; height: auto; overflow: visible; }
+      .sidebar { width: 100%; min-width: unset; border-right: none; border-bottom: 1px solid var(--border); max-height: none; }
+      .main { padding: 1rem; }
+      .hdr h1 { font-size: 1rem; }
+      .hdr img { height: 34px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="hdr-left">
+    <img src="assets/TRPALogo_WHITE.png" alt="Tahoe Regional Planning Agency" />
+    <div>
+      <div class="hdr-sub">Tahoe Regional Planning Agency</div>
+      <h1>Demographic Data Explorer</h1>
+    </div>
+  </div>
+  <a class="hdr-link" href="index.html" title="Technical data explorer">
+    <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg>
+    Technical explorer
+  </a>
+</header>
+
+<div class="layout">
+
+  <!-- ── Sidebar ── -->
+  <aside class="sidebar" aria-label="Data controls">
+
+    <div>
+      <label class="ctrl-label" for="cat-sel">Topic</label>
+      <select class="ctrl" id="cat-sel" aria-label="Topic category">
+        <option value="">Loading…</option>
+      </select>
+    </div>
+
+    <div id="var-wrap" hidden>
+      <label class="ctrl-label" for="var-sel">Variable</label>
+      <select class="ctrl" id="var-sel" aria-label="Variable"></select>
+    </div>
+
+    <div>
+      <span class="ctrl-label">Geographies</span>
+      <div class="geo-scroll" id="geo-list" role="group" aria-label="Geography checkboxes"></div>
+    </div>
+
+    <div>
+      <span class="ctrl-label" style="margin-bottom:0.4rem">View</span>
+      <div class="toggle" role="group" aria-label="Chart view">
+        <button class="toggle-btn on" data-view="trend" type="button">Trend over time</button>
+        <button class="toggle-btn" data-view="snapshot" type="button">Single year</button>
+      </div>
+    </div>
+
+    <div id="yr-wrap" hidden>
+      <label class="ctrl-label" for="yr-sel">Year</label>
+      <select class="ctrl" id="yr-sel" aria-label="Year for snapshot view"></select>
+    </div>
+
+    <div class="sidebar-meta" id="sidebar-meta" aria-live="polite"></div>
+  </aside>
+
+  <!-- ── Main ── -->
+  <main class="main" id="main">
+
+    <!-- Welcome (shown until a variable is selected) -->
+    <div id="welcome">
+      <div class="welcome">
+        <h2>Explore Tahoe Basin Demographics</h2>
+        <p>Select a topic from the sidebar, or click one below to get started.</p>
+        <div class="topic-pills" id="topic-pills" role="list"></div>
+      </div>
+      <div class="tip" style="margin-top:1rem">
+        <strong>How it works:</strong> Choose a topic, then a variable.
+        Select geographies to compare, and switch between <em>Trend over time</em> and <em>Single year</em> views.
+        Data comes from TRPA's published US Census Bureau summaries for the Lake Tahoe Basin.
+      </div>
+    </div>
+
+    <!-- Chart (hidden until data loads) -->
+    <div id="chart-wrap" hidden>
+      <div class="card">
+        <div class="card-head">
+          <div>
+            <h2 class="card-title" id="chart-title"></h2>
+            <p class="card-sub" id="chart-sub"></p>
+          </div>
+          <button class="btn" id="dl-btn" type="button" disabled>
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 12l-5-5h3V2h4v5h3L8 12z"/><rect x="1" y="13" width="14" height="2" rx="1"/></svg>
+            Download CSV
+          </button>
+        </div>
+        <div class="card-body">
+          <div id="main-chart"></div>
+          <p class="chart-note" id="chart-note"></p>
+          <details id="tbl-details">
+            <summary>Show data table</summary>
+            <div class="tbl-wrap" id="data-tbl"></div>
+          </details>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script>
+// ── Config ───────────────────────────────────────────────────────────────────
+const SERVER   = 'https://maps.trpa.org/server/rest/services';
+const SVC_URL  = `${SERVER}/LTinfo_Climate_Resilience_Dashboard/MapServer/135`;
+const F = { code: 'variable_code', name: 'variable_name', cat: 'Category', yr: 'year_sample', val: 'value', geo: 'Geography' };
+
+const COLORS  = ['#0072CE','#E87722','#4A6118','#9C3E27','#003B71','#B5A64C','#7B6A8A','#5DA89B'];
+const LAYOUT  = {
+  font: { family: 'Open Sans,system-ui,sans-serif', color: '#003B71', size: 13 },
+  paper_bgcolor: 'transparent', plot_bgcolor: 'transparent',
+  margin: { t: 10, r: 20, b: 55, l: 70 },
+  xaxis: { gridcolor: '#eaeaea', linecolor: '#ddd', zeroline: false },
+  yaxis: { gridcolor: '#eaeaea', linecolor: '#ddd', zeroline: false },
+  colorway: COLORS, hovermode: 'x unified',
+  legend: { orientation: 'h', y: -0.28, x: 0, bgcolor: 'transparent' }
+};
+const CFG = { responsive: true, displayModeBar: false };
+const fmt = v => (v == null || isNaN(v)) ? '—' : Number(v).toLocaleString(undefined, { maximumFractionDigits: 0 });
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const q   = s => `'${String(s).replace(/'/g,"''")}'`;
+
+// ── Geography groups ─────────────────────────────────────────────────────────
+const GEO_GROUPS = [
+  { group: 'Basin',  geos: ['Basin'] },
+  { group: 'Shore',  geos: ['North Lake', 'South Lake'] },
+  { group: 'County', geos: ['El Dorado County (Tahoe Basin)', 'Placer County (Tahoe Basin)', 'Douglas County (Tahoe Basin)', 'Washoe County (Tahoe Basin)'] },
+  { group: 'State',  geos: ['California', 'Nevada'] }
+];
+const GEO_SHORT = {
+  'Basin': 'Basin', 'North Lake': 'North Lake', 'South Lake': 'South Lake',
+  'El Dorado County (Tahoe Basin)': 'El Dorado', 'Placer County (Tahoe Basin)': 'Placer',
+  'Douglas County (Tahoe Basin)': 'Douglas', 'Washoe County (Tahoe Basin)': 'Washoe',
+  'California': 'California', 'Nevada': 'Nevada'
+};
+const DEFAULT_GEOS = new Set(['Basin', 'North Lake', 'South Lake']);
+
+// ── Data helpers ─────────────────────────────────────────────────────────────
+async function getJSON(url, params) {
+  const r = await fetch(params ? `${url}?${new URLSearchParams(params)}` : url);
+  if (!r.ok) throw new Error(`${r.status} ${r.statusText}`);
+  const j = await r.json();
+  if (j.error) throw new Error(j.error.message || JSON.stringify(j.error));
+  return j;
+}
+async function query(url, where, fields, extra = {}) {
+  const out = []; let off = 0;
+  while (true) {
+    const j = await getJSON(`${url}/query`, { where, outFields: fields, returnGeometry: false, f: 'json', resultOffset: off, resultRecordCount: 2000, ...extra });
+    const rows = (j.features || []).map(f => f.attributes);
+    out.push(...rows);
+    if (rows.length < 2000 || !j.exceededTransferLimit) break;
+    off += rows.length;
+  }
+  return out;
+}
+async function statsQ(url, groupBy, statistics, where = '1=1') {
+  const p = {
+    where, f: 'json', groupByFieldsForStatistics: groupBy.join(','), orderByFields: groupBy.join(','),
+    outStatistics: JSON.stringify(statistics.map(([t, f, n]) => ({ statisticType: t, onStatisticField: f, outStatisticFieldName: n }))),
+    resultRecordCount: 2000
+  };
+  const j = await getJSON(`${url}/query`, p);
+  const wanted = [...groupBy, ...statistics.map(s => s[2])];
+  return (j.features || []).map(ft => {
+    const low = Object.fromEntries(Object.entries(ft.attributes).map(([k,v]) => [k.toLowerCase(), v]));
+    return Object.fromEntries(wanted.map(k => [k, low[k.toLowerCase()]]));
+  });
+}
+
+// ── Inventory ────────────────────────────────────────────────────────────────
+let inv = null;
+async function getInventory() {
+  if (inv) return inv;
+  const rows = await statsQ(SVC_URL, [F.code, F.name, F.cat], [['min', F.yr, 'y0'], ['max', F.yr, 'y1']]);
+  inv = rows.map(r => ({ code: r[F.code], name: r[F.name] || r[F.code], cat: r[F.cat], y0: r.y0, y1: r.y1 }))
+            .filter(r => r.cat && r.code);
+  return inv;
+}
+
+// ── State ────────────────────────────────────────────────────────────────────
+let rawData    = null;
+let currentVar = null;
+let view       = 'trend';
+let geoColors  = {};
+
+function selectedGeos() {
+  return [...document.querySelectorAll('.geo-cb:checked')].map(cb => cb.value);
+}
+function selectedYear() {
+  return Number(document.getElementById('yr-sel').value);
+}
+
+// ── Geo list ─────────────────────────────────────────────────────────────────
+function buildGeoList() {
+  const el = document.getElementById('geo-list');
+  el.innerHTML = '';
+  GEO_GROUPS.forEach(({ group, geos }) => {
+    const grpEl = document.createElement('div');
+    grpEl.className = 'geo-group';
+    grpEl.textContent = group;
+    el.appendChild(grpEl);
+    geos.forEach(geo => {
+      const lbl = document.createElement('label');
+      lbl.className = 'geo-item';
+      const cb = document.createElement('input');
+      cb.type = 'checkbox'; cb.className = 'geo-cb'; cb.value = geo;
+      cb.checked = DEFAULT_GEOS.has(geo);
+      cb.addEventListener('change', updateChart);
+      lbl.appendChild(cb);
+      lbl.appendChild(document.createTextNode(GEO_SHORT[geo] || geo));
+      el.appendChild(lbl);
+    });
+  });
+}
+
+// ── Populate selects ──────────────────────────────────────────────────────────
+async function initCategories() {
+  const data = await getInventory();
+  const cats = [...new Set(data.map(r => r.cat))].filter(Boolean).sort();
+  const sel = document.getElementById('cat-sel');
+  sel.innerHTML = '<option value="">Select a topic…</option>' + cats.map(c => `<option value="${esc(c)}">${esc(c)}</option>`).join('');
+
+  // Quick-access pills on welcome screen
+  const popular = ['Population', 'Housing', 'Income', 'Age', 'Race', 'Employment', 'Poverty', 'Language'];
+  const pills = cats.filter(c => popular.some(p => c.toLowerCase().includes(p.toLowerCase())));
+  const show = (pills.length ? pills : cats).slice(0, 10);
+  document.getElementById('topic-pills').innerHTML = show.map(c =>
+    `<button class="topic-pill" type="button" data-cat="${esc(c)}">${esc(c)}</button>`
+  ).join('');
+  document.querySelectorAll('.topic-pill').forEach(btn =>
+    btn.addEventListener('click', () => {
+      document.getElementById('cat-sel').value = btn.dataset.cat;
+      onCatChange(btn.dataset.cat);
+    })
+  );
+}
+
+function onCatChange(cat) {
+  if (!cat) return;
+  const vars = (inv || []).filter(r => r.cat === cat);
+  const varSel = document.getElementById('var-sel');
+  varSel.innerHTML = vars.map(v => `<option value="${esc(v.code)}">${esc(v.name)}</option>`).join('');
+  document.getElementById('var-wrap').hidden = false;
+  if (vars.length) loadVariable(vars[0].code, cat);
+}
+
+function onVarChange() {
+  const code = document.getElementById('var-sel').value;
+  const cat  = document.getElementById('cat-sel').value;
+  if (code && cat) loadVariable(code, cat);
+}
+
+// ── Load + render ─────────────────────────────────────────────────────────────
+async function loadVariable(code, cat) {
+  currentVar = (inv || []).find(r => r.code === code && r.cat === cat) || { code, cat, name: code };
+
+  // Switch from welcome to chart area
+  document.getElementById('welcome').hidden = true;
+  document.getElementById('chart-wrap').hidden = false;
+  document.getElementById('chart-title').textContent = currentVar.name;
+  document.getElementById('chart-sub').textContent = cat;
+  document.getElementById('main-chart').innerHTML = '<div class="spinner" aria-label="Loading data"></div>';
+  document.getElementById('chart-note').textContent = '';
+  document.getElementById('data-tbl').innerHTML = '';
+
+  try {
+    const where = `${F.code} = ${q(code)} AND ${F.cat} = ${q(cat)}`;
+    rawData = await query(SVC_URL, where, `${F.geo},${F.yr},${F.val}`, { orderByFields: F.yr });
+
+    // Year selector
+    const years = [...new Set(rawData.map(d => d[F.yr]))].filter(Boolean).sort((a, b) => b - a);
+    const yrSel = document.getElementById('yr-sel');
+    yrSel.innerHTML = years.map(y => `<option value="${y}">${y}</option>`).join('');
+
+    // Assign colors to geographies in a stable order
+    geoColors = {};
+    GEO_GROUPS.flatMap(g => g.geos).forEach((geo, i) => { geoColors[geo] = COLORS[i % COLORS.length]; });
+
+    // Sidebar meta
+    if (years.length) {
+      document.getElementById('sidebar-meta').textContent =
+        `${Math.min(...years)}–${Math.max(...years)} · ${years.length} year${years.length !== 1 ? 's' : ''}`;
+    }
+    document.getElementById('dl-btn').disabled = false;
+    updateChart();
+  } catch (err) {
+    document.getElementById('main-chart').innerHTML = `<p class="err-msg">Could not load data: ${esc(err.message)}</p>`;
+  }
+}
+
+function updateChart() {
+  if (!rawData) return;
+  const geos = selectedGeos().filter(g => rawData.some(d => d[F.geo] === g));
+  if (!geos.length) {
+    Plotly.purge('main-chart');
+    document.getElementById('main-chart').innerHTML = '<p class="one-year-msg">Select at least one geography from the sidebar.</p>';
+    document.getElementById('data-tbl').innerHTML = '';
+    return;
+  }
+  const data = rawData.filter(d => geos.includes(d[F.geo]));
+  if (view === 'trend') renderTrend(data, geos);
+  else renderSnapshot(data, geos, selectedYear());
+  renderTable(data, geos);
+}
+
+function renderTrend(data, geos) {
+  const years = [...new Set(data.map(d => d[F.yr]))].filter(Boolean).sort();
+  if (years.length <= 1) {
+    Plotly.purge('main-chart');
+    document.getElementById('main-chart').innerHTML = '<p class="one-year-msg">Only one year of data available — try the Single year view.</p>';
+    document.getElementById('chart-note').textContent = '';
+    return;
+  }
+  const traces = geos.map(g => ({
+    name: GEO_SHORT[g] || g,
+    type: 'scatter', mode: 'lines+markers',
+    line: { width: 2.5 }, marker: { size: 6 },
+    x: years.map(String),
+    y: years.map(y => data.find(d => d[F.geo] === g && d[F.yr] === y)?.[F.val] ?? null),
+    marker: { color: geoColors[g], size: 6 },
+    line: { color: geoColors[g], width: 2.5 }
+  }));
+  Plotly.newPlot('main-chart', traces, {
+    ...LAYOUT,
+    xaxis: { ...LAYOUT.xaxis, type: 'category', title: { text: 'Year', standoff: 10 } },
+    yaxis: { ...LAYOUT.yaxis, title: { text: currentVar?.name || '', standoff: 10 } }
+  }, CFG);
+  document.getElementById('chart-note').textContent =
+    `Source: TRPA Climate Resilience Dashboard summary data · American Community Survey 5-year estimates.`;
+}
+
+function renderSnapshot(data, geos, year) {
+  const pts = geos.map(g => ({ geo: g, val: data.find(d => d[F.geo] === g && d[F.yr] === year)?.[F.val] ?? null }))
+                  .filter(p => p.val !== null)
+                  .sort((a, b) => b.val - a.val);
+  if (!pts.length) {
+    Plotly.purge('main-chart');
+    document.getElementById('main-chart').innerHTML = `<p class="one-year-msg">No data for ${year} in the selected geographies.</p>`;
+    document.getElementById('chart-note').textContent = '';
+    return;
+  }
+  const maxL = Math.max(...pts.map(p => (GEO_SHORT[p.geo] || p.geo).length)) * 8 + 20;
+  Plotly.newPlot('main-chart', [{
+    type: 'bar', orientation: 'h',
+    x: pts.map(p => p.val),
+    y: pts.map(p => GEO_SHORT[p.geo] || p.geo),
+    marker: { color: pts.map(p => geoColors[p.geo] || COLORS[0]) },
+    text: pts.map(p => fmt(p.val)),
+    textposition: 'outside',
+    cliponaxis: false,
+    hovertemplate: '%{y}: %{x:,.0f}<extra></extra>'
+  }], {
+    ...LAYOUT,
+    margin: { ...LAYOUT.margin, l: Math.min(maxL, 140) },
+    xaxis: { ...LAYOUT.xaxis, title: { text: currentVar?.name || '', standoff: 10 } },
+    yaxis: { ...LAYOUT.yaxis, automargin: true },
+    showlegend: false
+  }, CFG);
+  document.getElementById('chart-note').textContent =
+    `${year} values · Source: TRPA Climate Resilience Dashboard summary data.`;
+}
+
+function renderTable(data, geos) {
+  const years = [...new Set(data.map(d => d[F.yr]))].filter(Boolean).sort((a, b) => b - a);
+  if (!years.length || !geos.length) { document.getElementById('data-tbl').innerHTML = ''; return; }
+  const shortGeos = geos.map(g => GEO_SHORT[g] || g);
+  let html = '<table class="dtbl"><thead><tr><th>Year</th>' +
+    shortGeos.map(g => `<th>${esc(g)}</th>`).join('') + '</tr></thead><tbody>';
+  for (const y of years) {
+    html += `<tr><td>${y}</td>`;
+    geos.forEach(g => {
+      const v = data.find(d => d[F.geo] === g && d[F.yr] === y)?.[F.val];
+      html += `<td>${v != null ? fmt(v) : '—'}</td>`;
+    });
+    html += '</tr>';
+  }
+  html += '</tbody></table>';
+  document.getElementById('data-tbl').innerHTML = html;
+}
+
+// ── CSV download ──────────────────────────────────────────────────────────────
+function downloadCSV() {
+  if (!rawData || !currentVar) return;
+  const geos  = selectedGeos().filter(g => rawData.some(d => d[F.geo] === g));
+  const years = [...new Set(rawData.map(d => d[F.yr]))].filter(Boolean).sort();
+  let csv = `Year,${geos.map(g => `"${(GEO_SHORT[g] || g).replace(/"/g,'""')}"`).join(',')}\n`;
+  years.forEach(y => {
+    csv += `${y},${geos.map(g => rawData.find(d => d[F.geo] === g && d[F.yr] === y)?.[F.val] ?? '').join(',')}\n`;
+  });
+  const a = Object.assign(document.createElement('a'), {
+    href: 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv),
+    download: `${(currentVar.name || currentVar.code).replace(/[^a-z0-9]/gi, '_')}.csv`
+  });
+  a.click();
+}
+
+// ── Wire everything up ────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  buildGeoList();
+
+  document.getElementById('cat-sel').addEventListener('change', e => onCatChange(e.target.value));
+  document.getElementById('var-sel').addEventListener('change', onVarChange);
+  document.getElementById('yr-sel').addEventListener('change', updateChart);
+  document.getElementById('dl-btn').addEventListener('click', downloadCSV);
+
+  document.querySelectorAll('.toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('on'));
+      btn.classList.add('on');
+      view = btn.dataset.view;
+      document.getElementById('yr-wrap').hidden = (view !== 'snapshot');
+      updateChart();
+    });
+  });
+
+  initCategories().catch(err => {
+    document.getElementById('cat-sel').innerHTML = `<option value="">Error: ${esc(err.message)}</option>`;
+  });
+});
+</script>
+</body>
+</html>

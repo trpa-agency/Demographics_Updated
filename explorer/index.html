@@ -124,6 +124,7 @@
           <calcite-select id="var-source" label-text="Data source"></calcite-select>
           <calcite-input id="var-search" class="grow" label-text="Search code, name, or category" placeholder="For example B25004, vacant, or Age" clearable icon="search"></calcite-input>
           <calcite-select id="var-category" label-text="Category"><calcite-option value="">All categories</calcite-option></calcite-select>
+          <calcite-select id="var-variable" label-text="Variable" disabled><calcite-option value="">Select a category first</calcite-option></calcite-select>
           <calcite-button id="var-export" icon-start="download" appearance="outline" scale="m">CSV</calcite-button>
         </div>
         <p class="muted" id="var-count">Loading variables...</p>
@@ -332,11 +333,11 @@
     if (!inventoryCache[key]) {
       const s = SOURCES[key];
       const groupBy = ['code', 'name', 'category', 'dataset', 'level'].map(k => s.f[k]).filter(Boolean);
-      inventoryCache[key] = stats(s.url, groupBy, [['count', 'OBJECTID', 'records'], ['min', s.f.year, 'first_year'], ['max', s.f.year, 'last_year'], ['min', s.f.value, 'min_value'], ['max', s.f.value, 'max_value']])
+      inventoryCache[key] = stats(s.url, groupBy, [['count', 'OBJECTID', 'records'], ['min', s.f.year, 'first_year'], ['max', s.f.year, 'last_year'], ['min', s.f.value, 'min_value'], ['max', s.f.value, 'max_value'], ['sum', s.f.value, 'total_value']])
         .then(rows => rows.map(r => ({
           code: r[s.f.code], name: s.f.name ? r[s.f.name] : '', category: r[s.f.category], dataset: r[s.f.dataset],
           level: s.f.level ? r[s.f.level] : '', records: r.records, first_year: r.first_year, last_year: r.last_year,
-          min_value: r.min_value, max_value: r.max_value
+          min_value: r.min_value, max_value: r.max_value, total_value: r.total_value
         })));
     }
     return inventoryCache[key];
@@ -451,7 +452,7 @@
   }
 
   // ───────────────────────── Variables ─────────────────────────
-  let varGrid = null, detailGrid = null, currentSource = 'census';
+  let varGrid = null, detailGrid = null, currentSource = 'census', currentRows = [];
   async function loadVariables(sourceKey) {
     currentSource = sourceKey;
     const countEl = document.getElementById('var-count');
@@ -461,7 +462,11 @@
       const [inv, reg] = await Promise.all([inventory(sourceKey), registry()]);
       const notes = Object.fromEntries(reg.map(r => [`${r.variable_code}|${r.dataset}`, r]));
       const rows = inv.map(r => ({ ...r, trpa_note: notes[`${r.code}|${r.dataset}`]?.notes || '' }));
+      currentRows = rows;
       fillSelect(document.getElementById('var-category'), [...new Set(rows.map(r => r.category))].sort().map(c => [c, c]), true);
+      const varVarSel = document.getElementById('var-variable');
+      varVarSel.innerHTML = '<calcite-option value="">Select a category first</calcite-option>';
+      varVarSel.disabled = true;
       const cols = [
         { field: 'code', headerName: 'Variable code', width: 190, pinned: 'left' },
         { field: 'name', headerName: 'Name', flex: 2, minWidth: 220, hide: !SOURCES[sourceKey].f.name },
@@ -471,6 +476,7 @@
         { field: 'first_year', headerName: 'First year', width: 110, type: 'numericColumn' },
         { field: 'last_year', headerName: 'Last year', width: 110, type: 'numericColumn' },
         numCol('records', 'Records', 110), numCol('min_value', 'Lowest value'), numCol('max_value', 'Highest value'),
+        { ...numCol('total_value', 'Total value', 130), hide: true },
         { field: 'trpa_note', headerName: 'TRPA note', flex: 1, minWidth: 200, tooltipField: 'trpa_note' }
       ];
       if (varGrid) varGrid.destroy();
@@ -532,34 +538,34 @@
   }
 
   async function detailCensus(row, s) {
-    const additive = !NON_ADDITIVE.test(`${row.name} ${row.category}`);
     let where = `${s.f.code} = ${sqlText(row.code)} AND ${s.f.dataset} = ${sqlText(row.dataset)}`;
     if (row.level) where += ` AND ${s.f.level} = ${sqlText(row.level)}`;
-    const byYear = await stats(s.url, [s.f.year, 'county'], [['count', 'OBJECTID', 'records'], ['sum', s.f.value, 'total'], ['min', s.f.value, 'low'], ['max', s.f.value, 'high']], where);
-    const blanks = await stats(s.url, [s.f.year], [['count', 'OBJECTID', 'blank']], `${where} AND ${s.f.value} IS NULL`).catch(() => []);
-    const blankBy = Object.fromEntries(blanks.map(b => [b[s.f.year], b.blank]));
+    const byYear = await stats(s.url, [s.f.year, 'county'], [['sum', s.f.value, 'total']], where);
     const countyNames = { '017': 'El Dorado', '061': 'Placer', '005': 'Douglas', '031': 'Washoe' };
     const years = [...new Set(byYear.map(r => r[s.f.year]))].sort();
-    const traces = Object.keys(countyNames).map(c => ({
-      name: `${countyNames[c]} County (basin part)`, type: additive ? 'bar' : 'scatter', mode: 'lines+markers',
-      x: years.map(String), y: years.map(y => byYear.find(r => r[s.f.year] === y && r.county === c)?.[additive ? 'total' : 'high'] ?? null)
-    }));
     resetChart('detail-chart');
-    Plotly.newPlot('detail-chart', traces, { ...LAYOUT, barmode: 'stack', xaxis: { ...LAYOUT.xaxis, type: 'category' }, yaxis: { ...LAYOUT.yaxis, title: additive ? 'Sum of values' : 'Highest value' } }, PLOT_CONFIG);
-    document.getElementById('detail-chart-title').textContent = additive ? 'Basin total by year, stacked by county' : 'Highest tract or block group value by year';
-    document.getElementById('detail-chart-note').textContent = additive
-      ? `Sum of ${row.level || ''} values. Margins of error are not shown here. Source: ${s.label}.`
-      : 'This variable is a median, average, or percentage. Its values cannot be added, so the chart shows the highest value instead of a total.';
-    const tableRows = years.map(y => {
-      const rs = byYear.filter(r => r[s.f.year] === y);
-      return { year: y, records: rs.reduce((a, r) => a + r.records, 0), blank: blankBy[y] || 0,
-        low: Math.min(...rs.map(r => r.low ?? Infinity)), high: Math.max(...rs.map(r => r.high ?? -Infinity)),
-        total: additive ? rs.reduce((a, r) => a + (r.total || 0), 0) : null };
-    });
+    if (years.length <= 1) {
+      document.getElementById('detail-chart').innerHTML = '<p class="muted">Not enough years to draw a chart.</p>';
+    } else {
+      const traces = Object.keys(countyNames).map(c => ({
+        name: `${countyNames[c]} County (basin part)`, type: 'bar',
+        x: years.map(String), y: years.map(y => byYear.find(r => r[s.f.year] === y && r.county === c)?.total ?? null)
+      }));
+      Plotly.newPlot('detail-chart', traces, { ...LAYOUT, barmode: 'stack', xaxis: { ...LAYOUT.xaxis, type: 'category' }, yaxis: { ...LAYOUT.yaxis, title: 'Total value' } }, PLOT_CONFIG);
+    }
+    document.getElementById('detail-chart-title').textContent = 'Basin total by year, stacked by county';
+    const nonAdditive = NON_ADDITIVE.test(`${row.name} ${row.category}`);
+    document.getElementById('detail-chart-note').textContent = nonAdditive
+      ? `Note: this variable is a median, average, or percentage — summing across geographies may not be meaningful. Source: ${s.label}.`
+      : `Sum of ${row.level || ''} values. Margins of error are not shown. Source: ${s.label}.`;
+    const tableRows = years.map(y => Object.fromEntries([
+      ['year', y],
+      ...Object.entries(countyNames).map(([fips, name]) => [name, byYear.find(r => r[s.f.year] === y && r.county === fips)?.total ?? null])
+    ]));
     if (detailGrid) detailGrid.destroy();
     detailGrid = makeGrid(document.getElementById('detail-grid'), [
-      { field: 'year', headerName: 'Year', width: 100 }, numCol('records', 'Records'), numCol('blank', 'Blank values'),
-      numCol('low', 'Lowest value'), numCol('high', 'Highest value'), { ...numCol('total', 'Basin total', 150), hide: !additive }
+      { field: 'year', headerName: 'Year', width: 100 },
+      ...Object.values(countyNames).map(name => numCol(name, name, 140))
     ], tableRows);
   }
 
@@ -574,12 +580,16 @@
       const pts = data.filter(d => d[s.f.geo] === g).sort((a, b) => a[s.f.year] - b[s.f.year]);
       return { name: g, type: 'scatter', mode: 'lines+markers', x: pts.map(p => String(p[s.f.year])), y: pts.map(p => p[s.f.value]), visible: g === 'Basin' || geos.length < 4 ? true : 'legendonly' };
     });
+    const yearsAll = [...new Set(data.map(d => d[s.f.year]))].sort();
     resetChart('detail-chart');
-    Plotly.newPlot('detail-chart', traces, { ...LAYOUT, xaxis: { ...LAYOUT.xaxis, type: 'category', categoryorder: 'category ascending' }, yaxis: { ...LAYOUT.yaxis, title: row.name || row.category } }, PLOT_CONFIG);
+    if (yearsAll.length <= 1) {
+      document.getElementById('detail-chart').innerHTML = '<p class="muted">Not enough years to draw a chart.</p>';
+    } else {
+      Plotly.newPlot('detail-chart', traces, { ...LAYOUT, xaxis: { ...LAYOUT.xaxis, type: 'category', categoryorder: 'category ascending' }, yaxis: { ...LAYOUT.yaxis, title: row.name || row.category } }, PLOT_CONFIG);
+    }
     document.getElementById('detail-chart-title').textContent = 'Values by year and geography';
     document.getElementById('detail-chart-note').textContent = `Select names in the legend to show or hide geographies. Source: ${s.label}.`;
     if (detailGrid) detailGrid.destroy();
-    const yearsAll = [...new Set(data.map(d => d[s.f.year]))].sort();
     const wide = geos.map(g => Object.fromEntries([['geography', g], ...yearsAll.map(y => [String(y), data.find(d => d[s.f.geo] === g && d[s.f.year] === y)?.[s.f.value] ?? null])]));
     detailGrid = makeGrid(document.getElementById('detail-grid'), [
       { field: 'geography', headerName: 'Geography', pinned: 'left', width: 260 }, ...yearsAll.map(y => numCol(String(y), String(y), 110))
@@ -859,9 +869,27 @@
     onSelect(document.getElementById('var-source'), loadVariables);
     onSelect(document.getElementById('var-category'), value => {
       varGrid?.setColumnFilterModel('category', value ? { filterType: 'text', type: 'equals', filter: value } : null).then(() => varGrid.onFilterChanged());
+      const varVarSel = document.getElementById('var-variable');
+      if (value) {
+        const vars = currentRows.filter(r => r.category === value);
+        fillSelect(varVarSel, vars.map(r => [`${r.code}|${r.dataset}|${r.level || ''}`, r.name ? `${r.code}: ${r.name}` : r.code]));
+        varVarSel.disabled = false;
+      } else {
+        varVarSel.innerHTML = '<calcite-option value="">Select a category first</calcite-option>';
+        varVarSel.disabled = true;
+      }
+    });
+    onSelect(document.getElementById('var-variable'), value => {
+      if (!value) return;
+      const [code, dataset, level] = value.split('|');
+      const row = currentRows.find(r => r.code === code && r.dataset === dataset && (r.level || '') === level);
+      if (row) showDetail(row);
     });
     document.getElementById('var-search').addEventListener('calciteInputInput', e => { varGrid?.setGridOption('quickFilterText', e.target.value); updateCount(); });
-    document.getElementById('var-export').addEventListener('click', () => varGrid?.exportDataAsCsv({ fileName: `variables_${currentSource}.csv` }));
+    document.getElementById('var-export').addEventListener('click', () => varGrid?.exportDataAsCsv({
+      fileName: `variables_${currentSource}.csv`,
+      columnKeys: ['code', 'name', 'category', 'dataset', 'level', 'first_year', 'last_year', 'total_value', 'trpa_note']
+    }));
     onSelect(document.getElementById('cov-source'), () => fillCoverageCategories().then(loadCoverage));
     onSelect(document.getElementById('cov-category'), loadCoverage);
     document.getElementById('qa-run').addEventListener('click', runChecks);
